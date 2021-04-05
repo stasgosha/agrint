@@ -1,0 +1,96 @@
+.about-info-section{ 
+    .big-screen-block{ 
+        background-color: #E9F2F0;  
+        display: flex;
+        height: calc(100vh - 8.5938vw);
+        min-height: 600px;
+        
+        .block-content{
+            width: 50%;
+            flex: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            // padding: 7.2917vw;
+            padding: 2.3438vw;//45px
+            padding: 245px 0;
+        }
+
+        .block-image{
+            position: relative;
+            width: 50%;
+            background: #eee;
+
+            img{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                object-fit: cover;
+                object-position: center center;
+            }
+        }
+        .block-text{ 
+            ul{
+                li{
+                    position: relative; 
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        width: 0.4167vw;
+                        height: 0.4167vw;
+                        background: $gray;
+                        top: 0.2604vw; 
+                        border-radius: 50%;
+                    }
+                    html[dir="ltr"] &{
+                        padding-left: 1.1458vw;
+                        &::before{
+                            left: 0;
+                        }
+                    }
+                    html[dir="rtl"] &{
+                        padding-right: 1.1458vw;
+                        &::before{
+                            right: 0;
+                        }
+                    }
+                }
+            } 
+        }
+        .block-footer{
+            margin-top: 2.5000vw;
+        }
+
+        &:nth-child(odd){
+            .block-content{ 
+                html[dir="ltr"] &{ 
+                    padding-right: 7.2917vw;
+                    padding-left: 2.3438vw; 
+                }
+    
+                html[dir="rtl"] &{
+                    padding-left: 7.2917vw;
+                    padding-right: 2.3438vw; 
+                }
+            }
+        }
+    
+        &:nth-child(even){
+            .block-content{
+                order: -1;
+                html[dir="ltr"] &{
+                    padding-left: 7.2917vw;
+                    padding-right: 2.3438vw; 
+                }
+    
+                html[dir="rtl"] &{
+                    padding-right: 7.2917vw;
+                    padding-left: 2.3438vw; 
+                }
+            }
+        } 
+    } 
+}

@@ -6,6 +6,7 @@
 body{
 	font-family: $main-font;
 	color: $text-color;
+	font-weight: 300;
 
 	html[dir="rtl"] &{
 		font-family: $rtl-font;
@@ -103,7 +104,7 @@ body{
 }
 
 .page-caption{
-	@include h1;
+	@include h1; 
 }
 
 .read-more-link{

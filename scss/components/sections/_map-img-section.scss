@@ -1,0 +1,14 @@
+.map-img-section { 
+    padding: 7.5521vw 0 9.3750vw;
+    .block-text {
+        text-align: center;
+        margin-bottom: 4.6875vw;
+    }
+    .block-image {
+        img{
+            width: 100%;
+            height: auto;
+            display: block
+        }
+    }
+}
