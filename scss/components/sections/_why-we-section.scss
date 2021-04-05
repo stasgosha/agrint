@@ -1,0 +1,44 @@
+.why-we-section{
+	padding: 5.7292vw 0;
+	// TODO: fix padding
+	// TODO: add bg
+
+	.section-caption{
+		max-width: 63.5417vw;
+	}
+}
+
+.features-list{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	// TODO: fix gap
+	grid-gap: 5.2083vw 2.0833vw;
+}
+
+.feature-card{
+	display: grid;
+	grid-template-columns: 4.4792vw 1fr;
+	grid-gap: 1.5625vw;
+
+	.card-content{
+		// TODO: fix padding
+		padding-top: 1.0417vw;
+		font-weight: 300;
+	}
+
+	.card-caption{
+		@include p;
+		color: $text-dark;
+		font-weight: bold;
+	}
+
+	.card-icon{
+		// TODO: remove bg
+		background: #eee;
+		img{
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+}

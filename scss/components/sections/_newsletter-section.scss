@@ -1,0 +1,53 @@
+.newsletter-section{
+	background: #F8F8F8;
+	padding: 5.2083vw 0 6.7708vw;
+
+	.section-inner{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		// TODO: fix gap
+		grid-gap: 5.2083vw 0;
+	}
+
+	.socials-component{
+		justify-self: end;
+	}
+
+	.section-caption{
+		margin-bottom: 0;
+	}
+
+	.block-text{
+		font-weight: 300;
+	}
+
+	.newsletter-form{
+		grid-column: 1 / -1;
+	}
+
+	.socials-component{
+		grid-gap: 2.0833vw;
+
+		p{
+			font-weight: 400;
+		}
+	}
+}
+
+.newsletter-form{
+	.form-inner{
+		display: grid;
+		grid-template-columns: 1fr 7.2917vw;
+		grid-gap: 4.4792vw;
+	}
+
+	.form-fields{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 2.3438vw;
+	}
+
+	.btn{
+		width: 100%;
+	}
+}

@@ -1,0 +1,157 @@
+@mixin p{
+	font-size: 1.3542vw; // 26px
+	line-height: 1.308;
+}
+
+body{
+	font-family: $main-font;
+	color: $text-color;
+
+	html[dir="rtl"] &{
+		font-family: $rtl-font;
+	}
+
+	@include p;
+}
+
+@mixin h1{
+	font-size: 3.3333vw; // 64px
+	line-height: 1.3125;
+}
+
+@mixin h2{
+	font-size: 2.5000vw; // 48px
+	line-height: 1.3125;
+}
+
+@mixin h3{
+	font-size: 1.4583vw; // 28px
+	line-height: 1.428;
+	text-transform: uppercase;
+}
+
+@mixin h4{
+	@include p;
+	font-weight: bold;
+}
+
+.tpg{
+	p{
+		margin-bottom: 1.308em;
+		@include p;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+
+	ul{
+		margin-bottom: 1.308em;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		li{
+			&:before{
+				content: '';
+				display: inline-block;
+				width: 0.5556vw;
+				height: 0.5556vw;
+				background: $primary;
+				border-radius: 50%;
+				margin-right: 0.3472vw;
+			}
+		}
+	}
+}
+
+.section-caption{
+	margin-bottom: 1.5625vw; // 30px
+
+	&:last-child{
+		margin-bottom: 0;
+	}
+
+	.sc-title{
+		@include h2;
+		color: $primary;
+
+		&.text-color{
+			color: $text-color;
+		}
+
+		&.uppercase{
+			text-transform: uppercase;
+		}
+	}
+
+	.sc-subtitle{
+		margin-top: 1.2500vw;
+		@include h3;
+		color: $primary;
+		font-weight: bold;
+
+		&.text-color{
+			color: $text-color;
+		}
+
+		&.no-uppercase{
+			text-transform: none;
+		}
+	}
+}
+
+.page-caption{
+	@include h1;
+}
+
+.read-more-link{
+	position: relative;
+	display: inline-flex;
+	color: $accent;
+
+	.link-text{
+		font-size: 1.0417vw;
+		font-weight: 500;
+		transition: all $t;
+		opacity: 0;
+	}
+
+	.link-icon{
+		width: 3.3333vw;
+		height: 1.0938vw;
+		fill: currentcolor;
+		transition: all $t;
+		position: absolute;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+
+		html[dir="ltr"] &{
+			left: 0;
+		}
+
+		html[dir="rtl"] &{
+			right: 0;
+			transform: scaleX(-1) translateY(-50%);
+		}
+	}
+
+	&:hover,
+	&:focus{
+		.link-text{
+			opacity: 1;
+		}
+
+		.link-icon{
+			html[dir="ltr"] &{
+				left: calc(100% + 0.7813vw);
+			}
+
+			html[dir="rtl"] &{
+				right: calc(100% + 0.7813vw);
+			}
+		}
+	}
+}
