@@ -1,0 +1,112 @@
+.press-room-section{
+	padding-bottom: 2.3438vw;
+}
+
+.articles-grid{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 3.8542vw 0.8333vw;
+}
+
+.article-card{
+	.card-image{
+		position: relative;
+		display: block;
+		overflow: hidden;
+		
+		&:before{
+			content: '';
+			display: block;
+			padding-top: 138.4328%;
+		}
+		
+		img{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: block;
+			object-fit: cover;
+			object-position: center center;
+			transition: all .5s;
+		}
+
+		&:hover,
+		&:focus{
+			img{
+				transform: scale(1.07);
+				opacity: .8;
+			}
+		}
+	}
+
+	.card-content{
+		padding: 3.6458vw 0 1.5625vw;
+		font-weight: 300;
+
+		html[dir="ltr"] &{
+			padding-right: 3.6458vw;
+		}
+
+		html[dir="rtl"] &{
+			padding-left: 3.6458vw;
+		}
+	}
+
+	.card-caption{
+		font-size: 1.6667vw;
+		font-weight: bold;
+		color: $primary;
+		// TODO: поправить отступ
+		margin-bottom: 1.0417vw;
+
+		a{
+			color: inherit;
+
+			&:hover,
+			&:focus{
+				color: $accent;
+			}
+		}
+	}
+
+	.card-footer{
+		// TODO: поправить отступ
+		margin-top: 1.5625vw;
+	}
+
+	.articles-grid &{
+		&:first-child{
+			grid-column: 1 / -1;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 0.8333vw;
+
+			.card-content{
+				padding-top: 3.6458vw;
+				padding-bottom: 3.6458vw;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+
+				html[dir="ltr"] &{
+					padding-right: 5.7292vw;
+				}
+
+				html[dir="rtl"] &{
+					padding-left: 5.7292vw;
+				}
+			}
+
+			.card-image{
+				grid-column: span 2;
+				order: 1;
+
+				&:before{
+					padding-top: 68.32%;
+				}
+			}
+		}
+	}
+}
