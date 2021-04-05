@@ -1,0 +1,56 @@
+.solutions-section{
+    &.bg-color-green{
+        background-color: #E9F2F0;
+        
+			// html[dir="ltr"] &{ 
+            //     .split-screen-block .block-content{  
+            //         padding-right: 7.2917vw;
+            //         padding-left: 2.3438vw; 
+            //     }
+            // }
+            
+			// html[dir="rtl"] &{ 
+            //     .split-screen-block .block-content{
+            //         padding-left: 7.2917vw;
+            //         padding-right: 2.3438vw; 
+            //     }
+            // } 
+            .split-screen-block{
+                .block-content{
+                    align-items: center;
+                    padding: 2.3438vw;//45px
+                }
+                &:nth-child(odd){
+                    .block-content{
+                        order: 1;
+                        html[dir="ltr"] &{ 
+                            padding-right: 7.2917vw;
+                            padding-left: 2.3438vw; 
+                        }
+            
+                        html[dir="rtl"] &{
+                            padding-left: 7.2917vw;
+                            padding-right: 2.3438vw; 
+                        }
+                    }
+                }
+            
+                &:nth-child(even){
+                    .block-content{
+                        order: 0;
+            
+                        html[dir="ltr"] &{
+                            padding-left: 7.2917vw;
+                            padding-right: 2.3438vw; 
+                        }
+            
+                        html[dir="rtl"] &{
+                            padding-right: 7.2917vw;
+                            padding-left: 2.3438vw; 
+                        }
+                    }
+                }
+            }
+            
+    }
+}

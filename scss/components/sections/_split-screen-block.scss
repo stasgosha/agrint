@@ -27,7 +27,32 @@
 			object-position: center center;
 		}
 	}
-
+	.block-list{
+		p{
+			position: relative;
+			&::before{
+				content: "";
+				position: absolute;
+				width: 8px;
+				height: 8px;
+				background: $gray;
+				top: 5px; 
+				border-radius: 50%;
+			}
+			html[dir="ltr"] &{
+				padding-left: 22px;
+				&::before{
+					left: 0;
+				}
+			}
+			html[dir="rtl"] &{
+				padding-right: 22px;
+				&::before{
+					right: 0;
+				}
+			}
+		}
+	}
 	.block-footer{
 		margin-top: 2.5000vw;
 	}
