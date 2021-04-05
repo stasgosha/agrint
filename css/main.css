@@ -1609,7 +1609,7 @@ html[dir=rtl] .about-info-section .big-screen-block:nth-child(even) .block-conte
 }
 
 .big-img-block {
-  height: calc(57.2917vw - 8.5938vw);
+  height: calc(63.2917vw - 8.5938vw);
   position: relative;
 }
 .big-img-block .block-img-container {
