@@ -1,0 +1,31 @@
+.block-bottom-info {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    .block-container{
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 16px 0 40px;
+    }
+    .icons-wrrap {
+        color: $green;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 0 28px;
+        max-width: 1100px;
+        margin: 0 auto;
+        margin-bottom: 35px;
+    }
+    .icons-item {
+        font-weight: 500;
+        img{
+            width: 45px;
+            height: 45px;
+            display: block;
+        }
+    }
+}

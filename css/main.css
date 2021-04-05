@@ -1320,6 +1320,16 @@ html[dir=rtl] .socials-list li:last-child {
   position: relative;
   z-index: 3;
 }
+.big-video-block .block-content .section-caption {
+  position: relative;
+  z-index: 3;
+}
+.big-video-block .block-content .section-caption .sc-subtitle, .big-video-block .block-content .section-caption .sc-title {
+  color: #fff;
+}
+.big-video-block .block-content .section-caption .sc-subtitle {
+  text-transform: none;
+}
 .big-video-block .block-content .block-preview {
   width: 100%;
   height: 100%;
@@ -1538,4 +1548,36 @@ html[dir=rtl] .solutions-section.bg-color-green .split-screen-block:nth-child(ev
 .map-img-section .block-image img {
   width: 100%;
   height: 100vh;
+}
+
+.block-bottom-info {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.block-bottom-info .block-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 16px 0 40px;
+}
+.block-bottom-info .icons-wrrap {
+  color: #26A562;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-bottom: 35px;
+}
+.block-bottom-info .icons-item {
+  font-weight: 500;
+}
+.block-bottom-info .icons-item img {
+  width: 45px;
+  height: 45px;
+  display: block;
 }
