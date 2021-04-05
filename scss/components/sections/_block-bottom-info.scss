@@ -7,25 +7,31 @@
     text-align: center;
     background-color: rgba(255, 255, 255, 0.8);
     .block-container{
-        max-width: 1300px;
+        max-width: 67.7083vw;
         margin: 0 auto;
-        padding: 16px 0 40px;
+        padding: 0.8333vw 0 2.0833vw;
     }
     .icons-wrrap {
         color: $green;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-gap: 0 28px;
-        max-width: 1100px;
+        grid-gap: 0 1.4583vw;
+        max-width: 57.2917vw;
         margin: 0 auto;
-        margin-bottom: 35px;
+        margin-bottom: 1.8229vw;
     }
     .icons-item {
         font-weight: 500;
         img{
-            width: 45px;
-            height: 45px;
+            width: 2.3438vw;
+            height: 2.3438vw;
             display: block;
+            margin-bottom: 0.2604vw;
+        }
+    }
+    .block-text{
+        p+p{
+            margin-top: 1.0417vw;
         }
     }
 }
