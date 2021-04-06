@@ -1805,7 +1805,7 @@ html[dir=rtl] .small-article-card {
 .full-width-section {
   height: calc(100vh - 8.5938vw);
 }
-.full-width-section .block-contant {
+.full-width-section .block-content {
   padding-top: 5.9896vw;
 }
 .full-width-section .section-caption {
