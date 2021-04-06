@@ -20,6 +20,10 @@
   color: #3C3B3B !important;
 }
 
+.no-bold {
+  font-weight: 400 !important;
+}
+
 .push {
   position: relative;
 }
@@ -717,6 +721,48 @@ html[dir=rtl] .footer-logo p {
 .creator a:hover,
 .creator a:focus {
   color: #FDB22A;
+}
+
+.footer-2 {
+  font-size: 1.0417vw;
+  line-height: 1.4;
+  min-height: 22.2917vw;
+  background: #3C3B3B;
+  color: #fff;
+  padding-top: 4.6875vw;
+}
+.footer-2 a {
+  color: inherit;
+}
+.footer-2 .footer-block {
+  display: flex;
+  align-items: center;
+}
+.footer-2 .footer-logo {
+  display: flex;
+  max-width: initial;
+}
+.footer-2 .footer-row.first {
+  padding-bottom: 0;
+}
+.footer-2 .footer-row.second {
+  padding-top: 1.5625vw;
+}
+html[dir=ltr] .footer-2 .copyright {
+  margin-left: 2.5521vw;
+}
+html[dir=rtl] .footer-2 .copyright {
+  margin-right: 2.5521vw;
+}
+.footer-2 .footer-inner {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% + 1.0417vw * 2);
+  margin-left: -1.0417vw;
+  margin-right: -1.0417vw;
+}
+.footer-2 .footer-inner .footer-block {
+  padding: 0 1.0417vw;
 }
 
 .btn {
