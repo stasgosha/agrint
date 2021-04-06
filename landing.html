@@ -83,6 +83,82 @@
 			</div>
 		</header>
 		<main class="page-content">
+			<section class="middle-img-section">
+				<div class="blocks-img">
+					<div class="bg-picture">
+						<img src="img/content-images/press-room/holder.jpg" alt="">
+					</div> 
+					<div class="blocks-content">
+						<h2>The sensor that will <br> save your palm trees</h2>
+						<p>Smart sensing solutions for tree protection. <br> Unique pest sensing technology that detects threats in trees before they cause damage.</p>
+					</div> 
+					<a href="#" class="btn-text" data-video-type="youtube" data-video-modal="" aria-label="Watch video">
+						Watch and learn
+						<span class="play"></span>
+						<span class="arrow"></span>
+					</a>
+				</div>
+				<div class="blocks-info"> 
+					<div class="section-caption">
+						<h2 class="sc-title">Contact us</h2>
+					</div>
+					<div class="form contact-form"> 
+						<form>  
+							<div class="form-field">
+								<input type="text" class="input-field" placeholder="Name">
+							</div>
+							<div class="form-field">
+								<input type="text" class="input-field" placeholder="eMail">
+							</div>
+							<div class="form-col">
+								<div class="form-label">Message:</div>
+								<div class="form-textarea">
+									<textarea cols="10" rows="6" class="textarea" placeholder=""></textarea>
+								</div>
+							</div>
+							<div class="form-submit">
+								<input class="btn w-btn btn-green" type="submit" value="Submit">
+							</div> 
+						</form>
+					</div>
+				</div>
+			</section>
+			<section class="autors-section">
+				<div class="container">
+					<div class="section-caption">
+						<h2 class="sc-title">Chosen by farmers from more <br> then 13 countries</h2>
+					</div>
+					<div class="cards-list columns-3">
+						<div class="autor-blocks">
+							<div class="blocks-img">
+								<img src="" alt="">
+							</div>
+							<div class="blocks-info">
+								<h3>George</h3>
+								<p>Short testimonial Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+							</div>
+						</div>
+						<div class="autor-blocks">
+							<div class="blocks-img">
+								<img src="" alt="">
+							</div>
+							<div class="blocks-info">
+								<h3>George</h3>
+								<p>Short testimonial Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+							</div>
+						</div>
+						<div class="autor-blocks">
+							<div class="blocks-img">
+								<img src="" alt="">
+							</div>
+							<div class="blocks-info">
+								<h3>George</h3>
+								<p>Short testimonial Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 			<section class="crops-section">
 				<div class="container">
 					<div class="section-caption">
@@ -255,7 +331,19 @@
 		</footer>
 	</div>
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<div class="modal video-modal" id="video-modal" tabindex="-1">
+		<div class="modal-dialog"> 
+			<div class="modal-content">
+				<button class="modal-close" aria-label="Close modal"></button>
+				<div class="modal-video">
+					<div id="modal-video-iframe"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
+	<script src="//www.youtube.com/iframe_api"></script>
 	<script src="js/slick.min.js"></script>
 	<script src="js/scripts.js"></script>
 </body>
