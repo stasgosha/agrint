@@ -1,0 +1,53 @@
+.related-section{
+	padding: 4.1667vw 0 2.0833vw;
+}
+
+.related-card{
+	display: block;
+
+	.card-image{
+		position: relative;
+		margin-bottom: 1.8229vw;
+		overflow: hidden;
+		
+		&:before{
+			content: '';
+			display: block;
+			padding-top: 62.56%;
+		}
+		
+		img{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: block;
+			object-fit: cover;
+			object-position: center center;
+			transition: all .5s;
+		}
+	}
+
+	.card-caption{
+		@include h3;
+		text-align: center;
+		color: $primary;
+		text-transform: uppercase;
+		transition: all $t;
+	}
+
+	&:hover,
+	&:focus{
+		.card-image{
+			img{
+				transform: scale(1.05);
+				opacity: .8;
+			}
+		}
+
+		.card-caption{
+			color: $accent;
+		}
+	}
+}
