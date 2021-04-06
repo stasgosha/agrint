@@ -20,7 +20,7 @@
   color: #3C3B3B !important;
 }
 
-.font-weight-400 {
+.fw-400 {
   font-weight: 400 !important;
 }
 
@@ -2418,7 +2418,7 @@ html[dir=ltr] .middle-img-section .blocks-img .blocks-content {
 html[dir=rtl] .middle-img-section .blocks-img .blocks-content {
   padding-left: 16.6667vw;
 }
-.middle-img-section .blocks-img .blocks-content h1 {
+.middle-img-section .blocks-img .blocks-content .title {
   font-size: 3.3333vw;
   line-height: 1;
   margin-bottom: 2.0833vw;
