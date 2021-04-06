@@ -262,6 +262,9 @@
  
 .contact-form{
     &.form{
+        input,textarea{
+            padding: 0 0.6250vw;
+        }
         .form-field{
             & + .form-field{
                 margin-top: 2.0833vw;
@@ -274,12 +277,13 @@
                 padding-bottom: 0.5208vw;
                 border: 0.1042vw solid $gray;
                 height: auto;
+                min-height: 11.0938vw;
             }
         } 
         .form-submit {
             margin-right: auto;
             margin-top: 2.6042vw;
-            input {
+            input,button {
                 cursor: pointer; 
                 padding-bottom: 0;
                 padding-top: 0;

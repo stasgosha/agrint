@@ -875,6 +875,9 @@ html[dir=rtl] .btn .btn-icon:last-child {
   border-color: #26A562;
 }
 
+.contact-form.form input, .contact-form.form textarea {
+  padding: 0 0.625vw;
+}
 .contact-form.form .form-field + .form-field {
   margin-top: 2.0833vw;
 }
@@ -884,12 +887,13 @@ html[dir=rtl] .btn .btn-icon:last-child {
   padding-bottom: 0.5208vw;
   border: 0.1042vw solid #3C3B3B;
   height: auto;
+  min-height: 11.0938vw;
 }
 .contact-form.form .form-submit {
   margin-right: auto;
   margin-top: 2.6042vw;
 }
-.contact-form.form .form-submit input {
+.contact-form.form .form-submit input, .contact-form.form .form-submit button {
   cursor: pointer;
   padding-bottom: 0;
   padding-top: 0;
@@ -2305,27 +2309,27 @@ html[dir=rtl] .small-article-card {
   grid-template-columns: 30.7292vw 38.0729vw;
   grid-gap: 0 16.7188vw;
 }
-.autors-section .section-caption {
+.authors-section .section-caption {
   margin-bottom: 5.2083vw;
 }
-.autors-section .autor-blocks .blocks-img {
+.authors-section .author-blocks .blocks-img {
   background-color: #ccc;
 }
-.autors-section .autor-blocks .blocks-img img {
+.authors-section .author-blocks .blocks-img img {
   width: 100%;
   height: auto;
   display: block;
 }
-.autors-section .autor-blocks .blocks-info {
+.authors-section .author-blocks .blocks-info {
   background: #EBEBEB;
   padding: 1.3021vw 2.3438vw 2.1875vw;
 }
-.autors-section .autor-blocks .blocks-info h3 {
+.authors-section .author-blocks .blocks-info .block-caption {
   font-size: 1.4583vw;
   font-weight: 500;
   margin-bottom: 1.0417vw;
 }
-.autors-section .autor-blocks .blocks-info p {
+.authors-section .author-blocks .blocks-info p {
   font-size: 1.3542vw;
   line-height: 1.5;
 }
@@ -2368,7 +2372,7 @@ html[dir=ltr] .middle-img-section .blocks-img .blocks-content {
 html[dir=rtl] .middle-img-section .blocks-img .blocks-content {
   padding-left: 16.6667vw;
 }
-.middle-img-section .blocks-img .blocks-content h2 {
+.middle-img-section .blocks-img .blocks-content h1 {
   font-size: 3.3333vw;
   line-height: 1;
   margin-bottom: 2.0833vw;
