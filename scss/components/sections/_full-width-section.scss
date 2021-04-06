@@ -1,0 +1,18 @@
+.full-width-section {
+    height: calc(100vh - 8.5938vw);
+    .container {
+    }
+    .block-content {
+        padding-top: 5.9896vw;  
+    }
+    .section-caption {
+        margin-bottom: 2.0833vw;
+        .sc-subtitle {
+            text-transform: none;
+            margin-top: 0;
+        }
+    } 
+    .block-text {
+        color: #fff;
+    }
+}
