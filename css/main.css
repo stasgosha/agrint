@@ -2086,6 +2086,21 @@ html[dir=rtl] .small-article-card {
   object-position: center center;
 }
 
+.full-width-section {
+  height: calc(100vh - 8.5938vw);
+}
+.full-width-section .block-content {
+  padding-top: 5.9896vw;
+}
+.full-width-section .section-caption {
+  margin-bottom: 2.0833vw;
+}
+.full-width-section .section-caption .sc-subtitle {
+  text-transform: none;
+  margin-top: 0;
+}
+.full-width-section .block-text {
+  color: #fff;
 .contact-us-section {
   padding: 5.9896vw 0 0;
 }
