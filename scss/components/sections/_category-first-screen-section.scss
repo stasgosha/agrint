@@ -1,0 +1,48 @@
+.category-first-screen-section{
+	.section-inner{
+		display: grid;
+		grid-template-columns: 24.5833vw 1fr;
+		grid-gap: 4.1667vw;
+	}
+
+	.section-content{
+		padding: 3.6458vw 0 0.5208vw;
+	}
+
+	.section-image{
+		position: relative;
+
+		img{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			object-fit: cover;
+			object-position: center center;
+		}
+	}
+
+	.section-caption{
+		margin-bottom: 2.6042vw;
+		// TODO: fix margin
+	}
+
+	.solutions-list{
+		margin-top: 2.0833vw;
+		max-width: 14.0625vw;
+		display: grid;
+		grid-gap: 1.0417vw;
+	}
+
+	.small-solution-card{
+		strong{
+			display: block;
+			font-weight: 500;
+		}
+
+		p{
+			margin-bottom: 1.0417vw;
+		}
+	}
+}
