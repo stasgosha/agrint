@@ -2334,13 +2334,18 @@ html[dir=rtl] .small-article-card {
   display: grid;
   grid-template-columns: 63.9583vw 34.5313vw;
   grid-gap: 0 1.3542vw;
-  margin-bottom: 100px;
+  margin-bottom: 5.2083vw;
 }
 .middle-img-section .blocks-img {
-  padding-left: 7.2917vw;
-  min-height: 913px;
-  padding-top: 331px;
+  min-height: 47.5521vw;
+  padding-top: 17.2396vw;
   position: relative;
+}
+html[dir=ltr] .middle-img-section .blocks-img {
+  padding-left: 7.2917vw;
+}
+html[dir=rtl] .middle-img-section .blocks-img {
+  padding-right: 7.2917vw;
 }
 .middle-img-section .blocks-img .bg-picture img {
   width: 100%;
@@ -2356,33 +2361,43 @@ html[dir=rtl] .small-article-card {
   position: relative;
   z-index: 1;
   color: #fff;
-  padding-right: 320px;
+}
+html[dir=ltr] .middle-img-section .blocks-img .blocks-content {
+  padding-right: 16.6667vw;
+}
+html[dir=rtl] .middle-img-section .blocks-img .blocks-content {
+  padding-left: 16.6667vw;
 }
 .middle-img-section .blocks-img .blocks-content h2 {
-  font-size: 64px;
+  font-size: 3.3333vw;
   line-height: 1;
-  margin-bottom: 40px;
+  margin-bottom: 2.0833vw;
 }
 .middle-img-section .blocks-img .blocks-content p {
-  font-size: 32px;
+  font-size: 1.6667vw;
   line-height: 1.5;
   font-weight: 500;
 }
 .middle-img-section .blocks-img .btn-text {
-  font-size: 32px;
+  font-size: 1.6667vw;
   line-height: 1.5;
   font-weight: 500;
   position: relative;
   z-index: 1;
   color: #fff;
-  margin-top: 40px;
+  margin-top: 2.0833vw;
   display: block;
 }
 .middle-img-section .blocks-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+html[dir=ltr] .middle-img-section .blocks-info {
   padding-right: 7.2917vw;
+}
+html[dir=rtl] .middle-img-section .blocks-info {
+  padding-left: 7.2917vw;
 }
 .video-section {
   min-height: 1095px;
