@@ -1,5 +1,5 @@
 .contact-us-section { 
-    padding: 115px 0 0;
+    padding: 5.9896vw 0 0;
     .block-content {
     }
     .section-caption {
@@ -12,10 +12,9 @@
         }
     }
     .block-wrrap{
-        display: grid;
-        // grid-template-columns: repeat(2, 1fr);
-        grid-template-columns: 36% 46%; 
-        grid-gap: 0 18%; 
+        display: grid; 
+        grid-template-columns: 30.7292vw 38.0729vw;
+        grid-gap: 0 16.7188vw;
     }
     .block-text {
 

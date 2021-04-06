@@ -266,10 +266,10 @@
 .form {
     &-item {
         &.row {
-            margin-top: 13px;
+            margin-top: 0.6771vw;
             display: flex;
             align-items: center;
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 768px) { //768
                 flex-direction: column;
             }
         }
@@ -281,7 +281,7 @@
         textarea {
             @include label-form;
             border: 0;
-            border-bottom: 2px solid $gray;
+            border-bottom: 0.1042vw solid $gray; //2
             appearance: none;
             background: transparent;
             border-radius: 0;
@@ -291,8 +291,8 @@
             transition: all $t;
             width: 100%;
             box-shadow: none;
-            padding: 0 12.5px;
-            margin-top: 40px;
+            padding: 0 12.0.2604vw;
+            margin-top: 2.0833vw;
             &::placeholder{
                 opacity: 1;
                 color: $text-color;
@@ -303,16 +303,16 @@
             }
         }
         input { 
-            height: 60px;
-            padding-bottom: 15px;
+            height: 3.1250vw;
+            padding-bottom: 0.7813vw;
         }
     }
     &-textarea {
         textarea {
             margin-top: 0;
             resize: none;
-            padding-bottom: 10px;
-            border: 2px solid $gray;
+            padding-bottom: 0.5208vw;
+            border: 0.1042vw solid $gray;
         }
     } 
     &-submit {
@@ -320,23 +320,23 @@
         input {
             cursor: pointer; 
             padding-bottom: 0;
-            min-height: 66px;
-            font-size: 32px;
+            min-height: 3.4375vw;
+            font-size: 1.6667vw;
         }
     } 
     &-radio-box{  
         display: flex;
         flex-wrap: wrap;
-        margin: 0 -12px;
-        margin-top: 40px;
+        margin: 0 -0.6250vw;
+        margin-top: 2.0833vw;
         .text { 
             @include label-form;
-            margin-bottom: 30px;
+            margin-bottom: 1.5625vw;
             display: block;
             width: 100%; 
         }
         .text, .form-radio-item{
-            padding: 0 12px;
+            padding: 0 0.6250vw;
         }
         .form-radio-item {
             display: flex;
@@ -352,10 +352,10 @@
         }
         .fake-text {
             html[dir="ltr"] &{ 
-                margin-left: 20px;
+                margin-left: 1.0417vw;
             } 
             html[dir="rtl"] &{ 
-                margin-right: 20px;
+                margin-right: 1.0417vw;
             }
             sup{
                 font-size: 1.2500vw;
@@ -364,18 +364,18 @@
         }
     }
     .form-col{
-        margin-top: 40px;
+        margin-top: 2.0833vw;
         .form-label{
             @include label-form; 
         }
         .form-textarea{
             textarea{
-                margin-top: 30px;
+                margin-top: 1.5625vw;
             }
         }
     }
     .form__checkbox{
-        margin-top: 40px;
+        margin-top: 2.0833vw;
     }
 }
 
@@ -388,8 +388,8 @@
 		background-repeat: no-repeat;
 		background-size: contain;
 		position: absolute;
-		width: 12px;
-		height: 12px;
+		width: 0.6250vw;
+		height: 0.6250vw;
         border-radius: 50%;
         top: 50%;
         left: 50%;
@@ -406,9 +406,9 @@
 				position: relative;
 				top: 0;
 				right: 0;
-				height: 30px;
-				width: 30px;
-				border: 4px solid $gray;
+				height: 1.5625vw; //30
+				width: 1.5625vw;
+				border: 0.1563vw solid $gray; //3
                 border-radius: 50%;
 			}
 		}
@@ -421,16 +421,16 @@
     cursor: pointer;
     align-items: center;
     display: flex;
-    height: 15px;
+    height: 0.7813vw; //15
 }
 
 .wpcf7-checkbox input[type=checkbox] {
     position: absolute;
     top: 0;
     right: 0;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
+    width: 0.0521vw;
+    height: 0.0521vw;
+    margin: -0.0521vw;
     bottom: 0;
     padding: 0;
     clip: rect(0 0 0 0);
@@ -444,12 +444,12 @@
     font-size: 1.3542vw;
     line-height: 1;
     vertical-align: text-top;
-    top: -8px;
+    top: -0.4167vw;
     html[dir="ltr"] &{ 
-        margin-left: 50px;
+        margin-left: 2.6042vw;
     } 
     html[dir="rtl"] &{ 
-        margin-right: 50px;
+        margin-right: 2.6042vw;
     }
 }
 
@@ -462,11 +462,11 @@
     display: block;
     position: absolute;
     background: transparent; 
-    height: 30px;
-    width: 30px;
-    border: 4px solid $gray;
+    height: 1.5625vw;
+    width: 1.5625vw;
+    border: 0.1563vw solid $gray; //3
     border-radius: 50%;
-    top: -6px;
+    top: -0.3125vw;
     html[dir="ltr"] &{ 
         left: 0;  
     }
@@ -483,19 +483,18 @@
     background-size: contain;
     position: absolute;
     background: $gray;
-    width: 14px;
-    height: 14px; 
+    width: 0.7292vw;
+    height: 0.7292vw; 
     border-radius: 50%; 
-    top: 2px;
+    top: 0.1042vw;
     html[dir="ltr"] &{ 
-        left: 8px;
+        left: 0.4167vw;
     }
 
     html[dir="rtl"] &{ 
-        right: 8px; 
+        right: 0.4167vw; 
     }
 }
-
 @media screen and (max-width: 768px) {
     /* custom checkbox styling for contact form 7 checkbox */
     // .wpcf7-checkbox label {
