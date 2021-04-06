@@ -25,6 +25,9 @@
 .text-color{
 	color: $text-color !important;
 }
+.fw-400{
+	font-weight: 400 !important;
+}
 
 @mixin addFocusBorder($color: $primary, $size: 8px){
 	position: relative;

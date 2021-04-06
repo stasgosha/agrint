@@ -116,4 +116,141 @@ document.addEventListener('DOMContentLoaded', function(){
 
 	window.addEventListener('scroll', stickyHeader);
 	setTimeout(stickyHeader, 100);
+
+	// Modals
+	$('.modal').css('display','block');
+
+	$('.modal-dialog').click(e => e.stopPropagation());
+	$('.modal').click(function(e){
+		hideModal( $(this) );
+		$('.video-modal .modal-video').html('<div id="modal-video-iframe"></div>');
+	});
+
+	$('.modal-close, .js-modal-close').click(function(e){
+		e.preventDefault();
+
+		hideModal( $(this).closest('.modal') );
+		$('.video-modal .modal-video').html('<div id="modal-video-iframe"></div>');
+	});
+
+	$('[data-modal]').click(function(e){
+		e.preventDefault();
+		e.stopPropagation();
+
+		hideModal('.modal');
+
+		if ($(this).data('modal-tab') != undefined) {
+			goToTab($(this).data('modal-tab'));
+		}
+
+		showModal( $(this).data('modal') );
+	});
+
+	
+    // Video
+    $('.v-start:not([data-video-modal])').on('click', function() {
+        let thise = $(this).parents('.video-section')
+ 
+        thise.addClass('playing');
+        thise.find('.block-overlay').fadeOut(300);
+
+        let videoId = thise.find('.play-btn').data('video-id');
+
+        if (!videoId) {
+            videoId = thise.data('video-id');
+        }
+
+        if (videoId == undefined) {
+            thise.find('video')[0].play();
+            thise.find('video').attr("controls", "controls");
+        } else {
+            let videoType = thise.data('video-type') ? thise.data('video-type').toLowerCase() : 'youtube';
+
+            if (videoType == 'youtube') {
+                thise.find('.block-video-container').append('<div class="video-iframe" id="' + videoId + '"></div>');
+                createVideo(videoId, videoId);
+            } else if (videoType == 'vimeo') {
+                thise.find('.block-video-container').append('<div class="video-iframe" id="' + videoId + '"><iframe allow="autoplay" class="video-iframe" src="https://player.vimeo.com/video/' + videoId + '?playsinline=1&autoplay=1&transparent=0&app_id=122963"></div>');
+            }
+        }
+
+    });
+    $('[data-video-modal]').click(function(e){
+    	e.preventDefault();
+    	e.stopPropagation();
+
+    	let videoId = $(this).data('video-modal');
+    	let videoType = $(this).data('video-type');
+
+    	if (videoType == 'youtube') {
+    		$('#modal-video-iframe').removeClass('vimeo youtube').addClass('youtube').append('<div class="video-iframe" id="'+videoId+'"></div>');
+    		createVideo(videoId, videoId);
+    	} else if(videoType == 'vimeo'){
+    		$('#modal-video-iframe').removeClass('vimeo youtube').addClass('vimeo').html('<iframe class="video-iframe" allow="autoplay" src="https://player.vimeo.com/video/'+videoId+'?playsinline=1&autoplay=1&transparent=1&app_id=122963">');
+    	}
+
+    	hideModal('.modal');
+
+    	showModal( "#video-modal" );
+    });
+
+    var player;
+    function createVideo(videoBlockId, videoId) {
+    	player = new YT.Player(videoBlockId, {
+    		videoId: videoId,
+    		playerVars: {
+    			'autohide': 1,
+    			'showinfo' : 0,
+    			'rel': 0,
+    			'loop': 1,
+    			'playsinline': 1,
+    			'fs': 0,
+    			'allowsInlineMediaPlayback': true
+    		},
+    		events: {
+    			'onReady': function (e) {
+    				// e.target.mute();
+    				// if ($(window).width() > 991) {
+    					setTimeout(function(){
+    						e.target.playVideo();
+    					}, 200);
+    				// }
+    			}
+    		}
+    	});
+    }
 });
+
+
+function getScrollWidth(){
+	// create element with scroll
+	let div = document.createElement('div');
+
+	div.style.overflowY = 'scroll';
+	div.style.width = '50px';
+	div.style.height = '50px';
+
+	document.body.append(div);
+	let scrollWidth = div.offsetWidth - div.clientWidth;
+
+	div.remove();
+
+	return scrollWidth;
+}
+
+let bodyScrolled = 0;
+function showModal(modal){
+	$(modal).addClass('visible');
+	bodyScrolled = $(window).scrollTop();
+	$('body, .header').addClass('modal-visible')
+			 .scrollTop(bodyScrolled)
+			 .css('padding-right', getScrollWidth());
+}
+
+function hideModal(modal){
+	$(modal).removeClass('visible');
+	bodyScrolled = $(window).scrollTop();
+	$('body, .header').removeClass('modal-visible')
+			 .scrollTop(bodyScrolled)
+			 .css('padding-right', 0);
+}

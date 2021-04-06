@@ -1,0 +1,95 @@
+.middle-img-section {
+    display: grid;  
+    // grid-template-columns: 1228 663;
+    // grid-gap: 0 26;
+    grid-template-columns: 63.9583vw 34.5313vw;
+    grid-gap: 0 1.3542vw;
+    margin-bottom: 5.2083vw;
+    .blocks-img { 
+        min-height: 47.5521vw; 
+        padding-top: 17.2396vw;
+        position: relative;
+		html[dir="ltr"] &{
+            padding-left: 7.2917vw;
+		} 
+		html[dir="rtl"] &{
+            padding-right: 7.2917vw;
+		}
+        .bg-picture { 
+            img{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                display: block;
+                object-fit: cover;
+                object-position: center center;
+            }
+        }
+        .blocks-content {
+            position: relative;
+            z-index: 1;
+            color: #fff; 
+            html[dir="ltr"] &{
+                padding-right: 16.6667vw;
+            } 
+            html[dir="rtl"] &{
+                padding-left: 16.6667vw;
+            }
+            .title{
+                font-size: 3.3333vw;
+                line-height: 1;
+                margin-bottom: 2.0833vw;
+            }
+            p{ 
+                font-size: 1.6667vw;
+                line-height: 1.5;
+                font-weight: 500;
+            }
+        }
+        .btn-text {
+            font-size: 1.6667vw;
+            line-height: 1.5;
+            font-weight: 500;
+            position: relative;
+            z-index: 1;
+            color: #fff; 
+            margin-top: 2.0833vw;
+            display: block;
+        }
+        .play {
+        }
+        .arrow {
+        }
+    }
+    .blocks-info { 
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        html[dir="ltr"] &{
+            padding-right: 7.2917vw; 
+        } 
+        html[dir="rtl"] &{
+            padding-left: 7.2917vw; 
+        }
+        .form {
+        }
+        .contact-form {
+        }
+        .form-field {
+        }
+        .input-field {
+        }
+        .form-col {
+        }
+        .form-label {
+        }
+        .form-textarea {
+        }
+        .textarea {
+        }
+        .form-submit {
+        } 
+    } 
+}

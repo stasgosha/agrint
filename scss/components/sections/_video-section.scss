@@ -1,0 +1,117 @@
+.video-section {
+    min-height: 1095px; 
+    position: relative;
+    background-color:#000; 
+    position: relative; 
+    &.playing{
+        cursor: pointer;
+    } 
+    .video-wrrap { 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+        height: 1095px;
+        padding-top: 100px;
+        padding-bottom: 20px;
+    }
+    .video-bottom{ 
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .section-caption{
+        margin-bottom: 10px;
+    }
+    .section-caption .sc-subtitle{
+        strong{
+            display: block;
+        }
+    } 
+    .sc-subtitle {
+    }
+    .video-text {
+        font-size: 20px;
+        line-height: 30px;
+        color: #fff;
+    }
+    .video-box {
+        a{
+            svg{
+                width: 87px;
+                height: 64px;
+            }
+        }
+        a.v-start.mobil{
+            display: none;
+        }
+    }
+    &.playing{
+        .video-bg video{
+            z-index: 2;
+        }
+    }
+    .video-content{
+        position: relative;
+        z-index: 1;
+        width: 100%;
+    }
+    .video-bg{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        video{ 
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            -o-object-fit: cover;
+            object-fit: cover;
+            -o-object-position: center center;
+            object-position: center center;
+            pointer-events: none;
+        }
+    }
+} 
+@media screen and (max-width: 768px){
+    .video-section {
+        min-height: 305px;  
+        .c-plus-block{
+            display: none;
+        }
+        .video-content { 
+            min-height: 305px;
+            display: flex;
+            align-items: flex-end;
+        }
+        .video-wrrap{
+            height: auto;
+        }
+        a.v-start{ 
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            left: 50%;
+        }
+        .video-text {
+            font-size: 14px;
+            line-height: 1; 
+        }
+        
+        .video-box {
+            a.v-start{
+                display: none; 
+            }
+            a.v-start.mobil{
+                display: block;
+                svg{
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+    } 
+}
