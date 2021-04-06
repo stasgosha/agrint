@@ -85,6 +85,34 @@
 			}
 		}
 	}
+	&.w-btn{
+		max-width: 290px;
+	}
+	&.btn-green{
+		background: transparent;
+		color: #fff;
+		background: $green;
+		font-weight: 500;
+		box-shadow: none;
+		border: 2px solid transparent;
+
+		&:hover,
+		&:focus,
+		&.active{
+			background: #5B422C;
+		}
+
+		&.no-border{
+			border: 0;
+			color: #5B422C;
+
+			&:hover,
+			&:focus{
+				background: transparent;
+				color: #fff;
+			}
+		}
+	}
 
 	&.fullwidth{
 		width: 100%;

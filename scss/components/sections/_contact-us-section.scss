@@ -1,0 +1,51 @@
+.contact-us-section { 
+    padding: 115px 0 0;
+    .block-content {
+    }
+    .section-caption {
+        margin-bottom: 2.0833vw;
+        .sc-title {
+        }
+        .sc-subtitle {
+            margin-top: 0.25vw;
+            text-transform: none;
+        }
+    }
+    .block-wrrap{
+        display: grid;
+        // grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 36% 46%; 
+        grid-gap: 0 18%; 
+    }
+    .block-text {
+
+    }
+    .form {
+        .form-input {
+        }
+        .form-radio-box {
+        }
+        .form-radio-item {
+        }
+        .visually-hidden {
+        }
+        .fake-label {
+        }
+        .answer-checkbox {
+        }
+        .answer-text {
+        }
+        .form-col {
+        }
+        .form-label {
+        }
+        .form-textarea {
+        }
+        .textarea {
+        }
+        .form__checkbox {
+        } 
+        .form-submit {
+        } 
+    }
+}

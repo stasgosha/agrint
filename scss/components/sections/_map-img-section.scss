@@ -1,14 +1,31 @@
 .map-img-section { 
-    padding: 7.5521vw 0 9.3750vw;
+    // padding: 7.5521vw 0 9.3750vw;
     .block-text {
         text-align: center;
         margin-bottom: 4.6875vw;
+        padding-top: 7.5521vw;
     }
     .block-image {
+        padding-bottom: 9.3750vw;
         img{
             width: 100%;
             height: auto;
             display: block
+        }
+    }
+    .section-caption {
+        margin-top: 20px;
+        margin-bottom: 2.0833vw; 
+        html[dir="ltr"] &{ 
+            text-align: left;
+        }
+    
+        html[dir="rtl"] &{ 
+            text-align: right;
+        }
+        .sc-subtitle {
+            margin-top: 0.25vw;
+            text-transform: none;
         }
     }
 }
