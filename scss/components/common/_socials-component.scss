@@ -1,6 +1,7 @@
 .socials-component{
 	display: grid;
 	grid-template-columns: min-content min-content;
+	align-items: center;
 	grid-gap: 0.7292vw;
 	white-space: nowrap;
 	color: #fff;
@@ -8,6 +9,14 @@
 	p{
 		font-size: 1.2500vw;
 		font-weight: bold;
+	}
+
+	@media screen and (max-width: 991px){
+		grid-gap: 10px;
+
+		p{
+			font-size: 14px;
+		}
 	}
 }
 
@@ -47,6 +56,28 @@
 			&:hover,
 			&:focus{
 				color: $primary;
+			}
+		}
+
+		@media screen and (max-width: 991px){
+			html[dir="ltr"] &{
+				margin-right: 8px;
+			}
+
+			html[dir="rtl"] &{
+				margin-left: 8px;
+			}
+
+			a{
+				width: 24px;
+				height: 24px;
+			}
+		}
+
+		@media screen and (max-width: 767px){
+			a{
+				width: 26px;
+				height: 26px;
 			}
 		}
 	}

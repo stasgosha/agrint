@@ -6,6 +6,25 @@
 	.section-caption{
 		max-width: 63.5417vw;
 	}
+
+	@media screen and (max-width: 991px){
+		padding: 50px 0;
+
+		.section-caption{
+			max-width: unset;
+			margin-bottom: 50px;
+		}
+	}
+
+	@media screen and (max-width: 575px){
+		background: #E9F2F0;
+
+		.section-caption{
+			.sc-subtitle{
+				font-size: 16px;
+			}
+		}
+	}
 }
 
 .features-list{
@@ -13,6 +32,18 @@
 	grid-template-columns: repeat(3, 1fr);
 	// TODO: fix gap
 	grid-gap: 5.2083vw 2.0833vw;
+
+	@media screen and (max-width: 991px){
+		grid-gap: 24px;
+	}
+
+	@media screen and (max-width: 767px){
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media screen and (max-width: 575px){
+		grid-template-columns: 1fr;
+	}
 }
 
 .feature-card{
@@ -35,10 +66,27 @@
 	.card-icon{
 		// TODO: remove bg
 		background: #eee;
+
+		@media screen and (max-width: 575px){
+			background: $text-color;
+		}
+
 		img{
 			display: block;
 			max-width: 100%;
 			height: auto;
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		display: flex;
+		flex-direction: column;
+		grid-gap: 0;
+
+		.card-icon{
+			margin-bottom: 12px;
+			width: 48px;
+			height: 48px; // TODO: remove height
 		}
 	}
 }

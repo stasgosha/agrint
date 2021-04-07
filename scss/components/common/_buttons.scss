@@ -1,5 +1,4 @@
 .btn{
-	font-weight: 700;
 	text-align: center;
 	padding: 0.6944vw 1.6667vw;
 	min-height: 3.4375vw;
@@ -85,14 +84,15 @@
 			}
 		}
 	}
+
 	&.w-btn{
 		max-width: 15.1042vw;
 		width: 100%;
 	}
+
 	&.btn-green{
-		background: transparent;
 		color: #fff;
-		background: $green;
+		background: $primary;
 		font-weight: 500;
 		box-shadow: none;
 		border: 2px solid transparent;
@@ -100,7 +100,7 @@
 		&:hover,
 		&:focus,
 		&.active{
-			background: #5B422C;
+			background: darken($primary, 10%);
 		}
 
 		&.no-border{
@@ -120,37 +120,8 @@
 	}
 
 	@media screen and (max-width: 991px){
-		min-height: 48px;
-		border-radius: 24px;
-		padding: 8px 24px;
-
-		.btn-icon{
-			width: 20px;
-			height: 20px;
-
-			&:first-child{
-				margin-right: 8px;
-			}
-
-			&:last-child{
-				margin-left: 8px;
-			}
-
-			html[dir="rtl"] &{
-				&.rtl-reverse{
-					transform: scaleX(-1);
-				}
-
-				&:first-child{
-					margin-right: 0;
-					margin-left: 8px;
-				}
-
-				&:last-child{
-					margin-left: 0;
-					margin-right: 8px;
-				}
-			}
-		}
+		min-height: 40px;
+		font-size: 16px;
+		padding: 5px 15px;
 	}
 }

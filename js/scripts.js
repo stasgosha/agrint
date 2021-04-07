@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function(){
 		e.preventDefault();
 
 		$('.menu-opener').toggleClass('active');
-		$('.main-nav').toggleClass('nav-opened');
+		$('.mobile-top-nav').toggleClass('opened');
 		$('.header').toggleClass('nav-opened');
 	});
 
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function(){
 		let header = document.querySelector('.header');
 
 		if (!!header) {
-			window.scrollY > 0
+			window.scrollY > 100
 				? header.classList.add('sticky')
 				: header.classList.remove('sticky');
 		};

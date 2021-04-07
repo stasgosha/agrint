@@ -1,6 +1,10 @@
 @mixin p{
 	font-size: 1.3542vw; // 26px
 	line-height: 1.308;
+
+	@media screen and (max-width: 991px){
+		font-size: 16px;
+	}
 }
 
 body{
@@ -18,22 +22,38 @@ body{
 @mixin h1{
 	font-size: 3.3333vw; // 64px
 	line-height: 1.3125;
+
+	@media screen and (max-width: 991px){
+		font-size: 34px;
+	}
 }
 
 @mixin h2{
 	font-size: 2.5000vw; // 48px
 	line-height: 1.3125;
+
+	@media screen and (max-width: 991px){
+		font-size: 28px;
+	}
 }
 
 @mixin h3{
 	font-size: 1.4583vw; // 28px
 	line-height: 1.428;
 	text-transform: uppercase;
+
+	@media screen and (max-width: 991px){
+		font-size: 18px;
+	}
 }
 
 @mixin h4{
 	@include p;
 	font-weight: bold;
+
+	@media screen and (max-width: 991px){
+		font-size: 18px;
+	}
 }
 
 .tpg{
@@ -101,10 +121,24 @@ body{
 			text-transform: none;
 		}
 	}
+
+	@media screen and (max-width: 991px){
+		margin-bottom: 20px;
+
+		.sc-subtitle{
+			margin-top: 16px;
+		}
+	}
+
+	@media screen and (max-width: 575px){
+		.sc-title.xs-small{
+			font-size: 22px;
+		}
+	}
 }
 
 .page-caption{
-	@include h1; 
+	@include h1;
 }
 
 .read-more-link{
@@ -116,7 +150,6 @@ body{
 		font-size: 1.0417vw;
 		font-weight: 500;
 		transition: all $t;
-		opacity: 0;
 	}
 
 	.link-icon{
@@ -124,35 +157,60 @@ body{
 		height: 1.0938vw;
 		fill: currentcolor;
 		transition: all $t;
-		position: absolute;
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-
-		html[dir="ltr"] &{
-			left: 0;
-		}
-
-		html[dir="rtl"] &{
-			right: 0;
-			transform: scaleX(-1) translateY(-50%);
-		}
 	}
 
-	&:hover,
-	&:focus{
+	@media screen and (min-width: 992px){
 		.link-text{
-			opacity: 1;
+			opacity: 0;
 		}
 
 		.link-icon{
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+
 			html[dir="ltr"] &{
-				left: calc(100% + 0.7813vw);
+				left: 0;
 			}
 
 			html[dir="rtl"] &{
-				right: calc(100% + 0.7813vw);
+				right: 0;
+				transform: scaleX(-1) translateY(-50%);
 			}
+		}
+
+		&:hover,
+		&:focus{
+			.link-text{
+				opacity: 1;
+			}
+
+			.link-icon{
+				html[dir="ltr"] &{
+					left: calc(100% + 0.7813vw);
+				}
+
+				html[dir="rtl"] &{
+					right: calc(100% + 0.7813vw);
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		display: grid;
+		align-items: center;
+		grid-template-columns: min-content min-content;
+		white-space: nowrap;
+		grid-gap: 10px;
+
+		.link-text{
+			font-size: 14px;
+		}
+
+		.link-icon{
+			width: 33px;
+			height: 10px;
 		}
 	}
 }

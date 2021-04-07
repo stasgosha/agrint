@@ -23,6 +23,34 @@
 			padding: 0 1.0417vw;
 		}
 	}
+
+	@media screen and (max-width: 991px){
+		.footer-row{
+			&.first{
+				padding: 30px 0 20px;
+			}
+
+			&.second{
+				padding: 20px 0;
+			}
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		.footer-row.first{
+			.footer-inner{
+				flex-direction: column;
+
+				.footer-block{
+					margin-bottom: 15px;
+
+					&:last-child{
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
 }
 
 .footer-logo{
@@ -50,12 +78,57 @@
 			}
 		}
 	}
+
+	@media screen and (max-width: 991px){
+		max-width: 220px;
+
+		p{
+			margin-top: 8px;
+			font-size: 12px;
+
+			// TODO: fix paddings
+			html[dir="ltr"] &{
+				padding-left: 20px;
+			}
+
+			html[dir="rtl"] &{
+				padding-right: 20px;
+			}
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		display: flex;
+		max-width: unset;
+	}
 }
 
 .footer-nav-block{
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 6.2500vw;
+
+	@media screen and (max-width: 991px){
+		grid-gap: 48px;
+	}
+
+	@media screen and (max-width: 575px){
+		display: flex;
+		justify-content: space-between;
+		width: calc(100% + 10px * 2);
+		margin-left: -10px;
+		margin-right: -10px;
+		grid-gap: 0;
+		
+		.column{
+			padding: 0 10px;
+			white-space: nowrap;
+
+			&:last-child{
+				min-width: 90px;
+			}
+		}
+	}
 }
 
 .footer-caption{
@@ -64,6 +137,15 @@
 	font-weight: bold;
 	text-transform: uppercase;
 	margin-bottom: 0.7813vw;
+
+	@media screen and (max-width: 991px){
+		font-size: 14px;
+		margin-bottom: 8px;
+	}
+
+	@media screen and (max-width: 575px){
+		font-size: 11px;
+	}
 }
 
 .footer-nav{
@@ -72,6 +154,10 @@
 		font-size: 1.2500vw;
 		line-height: 1.2;
 
+		&:last-child{
+			margin-bottom: 0;
+		}
+
 		a{
 			color: inherit;
 
@@ -79,6 +165,16 @@
 			&:focus{
 				color: $accent;
 			}
+		}
+
+		@media screen and (max-width: 991px){
+			margin-bottom: 8px;
+			font-size: 14px;
+		}
+
+		@media screen and (max-width: 575px){
+			font-size: 11px;
+			font-weight: bold;
 		}
 	}
 }
@@ -95,5 +191,20 @@
 		&:focus{
 			color: $accent;
 		}
+	}
+
+	@media screen and (max-width: 991px){
+		font-size: 12px;
+	}
+
+	@media screen and (max-width: 575px){
+		font-size: 10px;
+		line-height: 1.4;
+	}
+}
+
+.creator{
+	@media screen and (max-width: 575px){
+		max-width: 70px;
 	}
 }
