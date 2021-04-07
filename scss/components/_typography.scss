@@ -129,6 +129,12 @@ body{
 			margin-top: 16px;
 		}
 	}
+
+	@media screen and (max-width: 575px){
+		.sc-title.xs-small{
+			font-size: 22px;
+		}
+	}
 }
 
 .page-caption{

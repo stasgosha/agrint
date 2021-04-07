@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function(){
 		e.preventDefault();
 
 		$('.menu-opener').toggleClass('active');
-		$('.main-nav').toggleClass('nav-opened');
+		$('.mobile-top-nav').toggleClass('opened');
 		$('.header').toggleClass('nav-opened');
 	});
 

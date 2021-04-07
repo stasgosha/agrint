@@ -22,21 +22,20 @@
 	}
 
 	.bar{
-		background: rgba(#fff, .5);
-		height: 2px;
+		background: $primary;
+		height: 3px;
+		border-radius: 2px;
 		display: block;
-		margin-bottom: 2px;
+		margin-bottom: 4px;
 		transition: all $t;
-		width: 20px;
+		width: 24px;
 
 		&:last-child{
 			margin-bottom: 0;
-			display: none;
 		}
 
 		&:nth-child(2){
 			position: relative;
-			margin-bottom: 0;
 
 			&:before{
 				transition: transform $t, opacity $t;
@@ -50,7 +49,6 @@
 				top: 0;
 				transform-origin: center center;
 				border-radius: inherit;
-				opacity: 0;
 			}
 		}
 	}

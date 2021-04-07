@@ -79,6 +79,10 @@ picture, iframe, figure{
 		padding-top: 94px;
 	}
 
+	@media screen and (max-width: 767px){
+		padding-top: 68px;
+	}
+
 	.page-content{
 		flex: auto;
 		position: relative;
@@ -92,8 +96,12 @@ picture, iframe, figure{
 
 .container{
 	width: 100%;
-	padding: 0 25px;
+	padding: 0 15px;
 	margin: 0 auto;
+
+	@media screen and (min-width: 360px){
+		padding: 0 25px;
+	}
 
 	@media screen and (min-width: 576px){
 		max-width: 565px;

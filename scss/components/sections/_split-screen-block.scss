@@ -32,28 +32,30 @@
 		margin-top: 2.5000vw;
 	}
 
-	&:nth-child(odd){
-		.block-content{
-			html[dir="ltr"] &{
-				padding-right: 4.1667vw;
-			}
+	@media screen and (min-width: 576px){
+		&:nth-child(odd){
+			.block-content{
+				html[dir="ltr"] &{
+					padding-right: 4.1667vw;
+				}
 
-			html[dir="rtl"] &{
-				padding-left: 4.1667vw;
+				html[dir="rtl"] &{
+					padding-left: 4.1667vw;
+				}
 			}
 		}
-	}
 
-	&:nth-child(even){
-		.block-content{
-			order: 2;
+		&:nth-child(even){
+			.block-content{
+				order: 2;
 
-			html[dir="ltr"] &{
-				padding-left: 4.1667vw;
-			}
+				html[dir="ltr"] &{
+					padding-left: 4.1667vw;
+				}
 
-			html[dir="rtl"] &{
-				padding-right: 4.1667vw;
+				html[dir="rtl"] &{
+					padding-right: 4.1667vw;
+				}
 			}
 		}
 	}
@@ -61,5 +63,41 @@
 	@media screen and (max-width: 991px){
 		height: auto;
 		min-height: 400px;
+	}
+
+	@media screen and (max-width: 575px){
+		flex-direction: column-reverse;
+		height: auto;
+		min-height: unset;
+
+		.block-content{
+			padding: 20px 25px 45px;
+			width: 100%;
+		}
+
+		.block-footer{
+			margin-top: 20px;
+		}
+
+		.block-image{
+			position: relative;
+			width: 100%;
+
+			&:before{
+				content: '';
+				display: block;
+				padding-top: 62.222%;
+			}
+		}
+
+		.section-caption{
+			.sc-subtitle{
+				margin-top: 8px;
+			}
+
+			.tech-section &{
+				margin-bottom: 5px;
+			}
+		}
 	}
 }
