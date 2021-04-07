@@ -1,0 +1,42 @@
+.big-bg-form {
+    position: relative;
+    .bg-picture {
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: block;
+            object-fit: cover;
+            object-position: center center;
+            z-index: -1;
+        }
+    }
+    .block-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        min-height: 741px;
+        padding: 100px 0;
+    }
+    .section-caption {
+        .sc-title {
+            color: #fff;
+        }
+    }
+    .form {
+        .form-field {
+            input {
+                border: 2px solid #3C3B3B;
+                background: #E7DDC4;
+                margin-bottom: 40px;
+                max-width: 514px;
+                padding: 0 15px;
+            }
+        }
+        .input-field {}
+        .form-submit {}
+    }
+}

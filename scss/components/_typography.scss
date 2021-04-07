@@ -160,3 +160,25 @@ body{
 .no-transform{
 	text-transform: none;
 }
+
+.block-pdf{
+    display: inline-flex;
+    align-items: center; 
+	&:before{ 
+		width: 1.9792vw;
+		height: 2.2917vw;
+		background: url(http://wwwimages.adobe.com/content/dam/acom/en/legal/images/badges/Adobe_PDF_file_icon_32x32.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		display: inline-block;
+		content: ' ';
+	}
+	.read-more-link{
+        html[dir="ltr"] &{
+			margin-left: 1.8750vw;
+        } 
+        html[dir="rtl"] &{
+			margin-right: 1.8750vw;
+        } 
+	}
+}

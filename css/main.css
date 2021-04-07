@@ -466,6 +466,26 @@ html[dir=rtl] .read-more-link:hover .link-icon, html[dir=rtl] .read-more-link:fo
   text-transform: none;
 }
 
+.block-pdf {
+  display: inline-flex;
+  align-items: center;
+}
+.block-pdf:before {
+  width: 1.9792vw;
+  height: 2.2917vw;
+  background: url(http://wwwimages.adobe.com/content/dam/acom/en/legal/images/badges/Adobe_PDF_file_icon_32x32.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  content: " ";
+}
+html[dir=ltr] .block-pdf .read-more-link {
+  margin-left: 1.875vw;
+}
+html[dir=rtl] .block-pdf .read-more-link {
+  margin-right: 1.875vw;
+}
+
 [class^=icon-], [class*=" icon-"] {
   display: inline-flex;
   align-items: center;
@@ -919,6 +939,46 @@ html[dir=rtl] .btn .btn-icon:last-child {
 .form textarea:focus,
 .form .select-field select:focus {
   border-color: #26A562;
+}
+.form .select-field {
+  position: relative;
+}
+.form .select-field select {
+  border: 2px solid #3C3B3B;
+  height: 3.125vw;
+  padding: 0 0.625vw;
+}
+.form .select-field:after {
+  content: "";
+  display: block;
+  width: 1.1979vw;
+  height: 0.625vw;
+  background: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M11 1.17a1 1 0 00-1.41 0L6 4.71 2.46 1.17a1 1 0 10-1.41 1.42l4.24 4.24a1 1 0 001.42 0L11 2.59a1 1 0 000-1.42z' fill='%23fff'/%3E%3C/svg%3E") no-repeat center center/contain;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+html[dir=ltr] .form .select-field:after {
+  right: 0.9722vw;
+}
+html[dir=rtl] .form .select-field:after {
+  left: 0.9722vw;
+}
+@media screen and (max-width: 1199px) {
+  .form .select-field:after {
+    width: 12px;
+    height: 12px;
+  }
+  html[dir=ltr] .form .select-field:after {
+    right: 14px;
+  }
+  html[dir=rtl] .form .select-field:after {
+    left: 14px;
+  }
+}
+.form .select-field option {
+  background: #310000;
 }
 
 .contact-form.form input, .contact-form.form textarea {
@@ -2551,4 +2611,189 @@ html[dir=rtl] .middle-img-section .blocks-info {
     width: 40px;
     height: 40px;
   }
+}
+.product-section {
+  padding-top: 5.2083vw;
+  margin-bottom: 7.8125vw;
+}
+.product-section .product-blocks {
+  margin-bottom: 1.5625vw;
+}
+.product-section .product-blocks .product-img {
+  display: block;
+  background-color: #ccc;
+}
+.product-section .product-blocks .product-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.product-section .product-blocks .product-info {
+  padding: 1.0417vw 2.0833vw 1.0417vw 0.5208vw;
+  display: flex;
+  justify-content: space-between;
+}
+.product-section .product-blocks .product-info .buttons {
+  display: inline-flex;
+  align-items: center;
+  height: 2.2396vw;
+  padding: 0.3646vw 0.7813vw;
+  font-size: 0.9375vw;
+  line-height: 1;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #26A562;
+  position: relative;
+}
+.product-section .product-blocks .product-info .buttons.border {
+  border: 0.0521vw solid #26A562;
+  border-radius: 0.4167vw;
+}
+.product-section .product-blocks .product-info .buttons::after {
+  content: "";
+  position: absolute;
+  width: 0.5729vw;
+  height: 0.7292vw;
+  background-color: #ccc;
+}
+html[dir=ltr] .product-section .product-blocks .product-info .buttons {
+  padding-right: 1.9625vw;
+  margin-left: 1.5625vw;
+}
+html[dir=ltr] .product-section .product-blocks .product-info .buttons::after {
+  right: 0.8854vw;
+}
+html[dir=rtl] .product-section .product-blocks .product-info .buttons {
+  padding-left: 1.9625vw;
+  margin-right: 1.5625vw;
+}
+html[dir=rtl] .product-section .product-blocks .product-info .buttons::after {
+  left: 0.8854vw;
+}
+.product-section .product-blocks .product-caption {
+  font-size: 1.3542vw;
+  line-height: 1.5;
+  color: #26A562;
+}
+
+.middle-img-section-reverse {
+  display: grid;
+  grid-template-columns: 34.5313vw 63.9583vw;
+  grid-gap: 0 1.3542vw;
+}
+.middle-img-section-reverse .blocks-img {
+  min-height: 47.5521vw;
+  padding-top: 17.2396vw;
+  position: relative;
+}
+html[dir=ltr] .middle-img-section-reverse .blocks-img {
+  padding-right: 7.2917vw;
+}
+html[dir=rtl] .middle-img-section-reverse .blocks-img {
+  padding-left: 7.2917vw;
+}
+.middle-img-section-reverse .blocks-img .bg-picture img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+.middle-img-section-reverse .blocks-img .blocks-content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+html[dir=ltr] .middle-img-section-reverse .blocks-img .blocks-content {
+  padding-left: 16.6667vw;
+}
+html[dir=rtl] .middle-img-section-reverse .blocks-img .blocks-content {
+  padding-right: 16.6667vw;
+}
+.middle-img-section-reverse .blocks-img .blocks-content .title {
+  font-size: 3.3333vw;
+  line-height: 1;
+  margin-bottom: 2.0833vw;
+}
+.middle-img-section-reverse .blocks-img .blocks-content p {
+  font-size: 1.6667vw;
+  line-height: 1.5;
+  font-weight: 500;
+}
+.middle-img-section-reverse .blocks-img .btn-text {
+  font-size: 1.6667vw;
+  line-height: 1.5;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  margin-top: 2.0833vw;
+  display: block;
+}
+.middle-img-section-reverse .blocks-info {
+  display: flex;
+  flex-direction: column;
+  padding-top: 9.375vw;
+}
+html[dir=ltr] .middle-img-section-reverse .blocks-info {
+  padding-left: 7.2917vw;
+}
+html[dir=rtl] .middle-img-section-reverse .blocks-info {
+  padding-right: 7.2917vw;
+}
+.middle-img-section-reverse .section-caption .sc-subtitle {
+  margin-top: 0;
+}
+.middle-img-section-reverse .block-footer .text {
+  display: block;
+  margin-top: 1.0417vw;
+  margin-bottom: 2.0833vw;
+  font-size: 1.3542vw;
+  line-height: 1;
+  font-weight: 500;
+}
+.middle-img-section-reverse .form {
+  margin-bottom: 2.6042vw;
+}
+.middle-img-section-reverse .form .form-label {
+  color: #26A562;
+  font-size: 1.4583vw;
+  line-height: 1.5;
+  margin-bottom: 1.0417vw;
+  font-weight: 700;
+}
+.big-bg-form {
+  position: relative;
+}
+.big-bg-form .bg-picture img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+  z-index: -1;
+}
+.big-bg-form .block-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 741px;
+  padding: 100px 0;
+}
+.big-bg-form .section-caption .sc-title {
+  color: #fff;
+}
+.big-bg-form .form .form-field input {
+  border: 2px solid #3C3B3B;
+  background: #E7DDC4;
+  margin-bottom: 40px;
+  max-width: 514px;
+  padding: 0 15px;
 }
