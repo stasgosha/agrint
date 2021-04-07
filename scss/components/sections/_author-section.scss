@@ -1,28 +1,28 @@
 .authors-section { 
-    .section-caption{
-        margin-bottom: 5.2083vw;
-    }
-    .author-blocks {
-        .blocks-img { 
-            background-color: #ccc;
-            img{ 
-                width: 100%;
-                height: auto;
-                display: block;
-            }
-        }
-        .blocks-info {
-            background: #EBEBEB;
-            padding: 1.3021vw 2.3438vw 2.1875vw;
-            .block-caption{
-                font-size: 1.4583vw;
-                font-weight: 500;
-                margin-bottom: 1.0417vw;
-            }
-            p{
-                font-size: 1.3542vw;
-                line-height: 1.5;
-            }
-        }
-    }
+	.section-caption{
+		margin-bottom: 5.2083vw;
+	}
+	.author-blocks {
+		.blocks-img { 
+			background-color: #ccc;
+			img{ 
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+		}
+		.blocks-info {
+			background: #EBEBEB;
+			padding: 1.3021vw 2.3438vw 2.1875vw;
+			.block-caption{
+				font-size: 1.4583vw;
+				font-weight: 500;
+				margin-bottom: 1.0417vw;
+			}
+			p{
+				font-size: 1.3542vw;
+				line-height: 1.5;
+			}
+		}
+	}
 }

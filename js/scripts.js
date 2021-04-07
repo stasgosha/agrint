@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function(){
 		let header = document.querySelector('.header');
 
 		if (!!header) {
-			window.scrollY > 0
+			window.scrollY > 100
 				? header.classList.add('sticky')
 				: header.classList.remove('sticky');
 		};

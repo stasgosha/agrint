@@ -4,9 +4,9 @@
 
 	.section-inner{
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 2fr min-content;
 		// TODO: fix gap
-		grid-gap: 5.2083vw 0;
+		grid-gap: 5.2083vw 24px;
 	}
 
 	.socials-component{
@@ -49,5 +49,16 @@
 
 	.btn{
 		width: 100%;
+	}
+
+	@media screen and (max-width: 991px){
+		.form-inner{
+			grid-template-columns: 1fr 140px;
+			grid-gap: 24px;
+		}
+
+		.form-fields{
+			grid-gap: 24px;
+		}
 	}
 }
