@@ -106,6 +106,30 @@
 			}
 		}
 	}
+
+	@media screen and (max-width: 991px){
+		min-height: unset;
+
+		.section-top{
+			padding: 25px 0 80px;
+
+			.breadcrumbs{
+				position: static;
+				margin-bottom: 50px;
+			}
+		}
+
+		.section-caption{
+			.sc-subtitle{
+				max-width: 400px;
+				margin-bottom: 24px;
+			}
+		}
+
+		.section-bottom{
+			display: none;
+		}
+	}
 }
 
 .breadcrumbs{
@@ -133,5 +157,9 @@
 				color: $accent;
 			}
 		}
+	}
+
+	@media screen and (max-width: 991px){
+		font-size: 12px;
 	}
 }

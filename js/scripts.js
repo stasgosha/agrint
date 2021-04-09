@@ -1,3 +1,26 @@
+// TODO: ↓↓↓ remove this script ↓↓↓
+// Current menu item highlithing
+$(function () {
+	var location = window.location.href;
+	var cur_url = location.split('/').pop();
+
+	$('.top-nav li, .mobile-top-nav li, .footer-nav li').each(function () {
+		var link = $(this).find('a').attr('href');
+
+		// console.log(link);
+
+		if (cur_url == '') {
+			cur_url = 'index.html';
+		}
+
+		if (cur_url == link)
+		{
+			$(this).addClass('current-menu-item');
+			$(this).parents('li').addClass('current-menu-parent');
+		}
+	});
+});
+
 document.addEventListener('DOMContentLoaded', function(){
 
 	const isRTL = $('html').attr('dir') == 'rtl';
@@ -66,6 +89,8 @@ document.addEventListener('DOMContentLoaded', function(){
 		fade: true
 	});
 
+	equalSlideHeight('.steps-slider');
+
 	// Product page - solutions slider
 	$('.product-solutions-slider').slick({
 		slidesToShow: 1,
@@ -80,27 +105,6 @@ document.addEventListener('DOMContentLoaded', function(){
 		// fade: true
 	});
 
-	// if ($(window).width() < 768) {
-	// 	$('.home-section .section-grid').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-	// 		$('.home-section [data-slick-index='+nextSlide+']').trigger('mouseenter').trigger('mouseleave');
-	// 	});
-
-	// 	$('.home-section .section-grid').slick({
-	// 		slidesToShow: 3,
-	// 		slidesToScroll: 1,
-	// 		arrows: false,
-	// 		dots: false,
-	// 		infinite: true,
-	// 		speed: 600,
-	// 		centerMode: true,
-	// 		centerPadding: 0,
-	// 		autoplay: true,
-	// 		autoplaySpeed: 5000,
-	// 		rtl: isRTL
-	// 	});
-
-	// 	equalSlideHeight('.home-section .section-grid');
-	// }
 	//block-tab
 	$('.block-tab .title').on('click', function(e){
 		e.preventDefault();

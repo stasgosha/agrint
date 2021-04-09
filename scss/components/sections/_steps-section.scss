@@ -1,17 +1,32 @@
 .steps-section{
 	.slick-dots{
-		width: auto;
 		position: absolute;
 		bottom: 1.25vw !important;
 
-		html[dir="ltr"] &{
-			left: 50%;
-			transform: translateX(calc(-100% - 1.25vw));
+		@media screen and (min-width: 576px){
+			width: auto;
+
+			html[dir="ltr"] &{
+				left: 50%;
+				transform: translateX(calc(-100% - 1.25vw));
+
+				@media screen and (max-width: 991px){
+					transform: translateX(calc(-100% - 16px));
+				}
+			}
+
+			html[dir="rtl"] &{
+				right: 50%;
+				transform: translateX(calc(100% + 1.25vw));
+
+				@media screen and (max-width: 991px){
+					transform: translateX(calc(100% + 16px));
+				}
+			}
 		}
 
-		html[dir="rtl"] &{
-			right: 50%;
-			transform: translateX(calc(100% + 1.25vw));
+		@media screen and (max-width: 991px){
+			bottom: 16px !important;
 		}
 	}
 
@@ -28,11 +43,35 @@
 
 				html[dir="ltr"] &{
 					right: calc(100% + 0.5208vw);
+
+					@media screen and (max-width: 991px){
+						right: calc(100% + 6px);
+					}
 				}
 
 				html[dir="rtl"] &{
 					left: calc(100% + 0.5208vw);
+
+					@media screen and (max-width: 991px){
+						left: calc(100% + 6px);
+					}
 				}
+
+				@media screen and (max-width: 991px){
+					font-size: inherit;
+					line-height: inherit;
+				}
+			}
+		}
+	}
+
+	.split-screen-block{
+		height: 100%;
+
+		@media screen and (max-width: 575px){
+			.block-content{
+				padding-left: 40px;
+				padding-right: 40px;
 			}
 		}
 	}
