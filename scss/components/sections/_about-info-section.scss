@@ -2,6 +2,7 @@
 	.big-screen-block{ 
 		background-color: #E9F2F0;  
 		display: flex;
+		flex-wrap: wrap;
 		height: calc(100vh - 5.4734vw);
 		min-height: 600px;
 		
@@ -93,4 +94,45 @@
 			}
 		} 
 	} 
+	@media screen and (max-width: 991px){
+		.big-screen-block{
+			height: auto;
+		}
+		.big-screen-block{  
+			.block-text{ 
+				ul{
+					li{
+						position: relative; 
+						&::before{
+							content: "";
+							position: absolute;
+							width: 5px;
+							height: 5px;
+							background: $gray;
+							top: 5px; 
+							border-radius: 50%;
+						}
+						html[dir="ltr"] &{
+							padding-left: 10px;
+							&::before{
+								left: 0;
+							}
+						}
+						html[dir="rtl"] &{
+							padding-right: 10px;
+							&::before{
+								right: 0;
+							}
+						}
+					}
+				} 
+			}
+			.block-image, .block-content{
+				width: 100%;
+			}
+			.block-image{
+				height: 400px; 
+			}
+		}
+	}
 }

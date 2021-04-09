@@ -1,11 +1,12 @@
 .block-bottom-info {
-	position: absolute;
-	width: 100%;
-	left: 0;
-	bottom: 0;
-	z-index: 3;
+	// position: absolute;
+	// width: 100%;
+	// left: 0;
+	// bottom: 0;
+	// z-index: 3;
 	text-align: center;
 	background-color: rgba(#fff, 0.8);
+	margin-top: auto;
 
 	.block-container{
 		max-width: 67.7083vw;
@@ -40,6 +41,34 @@
 	.block-text{
 		p+p{
 			margin-top: 1.0417vw;
+		}
+	}
+	@media screen and (max-width: 991px){
+		margin-top: 50px;
+		.icons-wrrap{ 
+			grid-template-columns: repeat(2,1fr);
+			grid-gap: 10px; 
+			margin-bottom: 20px;
+		}
+		.block-container{
+			max-width: 700px;
+		}
+		.icons-item{ 
+			img{
+				margin: 3px auto;
+				width: 44px;
+				height: 44px;
+			}
+		} 
+	}
+	@media screen and (max-width: 657px){
+		padding-left: 25px;
+		padding-right: 25px;
+		// .block-container{ 
+		// 	max-width: 515px;
+		// }
+		.icons-wrrap{
+			max-width: 100%;
 		}
 	}
 }
