@@ -42,8 +42,15 @@
 
 		.breadcrumbs{
 			position: absolute;
-			left: 0;
 			top: 2.0833vw;
+
+			html[dir="ltr"] &{
+				left: 0;
+			}
+
+			html[dir="rtl"] &{
+				right: 0;
+			}
 		}
 	}
 

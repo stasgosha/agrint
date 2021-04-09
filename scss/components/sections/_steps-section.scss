@@ -2,14 +2,15 @@
 	.slick-dots{
 		width: auto;
 		position: absolute;
-		left: 50%;
 		bottom: 1.25vw !important;
 
 		html[dir="ltr"] &{
+			left: 50%;
 			transform: translateX(calc(-100% - 1.25vw));
 		}
 
 		html[dir="rtl"] &{
+			right: 50%;
 			transform: translateX(calc(100% + 1.25vw));
 		}
 	}
@@ -20,11 +21,18 @@
 
 			.step-number{
 				position: absolute;
-				right: calc(100% + 0.5208vw);
 				font-size: 6.2500vw;
 				font-weight: bold;
 				bottom: 0;
 				line-height: 0.95;
+
+				html[dir="ltr"] &{
+					right: calc(100% + 0.5208vw);
+				}
+
+				html[dir="rtl"] &{
+					left: calc(100% + 0.5208vw);
+				}
 			}
 		}
 	}
