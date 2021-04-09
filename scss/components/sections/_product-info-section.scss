@@ -1,12 +1,7 @@
 .product-info-section{
-	margin-top: -5.7292vw;
 	padding-bottom: 2.8646vw;
 	position: relative;
 	z-index: 2;
-
-	.section-caption{
-		margin-bottom: 6.7708vw;
-	}
 
 	.section-inner{
 		display: grid;
@@ -21,12 +16,35 @@
 			margin-bottom: 0;
 		}
 	}
+
+	@media screen and (min-width: 992px){
+		margin-top: -5.7292vw;
+
+		.section-caption{
+			margin-bottom: 6.7708vw;
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		padding-top: 50px;
+	}
+
+	@media screen and (max-width: 767px){
+		.section-inner{
+			grid-template-columns: 1fr;
+			grid-gap: 50px;
+		}
+	}
 }
 
 .pests-grid{
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 0.5208vw;
+
+	@media screen and (max-width: 991px){
+		grid-gap: 8px;
+	}
 }
 
 .pest-card{

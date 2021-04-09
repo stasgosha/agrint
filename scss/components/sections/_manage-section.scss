@@ -30,6 +30,19 @@
 				html[dir="rtl"] &{
 					margin-left: 0.4167vw;
 				}
+
+				@media screen and (max-width: 991px){
+					width: 6px;
+					height: 6px;
+
+					html[dir="ltr"] &{
+						margin-right: 8px;
+					}
+
+					html[dir="rtl"] &{
+						margin-left: 8px;
+					}
+				}
 			}
 		}
 	}
@@ -42,6 +55,20 @@
 			display: block;
 			max-width: 100%;
 			height: auto;
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		padding: 50px 0;
+
+		.section-caption{
+			max-width: 600px;
+			margin-bottom: 16px;
+		}
+
+		.section-features{
+			max-width: 600px;
+			margin-bottom: 50px;
 		}
 	}
 }

@@ -58,4 +58,21 @@
 			color: $accent;
 		}
 	}
+
+	@media screen and (max-width: 767px){
+		padding-bottom: 20px;
+
+		.card-image{
+			margin-bottom: 20px;
+		}
+
+		.card-content{
+			padding: 0 20px;
+		}
+
+		.card-footer{
+			padding: 0 20px;
+			margin-top: 10px;
+		}
+	}
 }

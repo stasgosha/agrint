@@ -55,4 +55,13 @@
 			text-transform: none;
 		}
 	}
+
+	@media screen and (max-width: 991px){
+		height: auto;
+		min-height: 500px;
+
+		.section-caption{
+			max-width: 380px;
+		}
+	}
 }

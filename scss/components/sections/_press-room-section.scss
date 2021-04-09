@@ -1,11 +1,24 @@
 .press-room-section{
 	padding-bottom: 2.3438vw;
+
+	@media screen and (max-width: 991px){
+		padding: 25px 0;
+	}
 }
 
 .articles-grid{
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 3.8542vw 0.8333vw;
+
+	@media screen and (max-width: 991px){
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 32px 8px;
+	}
+
+	@media screen and (max-width: 575px){
+		grid-template-columns: 1fr;
+	}
 }
 
 .article-card{
@@ -43,7 +56,6 @@
 
 	.card-content{
 		padding: 3.6458vw 0 1.5625vw;
-		font-weight: 300;
 
 		html[dir="ltr"] &{
 			padding-right: 3.6458vw;
@@ -76,37 +88,77 @@
 		margin-top: 1.5625vw;
 	}
 
-	.articles-grid &{
-		&:first-child{
-			grid-column: 1 / -1;
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			grid-gap: 0.8333vw;
+	@media screen and (min-width: 576px){
+		.articles-grid &{
+			&:first-child{
+				grid-column: 1 / -1;
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				grid-gap: 0.8333vw;
 
-			.card-content{
-				padding-top: 3.6458vw;
-				padding-bottom: 3.6458vw;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
+				.card-content{
+					padding-top: 3.6458vw;
+					padding-bottom: 3.6458vw;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
 
-				html[dir="ltr"] &{
-					padding-right: 5.7292vw;
+					html[dir="ltr"] &{
+						padding-right: 5.7292vw;
+					}
+
+					html[dir="rtl"] &{
+						padding-left: 5.7292vw;
+					}
 				}
 
-				html[dir="rtl"] &{
-					padding-left: 5.7292vw;
+				.card-image{
+					grid-column: span 2;
+					order: 1;
+
+					&:before{
+						padding-top: 68.32%;
+					}
+				}
+
+				@media screen and (max-width: 991px){
+					grid-template-columns: 1fr 1fr;
+					grid-gap: 8px;
+
+					.card-image{
+						grid-column: span 1;
+					}
 				}
 			}
+		}
+	}
 
-			.card-image{
-				grid-column: span 2;
-				order: 1;
+	@media screen and (max-width: 991px){
+		.card-caption{
+			font-size: 22px;
+			margin-bottom: 16px;
+		}
 
-				&:before{
-					padding-top: 68.32%;
-				}
+		.card-footer{
+			margin-top: 22px;
+		}
+
+		.card-content{
+			padding: 32px 0 10px;
+
+			html[dir="ltr"] &{
+				padding-right: 20px;
 			}
+
+			html[dir="rtl"] &{
+				padding-left: 20px;
+			}
+		}
+	}
+
+	@media screen and (max-width: 575px){
+		.card-content{
+			padding: 32px 0 10px !important;
 		}
 	}
 }
