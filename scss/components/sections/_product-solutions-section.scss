@@ -1,5 +1,9 @@
 .product-solutions-section{
 	padding-bottom: 5.2083vw;
+
+	@media screen and (max-width: 991px){
+		padding-bottom: 60px;
+	}
 }
 
 .product-solutions-slider{
@@ -9,6 +13,16 @@
 	
 	.slide{
 		padding: 0 0.5208vw;
+	}
+
+	@media screen and (max-width: 991px){
+		width: calc(100% + 4px * 2);
+		margin-left: -4px;
+		margin-right: -4px;
+		
+		.slide{
+			padding: 0 4px;
+		}
 	}
 }
 
@@ -80,6 +94,33 @@
 					display: none;
 				}
 			}
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		.block-back{
+			grid-gap: 8px;
+		}
+
+		.block-front{
+			width: 45vw;
+			height: 18vw;
+			padding: 3vw;
+		}
+	}
+
+	@media screen and (max-width: 575px){
+		.block-back{
+			grid-template-columns: 1fr;
+
+			.back-image:before{
+				padding-top: 70%;
+			}
+		}
+
+		.block-front{
+			width: 80%;
+			height: 120px;
 		}
 	}
 }

@@ -1,5 +1,15 @@
 .crops-section{
 	padding: 2.8646vw 0 5.7292vw;
+
+	@media screen and (max-width: 991px){
+		padding: 30px 0 50px;
+	}
+
+	@media screen and (max-width: 767px){
+		.cards-list{
+			grid-gap: 32px 8px;
+		}
+	}
 }
 
 .crop-card{
@@ -49,6 +59,12 @@
 
 		.card-caption{
 			color: $accent;
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		.card-image{
+			margin-bottom: 8px;
 		}
 	}
 }
