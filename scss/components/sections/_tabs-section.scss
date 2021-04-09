@@ -10,9 +10,8 @@
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 4.1667vw;
         ul.tabs-nav {
-            list-style: none;
-            margin-bottom: 1.8229vw;
-            display: block; 
+            list-style: none; 
+            display: block;
             li {
                 display: block;
                 margin: 0;
@@ -32,7 +31,8 @@
                     color: $gray;
                     text-transform: initial;
                     transition: all ease 0.35s;
-                    cursor: pointer; 
+                    cursor: pointer;
+                    text-align: start;
                     &:focus {
                         outline: none;
                     }
@@ -61,18 +61,18 @@
                             right: 0;
                         }
                     }
-                    &:after { 
+                    &:after {
                         border: solid $gray;
                         border-width: 0 0.1042vw 0.1042vw 0;
                         display: inline-block;
                         padding: 0.4167vw;
                         position: relative;
-                        html[dir="ltr"] &{
+                        html[dir="ltr"] & {
                             margin-left: auto;
                             right: 1.0417vw;
                             transform: rotate( -45deg);
                         }
-                        html[dir="rtl"] &{
+                        html[dir="rtl"] & {
                             margin-right: auto;
                             left: 1.0417vw;
                             transform: rotate(135deg);
@@ -93,5 +93,65 @@
                 }
             }
         }
+    }
+    @media screen and (max-width: 991px) {
+        .section-caption{
+            margin-bottom: 20px;
+        }  
+        .tabs-wrapper{
+            grid-gap: 10px;
+            ul.tabs-nav{ 
+                li{
+                    .tab-btn{
+                        flex-wrap: wrap;
+                        margin-bottom: 10px;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        strong{ 
+                            display: block;
+                            width: 100%;
+                            html[dir="ltr"] & {
+                                margin-right: 5px;
+                            }
+                            html[dir="rtl"] & {
+                                margin-left: 5px;
+                            }
+                        }
+                        &:after { 
+                            border-width: 0 1px 1px 0; 
+                            padding: 4px;
+                            position: relative;
+                            html[dir="ltr"] & { 
+                                right: 10px; 
+                            }
+                            html[dir="rtl"] & {  
+                                left: 10px; 
+                            }
+                        }
+                    } 
+                } 
+            } 
+        } 
+    }
+    @media screen and (max-width: 567px) {
+        .tabs-wrapper{ 
+            display: block;
+        }
+        .tabs-wrapper{ 
+            ul.tabs-nav{ 
+                li{
+                    .tab-btn{ 
+                        strong{  
+                            html[dir="ltr"] & {
+                                margin-right: 0;
+                            }
+                            html[dir="rtl"] & {
+                                margin-left: 0;
+                            }
+                        } 
+                    } 
+                } 
+            } 
+        } 
     }
 }

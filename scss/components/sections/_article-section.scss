@@ -43,4 +43,57 @@
             }
         } 
     } 
+	@media screen and (max-width: 991px){ 
+        padding-top: 50px;
+        .section-caption{
+            margin-bottom: 20px;
+        }
+        .article-list {
+            li{
+                html[dir="ltr"] &{ 
+                    padding-left: 10px;
+                }
+                html[dir="rtl"] &{
+                    padding-right: 10px;
+                }
+                position: relative;
+                &:after{
+                    content: "";
+                    position: absolute;
+                    width: 4px;
+                    height: 4px;
+                    border-radius: 50%;
+                    background: $gray;
+                    top: 7px;
+                    html[dir="ltr"] &{ 
+                        left: 0;
+                    }
+                    html[dir="rtl"] &{
+                        right: 0;
+                    }
+                }
+                strong{
+                    color: $primary;
+                    font-weight: 500;
+                }
+            } 
+        } 
+    }
+	@media screen and (max-width: 991px){ 
+        .article-wrrap{
+            grid-gap:10px;
+        }
+    }
+	@media screen and (max-width: 575px){ 
+        .article-wrrap{
+            display: block;
+            >div{
+                margin-bottom: 40px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+            
+        }
+    }
 }

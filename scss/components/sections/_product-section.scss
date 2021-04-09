@@ -1,37 +1,36 @@
-.product-section { 
+.product-section {
     padding-top: 5.2083vw;
     margin-bottom: 7.8125vw;
-    .section-caption {
-    } 
-    .product-blocks { 
+    .section-caption {}
+    .product-blocks {
         margin-bottom: 1.5625vw;
-        .product-img { 
+        .product-img {
             display: block;
             background-color: #ccc;
-            &::before{
+            &::before {
                 content: "";
                 display: block;
                 padding-top: 18.2292vw;
             }
-            img{
+            img {
                 width: 100%;
                 height: auto;
-                display: block; 
+                display: block;
             }
         }
         .product-info {
             display: flex;
             justify-content: space-between;
-            html[dir="ltr"] &{ 
+            html[dir="ltr"] & {
                 padding: 1.0417vw 0 1.0417vw 0.5208vw;
             }
-            html[dir="rtl"] &{
+            html[dir="rtl"] & {
                 padding: 1.0417vw 0.5208vw 1.0417vw 0;
             }
-            .buttons{
+            .buttons {
                 display: inline-flex;
-                align-items: center; 
-                height: 2.2396vw; 
+                align-items: center;
+                height: 2.2396vw;
                 padding: 0.3646vw 0.7813vw;
                 font-size: 0.9375vw;
                 line-height: 1;
@@ -39,36 +38,101 @@
                 text-transform: uppercase;
                 color: $primary;
                 position: relative;
-                &.border{
+                &.border {
                     border: 0.0521vw solid $primary;
                     border-radius: 0.4167vw;
+                    max-width: 8.5938vw; 
+                    width: 100%;
                 }
-                &::after{
-                    content:"";
+                &::after {
+                    content: "";
                     position: absolute;
                     width: 0.5729vw;
                     height: 0.7292vw;
                     background-color: #ccc;
                 }
-                html[dir="ltr"] &{
+                html[dir="ltr"] & {
                     padding-right: 1.9625vw;
                     margin-left: 1.5625vw;
-                    &::after{
+                    &::after {
                         right: 0.8854vw;
                     }
-                } 
-                html[dir="rtl"] &{
+                }
+                html[dir="rtl"] & {
                     padding-left: 1.9625vw;
                     margin-right: 1.5625vw;
-                    &::after{
+                    &::after {
                         left: 0.8854vw;
                     }
-                } 
+                }
             }
         }
         .product-caption {
-            @include p; 
+            @include p;
             color: $primary;
+        }
+    }
+    @media screen and (max-width: 991px) {
+        padding-top: 50px;
+        margin-bottom: 50px;
+        .section-caption {}
+        .product-blocks {
+            margin-bottom: 10px;
+            .product-img { 
+                &::before { 
+                    padding-top: 150px;
+                } 
+            }
+            .product-info {  
+                html[dir="ltr"] & {
+                    padding: 10px 0 10px 10px;
+                }
+                html[dir="rtl"] & {
+                    padding: 10px 10px 10px 0;
+                }
+                .buttons { 
+                    height: 25px;
+                    padding: 5px;
+                    font-size: 10px; 
+                    &.border {
+                        border: 1px solid $primary;
+                        border-radius: 3px;
+                        max-width: 85px; 
+                    }
+                    &::after { 
+                        width: 7px;
+                        height: 7px; 
+                    }
+                    html[dir="ltr"] & {
+                        padding-right: 16px;
+                        margin-left: 10px;
+                        &::after {
+                            right: 5px;
+                        }
+                    }
+                    html[dir="rtl"] & {
+                        padding-left: 16px;
+                        margin-right: 10px;
+                        &::after {
+                            left: 5px;
+                        }
+                    }
+                }
+            } 
+        }
+    }
+    @media screen and (max-width: 567px) {
+        
+        .product-blocks {  
+            max-width: 320px;
+            width: 100%;
+            margin: 0 auto;
+            margin-bottom: 25px;
+            .product-img { 
+                &::before { 
+                    padding-top: 200px;
+                } 
+            }
         }
     }
 }
