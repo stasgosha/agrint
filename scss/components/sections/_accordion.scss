@@ -1,44 +1,80 @@
  .accordion {
-    margin-bottom: 1.5625vw;
-    padding-bottom: 1.5625vw;
-    border-bottom: 1px solid $primary;
-    &.opened {
-        .ac-caption::after {
-            transform: rotate( -135deg); 
-            bottom: -0.3125vw;
-        }
-    }
-    .ac-content,
-    .ac-caption {
-        padding: 1.0417vw;
-    }
-    .ac-caption {
-        @include p;
-        font-weight: 500;
-        position: relative;
-        cursor: pointer;
-        &::after {
-            content: "";
-            position: relative;
-            display: inline-block;
-            border: solid $accent;
-            border-width: 0 0.1042vw 0.1042vw 0;
-            padding: 0.4167vw;
-            bottom: 0.2083vw;
-            transform: rotate( 45deg);
-            transition: all, 0.5s;
-            html[dir="ltr"] & {
-                margin-left: 0.7813vw;
-            }
-            html[dir="rtl"] & {
-                margin-right: 0.7813vw;
-            }
-        }
-    }
-    .ac-content {
-        padding-top: 0;
-        padding-bottom: 0;
-        display: none;
-    }
-}
- 
+     margin-bottom: 1.5625vw;
+     padding-bottom: 1.5625vw;
+     border-bottom: 1px solid $primary;
+     &.opened {
+         .ac-caption::after {
+             transform: rotate( -135deg);
+             bottom: -0.3125vw;
+         }
+     }
+     .ac-content,
+     .ac-caption {
+         padding: 1.0417vw;
+     }
+     .ac-caption {
+         @include p;
+         font-weight: 500;
+         position: relative;
+         cursor: pointer;
+         &::after {
+             content: "";
+             position: relative;
+             display: inline-block;
+             border: solid $accent;
+             border-width: 0 0.1042vw 0.1042vw 0;
+             padding: 0.4167vw;
+             bottom: 0.2083vw;
+             transform: rotate( 45deg);
+             transition: all, 0.5s;
+             html[dir="ltr"] & {
+                 margin-left: 0.7813vw;
+             }
+             html[dir="rtl"] & {
+                 margin-right: 0.7813vw;
+             }
+         }
+     }
+     .ac-content {
+         padding-top: 0;
+         padding-bottom: 0;
+         display: none;
+     }
+     @media screen and (max-width: 991px) {
+         .ac-caption {
+             br {
+                 display: contents;
+             }
+         }
+         margin-bottom: 10px;
+         padding-bottom: 10px;
+         &.opened {
+             .ac-caption::after {
+                 bottom: -2px;
+             }
+         }
+         .ac-content,
+         .ac-caption {
+             padding: 10px;
+         }
+         .ac-caption {
+             &::after {
+                 border-width: 0 1px 1px 0;
+                 padding: 4px;
+                 bottom: 2px;
+                 html[dir="ltr"] & {
+                     margin-left: 15px;
+                 }
+                 html[dir="rtl"] & {
+                     margin-right: 15px;
+                 }
+             }
+         }
+     }
+     @media screen and (max-width: 567px) {
+         .ac-content,
+         .ac-caption {
+             padding: 10px 0;
+         }
+     }
+ }

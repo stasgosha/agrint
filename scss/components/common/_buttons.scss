@@ -88,6 +88,12 @@
 	&.w-btn{
 		max-width: 15.1042vw;
 		width: 100%;
+		@media screen and (max-width: 991px){ 
+			max-width: 280px;
+		}
+		@media screen and (max-width: 575px){ 
+			max-width: 100%;
+		}
 	}
 
 	&.btn-green{
