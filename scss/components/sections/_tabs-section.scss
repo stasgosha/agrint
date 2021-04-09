@@ -99,7 +99,8 @@
             margin-bottom: 20px;
         }  
         .tabs-wrapper{
-            grid-gap: 10px;
+            grid-gap: 24px;
+            grid-template-columns: 2fr 3fr;
             ul.tabs-nav{ 
                 li{
                     .tab-btn{
@@ -139,6 +140,7 @@
         }
         .tabs-wrapper{ 
             ul.tabs-nav{ 
+                margin-bottom: 40px;
                 li{
                     .tab-btn{ 
                         strong{  
