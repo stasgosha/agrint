@@ -1,0 +1,38 @@
+.app-section {
+    padding-top: 4.1667vw;
+    .section-caption {
+        margin-bottom: 2.6042vw;
+    } 
+    .app-blocks {}
+    .app-img {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 1.25vw;
+        display: block;
+		&:before{
+			content: '';
+			display: block;
+			padding-top: 127.638%;
+		}
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: block;
+            object-fit: cover;
+            object-position: center center;
+            transition: all 0.5s;
+        }
+    }
+    .app-info {}
+    .app-caption {}
+
+	.app-caption{ 
+        @include p();
+		text-align: center; 
+		font-weight: 500;
+		color: $gray;
+	} 
+}

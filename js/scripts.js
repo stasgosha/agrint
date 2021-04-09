@@ -101,7 +101,26 @@ document.addEventListener('DOMContentLoaded', function(){
 
 	// 	equalSlideHeight('.home-section .section-grid');
 	// }
+	//block-tab
+	$('.block-tab .title').on('click', function(e){
+		e.preventDefault();
+		$(this).parent().toggleClass('on')
+	});
+	//Tabs
+    $(function() {
+        var tab = $('.tabs-wrapper > div');
+        tab.hide().filter(':first').show();
 
+        // Клики по вкладкам.
+        $('.tabs-wrapper .tabs a').click(function() {
+            tab.hide();
+            tab.filter(this.hash).show();
+            $('.tabs-wrapper .tabs a').removeClass('active');
+            $(this).addClass('active');
+            return false;
+        }).filter(':first').click();
+ 
+    });
 	// Scroll to anchor
 	$(document).on('click', 'a[href^="#"]', function (event) {
 		event.preventDefault();

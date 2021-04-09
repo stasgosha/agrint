@@ -1,0 +1,91 @@
+.tabs-section {
+    padding-top: 5.2083vw;
+    .section-caption{
+        margin-bottom: 4.1667vw;
+    }
+    .tabs-wrapper { 
+        padding: 1em 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 4.1667vw;
+        ul.tabs {
+            list-style: none; 
+            margin-bottom: 1.8229vw;
+            display: block;
+            text-align: center;
+            li {
+                display: block;
+                margin: 0;
+                position: relative; 
+                html[dir="ltr"] &{
+                    text-align: left;
+                }
+                html[dir="rtl"] &{
+                    text-align: right;
+                }
+                a {
+                    display: block;
+                    @include h3();
+                    margin-bottom: 2.6042vw;
+                    padding-top: 1.0417vw;
+                    padding-bottom: 1.0417vw;
+                    font-weight: 700;
+                    position: relative;
+                    color: $gray;
+                    text-transform: initial;
+                    transition: all ease 0.35s;
+                    &:hover, &.active{
+                        color: $green; 
+                        &:before{ 
+                            background-color: $orange;
+                        }
+                    }
+                    &:after,
+                    &:before{ 
+                        content: '';
+                        position: absolute;
+                    }
+                    &:after {
+                        bottom: 0;
+                        width: 100%;
+                        height: 0.1042vw;
+                        transition: all ease 0.35s;
+                        background-color:$gray;
+                        html[dir="ltr"] &{
+                            left: 0;
+                        }
+                        html[dir="rtl"] &{
+                            right: 0;
+                        }
+                    } 
+                    &:before{
+                        width: 0.5729vw;
+                        height: 1.0938vw;
+                        background-color: $gray;
+                        top: 50%; 
+                        transform: translate(0, -50%);
+                        html[dir="ltr"] &{
+                            right: 1.0417vw;
+                        }
+                        html[dir="rtl"] &{
+                            left: 1.0417vw;
+                        }
+                    }
+                    span{
+                        @include h2();
+                        html[dir="ltr"] &{
+                            margin-right: 0.2604vw;
+                        }
+                        html[dir="rtl"] &{
+                            margin-left: 0.2604vw;
+                        }
+                    }
+                    sup{ 
+                        @include h3();
+                    }
+                }
+            }
+        }
+    }
+} 
