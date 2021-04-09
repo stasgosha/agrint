@@ -15,14 +15,7 @@
     }
     .section-caption {
         margin-top: 1.0417vw;
-        margin-bottom: 2.0833vw; 
-        html[dir="ltr"] &{ 
-            text-align: left;
-        }
-    
-        html[dir="rtl"] &{ 
-            text-align: right;
-        }
+        margin-bottom: 2.0833vw;  
         .sc-subtitle {
             margin-top: 0.25vw;
             text-transform: none;

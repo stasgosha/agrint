@@ -1,0 +1,44 @@
+ .accordion {
+    margin-bottom: 1.5625vw;
+    padding-bottom: 1.5625vw;
+    border-bottom: 1px solid $primary;
+    &.opened {
+        .ac-caption::after {
+            transform: rotate( -135deg); 
+            bottom: -0.3125vw;
+        }
+    }
+    .ac-content,
+    .ac-caption {
+        padding: 1.0417vw;
+    }
+    .ac-caption {
+        @include p;
+        font-weight: 500;
+        position: relative;
+        cursor: pointer;
+        &::after {
+            content: "";
+            position: relative;
+            display: inline-block;
+            border: solid $accent;
+            border-width: 0 0.1042vw 0.1042vw 0;
+            padding: 0.4167vw;
+            bottom: 0.2083vw;
+            transform: rotate( 45deg);
+            transition: all, 0.5s;
+            html[dir="ltr"] & {
+                margin-left: 0.7813vw;
+            }
+            html[dir="rtl"] & {
+                margin-right: 0.7813vw;
+            }
+        }
+    }
+    .ac-content {
+        padding-top: 0;
+        padding-bottom: 0;
+        display: none;
+    }
+}
+ 

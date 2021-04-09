@@ -1,25 +1,27 @@
 .tabs-section {
     padding-top: 5.2083vw;
-    .section-caption{
+    .section-caption {
         margin-bottom: 4.1667vw;
     }
-    .tabs-wrapper { 
+    .tabs-wrapper {
         padding: 1em 0;
         width: 100%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 4.1667vw;
         ul.tabs-nav {
-            list-style: none; 
+            list-style: none;
             margin-bottom: 1.8229vw;
-            display: block;
-            text-align: center;
+            display: block; 
             li {
                 display: block;
                 margin: 0;
-                position: relative; 
-                a, .tab-btn {
-                    display: block;
+                position: relative;
+                a,
+                .tab-btn {
+                    // display: block;
+                    display: flex;
+                    align-items: baseline;
                     width: 100%;
                     @include h3;
                     margin-bottom: 2.6042vw;
@@ -30,66 +32,66 @@
                     color: $gray;
                     text-transform: initial;
                     transition: all ease 0.35s;
-                    html[dir="ltr"] &{
-                        text-align: left;
-                    }
-                    html[dir="rtl"] &{
-                        text-align: right;
-                    }
-                    &:focus{
+                    cursor: pointer; 
+                    &:focus {
                         outline: none;
                     }
-                    &:hover, &.active{
-                        color: $primary; 
-                        &:before{ 
-                            background-color: $accent;
+                    &:hover,
+                    &.current {
+                        color: $primary;
+                        &:after {
+                            border-color: $accent;
                         }
                     }
                     &:after,
-                    &:before{ 
+                    &:before {
                         content: '';
                         position: absolute;
+                        transition: all ease 0.35s;
                     }
-                    &:after {
+                    &:before {
                         bottom: 0;
                         width: 100%;
-                        height: 0.1042vw;
-                        transition: all ease 0.35s;
-                        background-color:$gray;
-                        html[dir="ltr"] &{
+                        height: 1px;
+                        background-color: $gray;
+                        html[dir="ltr"] & {
                             left: 0;
                         }
-                        html[dir="rtl"] &{
+                        html[dir="rtl"] & {
                             right: 0;
                         }
-                    } 
-                    &:before{
-                        width: 0.5729vw;
-                        height: 1.0938vw;
-                        background-color: $gray;
-                        top: 50%; 
-                        transform: translate(0, -50%);
+                    }
+                    &:after { 
+                        border: solid $gray;
+                        border-width: 0 0.1042vw 0.1042vw 0;
+                        display: inline-block;
+                        padding: 0.4167vw;
+                        position: relative;
                         html[dir="ltr"] &{
+                            margin-left: auto;
                             right: 1.0417vw;
+                            transform: rotate( -45deg);
                         }
                         html[dir="rtl"] &{
+                            margin-right: auto;
                             left: 1.0417vw;
+                            transform: rotate(135deg);
                         }
                     }
-                    strong{
+                    strong {
                         @include h2;
-                        html[dir="ltr"] &{
+                        html[dir="ltr"] & {
                             margin-right: 0.2604vw;
                         }
-                        html[dir="rtl"] &{
+                        html[dir="rtl"] & {
                             margin-left: 0.2604vw;
                         }
                     }
-                    sup{ 
+                    sup {
                         @include h3;
                     }
                 }
             }
         }
     }
-} 
+}
