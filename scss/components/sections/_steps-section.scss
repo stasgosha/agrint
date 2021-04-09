@@ -1,0 +1,31 @@
+.steps-section{
+	.slick-dots{
+		width: auto;
+		position: absolute;
+		left: 50%;
+		bottom: 1.25vw !important;
+
+		html[dir="ltr"] &{
+			transform: translateX(calc(-100% - 1.25vw));
+		}
+
+		html[dir="rtl"] &{
+			transform: translateX(calc(100% + 1.25vw));
+		}
+	}
+
+	.section-caption{
+		.sc-title{
+			position: relative;
+
+			.step-number{
+				position: absolute;
+				right: calc(100% + 0.5208vw);
+				font-size: 6.2500vw;
+				font-weight: bold;
+				bottom: 0;
+				line-height: 0.95;
+			}
+		}
+	}
+}
