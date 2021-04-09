@@ -1,21 +1,21 @@
-.blocks-tab-wrrap {
-    .block-tab {
+// .blocks-tab-wrrap {
+    .accordion {
         margin-bottom: 1.5625vw;
         padding-bottom: 1.5625vw;
-        border-bottom: 1px solid $green;
+        border-bottom: 1px solid $primary;
         &.on {
-            .title {
+            .ac-caption {
                 padding-bottom: 1.3021vw;
             }
-            .text{
+            .ac-content{
                 display: block;
             }
         }
-        .text,
-        .title {
+        .ac-content,
+        .ac-caption {
             padding: 1.0417vw;
         }
-        .title {
+        .ac-caption {
             font-weight: 500;
             @include p;
             position: relative;
@@ -25,7 +25,7 @@
                 width: 1.0938vw;
                 height: 0.5729vw;
                 display: inline-block;
-                background-color: $orange;
+                background-color: $accent;
                 html[dir="ltr"] & {
                     margin-left: 0.7813vw;
                 }
@@ -34,44 +34,44 @@
                 }
             }
         }
-        .text {
+        .ac-content {
             padding-top: 0;
             padding-bottom: 0;
             display: none;
         }
     }
-}
+// }
 
-@keyframes animation-MoveUp {
-    from {
-        -webkit-transform: translateY(-2.6042vw);
-        -ms-transform: translateY(-2.6042vw);
-        transform: translateY(-2.6042vw);
-        opacity: 0
-    }
+// @keyframes animation-MoveUp {
+//     from {
+//         -webkit-transform: translateY(-2.6042vw);
+//         -ms-transform: translateY(-2.6042vw);
+//         transform: translateY(-2.6042vw);
+//         opacity: 0
+//     }
 
-    to {
-        opacity: 1;
-        -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-        transform: translateY(0)
-    }
-}
-@keyframes animation-Opacity {
-    from { 
-        opacity: 0
-    } 
-    to {
-        opacity: 1; 
-    }
-}
+//     to {
+//         opacity: 1;
+//         -webkit-transform: translateY(0);
+//         -ms-transform: translateY(0);
+//         transform: translateY(0)
+//     }
+// }
+// @keyframes animation-Opacity {
+//     from { 
+//         opacity: 0
+//     } 
+//     to {
+//         opacity: 1; 
+//     }
+// }
 
-.animation-Opacity { 
-    animation-name: animation-Opacity
-}
-.animation-MoveUp { 
-    animation-name: animation-MoveUp
-}
-.animated-fast { 
-    animation-duration: 0.5s
-}
+// .animation-Opacity { 
+//     animation-name: animation-Opacity
+// }
+// .animation-MoveUp { 
+//     animation-name: animation-MoveUp
+// }
+// .animated-fast { 
+//     animation-duration: 0.5s
+// }

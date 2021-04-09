@@ -1,16 +1,22 @@
 .big-bg-form {
     position: relative;
     .bg-picture {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: transparent linear-gradient( 270deg, #FDB22A00 0%, #FDB22A 100%) 0% 0% no-repeat padding-box; 
+        z-index: -1;
         img {
             width: 100%;
             height: 100%;
             position: absolute;
-            left: 0;
+            left: 0; 
             top: 0;
             display: block;
             object-fit: cover;
             object-position: center center;
             z-index: -1;
+            mix-blend-mode: multiply;
         }
     }
     .block-info {

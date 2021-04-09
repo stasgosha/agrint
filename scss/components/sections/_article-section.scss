@@ -10,6 +10,9 @@
     }
     .article-info {
     }
+    .article-wrrap>.article-info:first-child li:first-child:after{
+        background: $primary; 
+    }
     .article-list {
         li{
             html[dir="ltr"] &{ 
@@ -34,21 +37,10 @@
                     right: 0;
                 }
             }
-            span{
-                color: $green;
+            strong{
+                color: $primary;
                 font-weight: 500;
             }
-        }
-        &.first-green-circle{
-            li{
-                &:first-child{ 
-                    &:after{
-                        background: $green;
-                    }
-                }
-            }
-        }
-    }
-    .first-green-circle { 
+        } 
     } 
 }
