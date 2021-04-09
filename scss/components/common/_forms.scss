@@ -120,10 +120,24 @@
 			}
 		}
 
-		.form-submit {
-			input,button{
-				min-height: 3.4375vw;
-				font-size: 1.6667vw;
+		@media screen and (min-width: 992px){
+			.form-submit {
+				input,button{
+					min-height: 3.4375vw;
+					font-size: 1.6667vw;
+				}
+			}
+		}
+
+		@media screen and (max-width: 991px){
+			.form-fields{
+				grid-gap: 16px;
+			}
+
+			.form-textarea {
+				textarea{
+					height: 120px;
+				}
 			}
 		}
 	}
