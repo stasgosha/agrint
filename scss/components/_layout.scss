@@ -136,6 +136,8 @@ picture, iframe, figure{
 	}
 
 	@media screen and (max-width: 991px){
+		grid-gap: 8px;
+
 		@for $i from 1 through 4 {
 			&.md-columns-#{$i} {
 				grid-template-columns: repeat(#{$i}, 1fr);
