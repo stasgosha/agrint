@@ -47,6 +47,10 @@
             border: 2px solid $gray;  
             height: 3.1250vw;
             padding: 0 0.625vw;
+			@media screen and (max-width: 991px){
+				height: 40px;
+				font-size: 16px;
+			}
         }
 		&:after{
 			content: '';
