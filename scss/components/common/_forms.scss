@@ -9,7 +9,7 @@
 		border-radius: 0;
 		flex: auto;
 		height: 3.4375vw;
-		font-size: 1.4583vw;
+		@include h3();
 		font-weight: bold;
 		color: $text-color;
 		font-family: inherit;
@@ -261,9 +261,8 @@
 
 
 
-@mixin label-form{
-	font-size: 1.3542vw; //26px
-	line-height: 1;
+@mixin label-form{					
+	@include p(); 
 	font-weight: bold;
 	color: $text-color;
 	font-family: inherit;
@@ -340,8 +339,7 @@
 				}
 	
 				input[type=radio]+span {
-					font-size: 1.3542vw;
-					line-height: 1;
+					@include p();
 					vertical-align: text-top;
 					top: -0.4167vw;
 					html[dir="ltr"] &{ 
@@ -506,9 +504,8 @@
 		}
 	}
 
-	.wpcf7-checkbox input[type=checkbox]+span {
-		font-size: 1.3542vw;
-		line-height: 1;
+	.wpcf7-checkbox input[type=checkbox]+span {					
+		@include p(); 
 		vertical-align: text-top;
 		top: -0.4167vw;
 		html[dir="ltr"] &{ 

@@ -38,8 +38,7 @@
                 padding-left: 16.6667vw;
             }
             .title{
-                font-size: 3.3333vw;
-                line-height: 1;
+                @include h1();
                 margin-bottom: 2.0833vw;
             }
             p{ 
