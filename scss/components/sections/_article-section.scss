@@ -1,0 +1,46 @@
+.article-section { 
+    padding-top: 5.2083vw;
+    .section-caption {
+        margin-bottom: 2.6042vw;
+    } 
+    .article-wrrap {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        grid-gap:0 2.6042vw;
+    }
+    .article-info {
+    }
+    .article-wrrap>.article-info:first-child li:first-child:after{
+        background: $primary; 
+    }
+    .article-list {
+        li{
+            html[dir="ltr"] &{ 
+                padding-left: 0.7813vw;
+            }
+            html[dir="rtl"] &{
+                padding-right: 0.7813vw;
+            }
+            position: relative;
+            &:after{
+                content: "";
+                position: absolute;
+                width: 0.2604vw;
+                height: 0.2604vw;
+                border-radius: 50%;
+                background: $gray;
+                top: 0.7813vw;
+                html[dir="ltr"] &{ 
+                    left: 0;
+                }
+                html[dir="rtl"] &{
+                    right: 0;
+                }
+            }
+            strong{
+                color: $primary;
+                font-weight: 500;
+            }
+        } 
+    } 
+}
