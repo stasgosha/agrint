@@ -5,4 +5,17 @@
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 2.6042vw 7.5521vw; 
     } 
+    
+	@media screen and (max-width: 991px){
+        padding: 25px 0;
+        .section-inner {
+            display: block;
+            >div{
+                margin-bottom: 30px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            } 
+        }  
+    }
 }
