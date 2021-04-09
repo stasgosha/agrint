@@ -121,9 +121,11 @@
         grid-template-columns: repeat(2, 1fr);
     }
     @media screen and (max-width: 567px) {
-        display: block;
+        display: flex;
+        flex-direction: column;
         .blocks-img {
             min-height: 300px;
+            order: -1;
         }
         .blocks-info {
             padding-top: 50px;
