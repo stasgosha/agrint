@@ -62,12 +62,20 @@
 		.title{
 			@include h1;
 			margin-bottom: 2.0833vw;
+
+			@media screen and (max-width: 991px){
+				margin-bottom: 24px;
+			}
 		}
 
 		p{ 
 			font-size: 1.6667vw;
 			line-height: 1.5;
 			font-weight: 500;
+
+			@media screen and (max-width: 991px){
+				font-size: 16px;
+			}
 		}
 	}
 
@@ -80,6 +88,11 @@
 		color: #fff; 
 		margin-top: 2.0833vw;
 		display: block;
+
+		@media screen and (max-width: 991px){
+			font-size: 16px;
+			margin-top: 24px;
+		}
 	}
 
 	.blocks-info {
@@ -102,6 +115,55 @@
 					font-size: 2.9167vw;
 				}
 			}
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		min-height: unset;
+
+		.blocks-img{
+			padding: 120px 25px;
+
+			html[dir="ltr"] &{
+				padding-left: 50px;
+			}
+
+			html[dir="rtl"] &{
+				padding-right: 50px;
+			}
+		}
+
+		.blocks-content{
+			max-width: 400px;
+
+			html[dir="ltr"] &{
+				padding-right: 0;
+			}
+
+			html[dir="rtl"] &{
+				padding-left: 0;
+			}
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		grid-template-columns: 1fr;
+		grid-gap: 10px;
+
+		.blocks-img{
+			padding: 120px 25px;
+
+			html[dir="ltr"] &{
+				padding-left: 25px;
+			}
+
+			html[dir="rtl"] &{
+				padding-right: 25px;
+			}
+		}
+
+		.blocks-info{
+			padding: 30px 25px !important;
 		}
 	}
 }

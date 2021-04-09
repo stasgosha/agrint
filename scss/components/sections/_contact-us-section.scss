@@ -3,6 +3,7 @@
 
 	.section-caption {
 		margin-bottom: 2.0833vw;
+
 		.sc-subtitle {
 			margin-top: 0.25vw;
 			text-transform: none;
@@ -12,6 +13,22 @@
 	.block-wrrap{
 		display: grid; 
 		grid-template-columns: 30.7292vw 38.0729vw;
+		justify-content: space-between;
 		grid-gap: 0 16.7188vw;
+	}
+
+	@media screen and (max-width: 991px){
+		padding: 50px 0;
+
+		.block-wrrap{
+			grid-gap: 40px;
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		.block-wrrap{
+			grid-template-columns: 1fr;
+		}
 	}
 }

@@ -102,9 +102,126 @@
 	}
 }
 
+.radios-grid{
+	display: flex;
+
+	.radio:not(:last-child){
+		html[dir="ltr"] &{
+			margin-right: 1.0417vw;
+
+			@media screen and (max-width: 991px){
+				margin-right: 20px;
+			}
+		}
+
+		html[dir="rtl"] &{
+			margin-left: 1.0417vw;
+
+			@media screen and (max-width: 991px){
+				margin-left: 20px;
+			}
+		}
+	}
+}
+
 .checkbox,
 .radio{
+	.fake-label{
+		display: block;
+		padding-left: 2.6042vw;
+		position: relative;
+		line-height: 1.5625vw;
+		transition: all $t;
+		cursor: pointer;
+		display: block;
 
+		&:before{
+			content: '';
+			display: block;
+			width: 1.5625vw;
+			height: 1.5625vw;
+			border: 2px solid #000;
+			position: absolute;
+			left: 0;
+			top: 0;
+			transition: all $t;
+
+			@media screen and (max-width: 1199px) and (min-width: 992px){
+				border-width: 1px;
+			}
+		}
+
+		&:after{
+			content: '';
+			display: block;
+			width: 1.5625vw;
+			height: 1.5625vw;
+			position: absolute;
+			left: 0;
+			top: 0;
+			opacity: 0;
+			transition: all $t;
+			background: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath fill='%23000' d='M5 5h20v20H5z'/%3E%3C/svg%3E") no-repeat center center / contain;
+		}
+
+		html[dir="rtl"] &{
+			padding-left: 0;
+			padding-right: 2.6042vw;
+
+			&:before{
+				left: auto;
+				right: 0;
+			}
+
+			&:after{
+				left: auto;
+				right: 0;
+			}
+		}
+
+		@media screen and (max-width: 991px){
+			line-height: 24px;
+
+			html[dir="ltr"] &{
+				padding-left: 35px;
+			}
+
+			html[dir="rtl"] &{
+				padding-right: 35px;
+			}
+
+			&:before,
+			&:after{
+				width: 24px;
+				height: 24px;
+			}
+		}
+	}
+
+	&:hover,
+	&:focus{
+		.fake-label{
+			color: $primary;
+		}
+	}
+
+	input:checked + .fake-label{
+		&:after{
+			opacity: 1;
+		}
+	}
+}
+
+.radio{
+	.fake-label{
+		&:before{
+			border-radius: 50%;
+		}
+
+		&:after{
+			background-image: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Crect x='5' y='5' width='20' height='20' rx='10' fill='%23000'/%3E%3C/svg%3E");
+		}
+	}
 }
 
 .contact-form{
@@ -120,10 +237,24 @@
 			}
 		}
 
-		.form-submit {
-			input,button{
-				min-height: 3.4375vw;
-				font-size: 1.6667vw;
+		@media screen and (min-width: 992px){
+			.form-submit {
+				input,button{
+					min-height: 3.4375vw;
+					font-size: 1.6667vw;
+				}
+			}
+		}
+
+		@media screen and (max-width: 991px){
+			.form-fields{
+				grid-gap: 16px;
+			}
+
+			.form-textarea {
+				textarea{
+					height: 120px;
+				}
 			}
 		}
 	}
