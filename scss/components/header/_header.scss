@@ -44,6 +44,10 @@
 
 	&.sticky{
 		box-shadow: 0 0 1px rgba(#000, .3);
+
+		@media screen and (min-width: 992px){
+			transform: translateY(-3.4024vw);
+		}
 	}
 
 	.mobile-header-right{

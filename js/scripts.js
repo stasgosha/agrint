@@ -52,6 +52,34 @@ document.addEventListener('DOMContentLoaded', function(){
 		nextArrow: '<button type="button" class="slick-next" aria-label="Следующий"><svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 17"><path d="M0 2l2-2 8 8.2-8 8.2-2-2 6.2-6.2L0 2z"/></svg></button>'
 	}
 
+	// Product page - steps slider
+	$('.steps-slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		dots: true,
+		infinite: true,
+		speed: 800,
+		autoplay: true,
+		autoplaySpeed: 5000,
+		rtl: isRTL,
+		fade: true
+	});
+
+	// Product page - solutions slider
+	$('.product-solutions-slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		dots: true,
+		infinite: true,
+		speed: 800,
+		autoplay: true,
+		autoplaySpeed: 5000,
+		rtl: isRTL,
+		// fade: true
+	});
+
 	// if ($(window).width() < 768) {
 	// 	$('.home-section .section-grid').on('beforeChange', function(event, slick, currentSlide, nextSlide){
 	// 		$('.home-section [data-slick-index='+nextSlide+']').trigger('mouseenter').trigger('mouseleave');

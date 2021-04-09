@@ -1,0 +1,79 @@
+.product-info-section{
+	margin-top: -5.7292vw;
+	padding-bottom: 2.8646vw;
+	position: relative;
+	z-index: 2;
+
+	.section-caption{
+		margin-bottom: 6.7708vw;
+	}
+
+	.section-inner{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 4.1667vw;
+	}
+
+	.section-text{
+		margin-bottom: 2.0833vw;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+
+.pests-grid{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 0.5208vw;
+}
+
+.pest-card{
+	display: block;
+	color: inherit;
+
+	.card-image{
+		position: relative;
+		overflow: hidden;
+		
+		&:before{
+			content: '';
+			display: block;
+			padding-top: 86.79%;
+		}
+		
+		img{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: block;
+			object-fit: cover;
+			object-position: center center;
+			transition: all .5s;
+		}
+	}
+
+	.card-caption{
+		text-align: center;
+		margin-top: 1.3021vw;
+		@include h4;
+		transition: all $t;
+	}
+
+	&:hover,
+	&:focus{
+		.card-image{
+			img{
+				transform: scale(1.05);
+				opacity: .8;
+			}
+		}
+
+		.card-caption{
+			color: $primary;
+		}
+	}
+}

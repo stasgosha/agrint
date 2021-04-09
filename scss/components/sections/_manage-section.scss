@@ -1,0 +1,47 @@
+.manage-section{
+	padding: 10.4167vw 0 4.6875vw;
+
+	.section-caption{
+		max-width: 45.8333vw;
+		margin: 0 auto 1.2500vw;
+		text-align: center;
+	}
+
+	.section-features{
+		max-width: 59.8958vw;
+		margin: 0 auto 3.1250vw;
+		text-align: center;
+		@include p;
+
+		li{
+			&:before{
+				content: '';
+				display: inline-block;
+				width: 0.8333vw;
+				height: 0.8333vw;
+				background: $primary;
+
+				// TODO: change style
+
+				html[dir="ltr"] &{
+					margin-right: 0.4167vw;
+				}
+
+				html[dir="rtl"] &{
+					margin-left: 0.4167vw;
+				}
+			}
+		}
+	}
+
+	.section-image{
+		display: flex;
+		justify-content: flex-end;
+
+		img{
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+}
