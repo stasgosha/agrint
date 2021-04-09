@@ -9,7 +9,7 @@
 		border-radius: 0;
 		flex: auto;
 		height: 3.4375vw;
-		@include h3();
+		@include h3;
 		font-weight: bold;
 		color: $text-color;
 		font-family: inherit;
@@ -262,7 +262,7 @@
 
 
 @mixin label-form{					
-	@include p(); 
+	@include p; 
 	font-weight: bold;
 	color: $text-color;
 	font-family: inherit;
@@ -339,7 +339,7 @@
 				}
 	
 				input[type=radio]+span {
-					@include p();
+					@include p;
 					vertical-align: text-top;
 					top: -0.4167vw;
 					html[dir="ltr"] &{ 
@@ -505,7 +505,7 @@
 	}
 
 	.wpcf7-checkbox input[type=checkbox]+span {					
-		@include p(); 
+		@include p; 
 		vertical-align: text-top;
 		top: -0.4167vw;
 		html[dir="ltr"] &{ 

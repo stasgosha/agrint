@@ -30,7 +30,7 @@
     .app-caption {}
 
 	.app-caption{ 
-        @include p();
+        @include p;
 		text-align: center; 
 		font-weight: 500;
 		color: $gray;

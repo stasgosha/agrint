@@ -38,7 +38,7 @@
                 padding-right: 16.6667vw;
             }
             .title{
-                @include h1();
+                @include h1;
                 margin-bottom: 2.0833vw;
             }
             p{ 
@@ -83,7 +83,7 @@
     .block-footer{
         .text{
             display: block;
-            @include p();
+            @include p;
             margin-top: 1.0417vw;
             margin-bottom: 2.0833vw; 
             font-weight: 500;
@@ -93,7 +93,7 @@
         margin-bottom: 2.6042vw;
         .form-label {
             color: $green;
-            @include h3();
+            @include h3;
             text-transform: initial;
             margin-bottom: 1.0417vw;
             font-weight: 700;

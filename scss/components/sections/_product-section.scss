@@ -62,7 +62,7 @@
             }
         }
         .product-caption {
-            @include p(); 
+            @include p; 
             color: $green;
         }
     }

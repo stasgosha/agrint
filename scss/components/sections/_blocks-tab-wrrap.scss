@@ -17,7 +17,7 @@
         }
         .title {
             font-weight: 500;
-            @include p();
+            @include p;
             position: relative;
             &::after {
                 content: "";
