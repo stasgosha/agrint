@@ -3,7 +3,7 @@
 }
 
 .big-img-block{
-	min-height: calc(63.2917vw - 5.4734vw);
+	height: calc(63.2917vw - 5.4734vw);
 	// min-height: 56.25vw;
 	position: relative;
 	overflow: hidden;
@@ -19,9 +19,15 @@
 		display: flex;
 		flex-direction: column;  
 		height: 100%;
-        padding: 12.7604vw 0 0;
+		padding: 12.2396vw 0 0;
 		position: relative;
 		z-index: 1;
+
+		.breadcrumbs{
+			top: 2.3438vw;
+			position: absolute;
+		}
+
 		.section-caption {
 			position: relative;
 			z-index: 3; 
@@ -30,7 +36,7 @@
 			} 
 			.sc-subtitle { 
 				text-transform: none;
-                margin-top: 1.8229vw;
+				margin-top: 1.8229vw;
 			}
 		}
 		.block-preview{
@@ -48,6 +54,16 @@
 		position: relative;
 		.block-content{
 			padding: 50px 0 0; 
+		}
+	}
+}
+
+.about-first-screen-section{
+	.section-caption{
+		text-transform: uppercase;
+
+		.sc-subtitle{
+			text-transform: uppercase !important;
 		}
 	}
 }

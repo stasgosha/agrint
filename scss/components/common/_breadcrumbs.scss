@@ -1,0 +1,29 @@
+.breadcrumbs{
+	font-size: 1.0417vw;
+	line-height: 1.2;
+	font-weight: 400;
+	color: var(--breadcrumbs-color, #fff);
+	display: flex;
+	flex-wrap: wrap;
+
+	li{
+		display: inline;
+
+		&:not(:last-child):after{
+			content: ' > ';
+		}
+
+		a{
+			color: inherit;
+
+			&:hover,
+			&:focus{
+				color: var(--breadcrumbs-hover-color, #{ $accent });
+			}
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		font-size: 12px;
+	}
+}

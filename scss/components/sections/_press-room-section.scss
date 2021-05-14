@@ -4,6 +4,27 @@
 	@media screen and (max-width: 991px){
 		padding: 25px 0;
 	}
+
+	--breadcrumbs-color: #{ $text-color };
+	--breadcrumbs-hover-color: #{ $primary };
+
+	.container{
+		position: relative;
+
+		.breadcrumbs{
+			position: absolute;
+			top: 2.3958vw;
+
+			@media screen and (max-width: 991px){
+				top: 15px;
+			}
+
+			@media screen and (max-width: 575px){
+				position: static;
+				margin-bottom: 25px;
+			}
+		}
+	}
 }
 
 .articles-grid{
@@ -109,6 +130,11 @@
 
 					html[dir="rtl"] &{
 						padding-left: 5.7292vw;
+					}
+
+					@media screen and (max-width: 991px){
+						padding-top: 50px;
+						padding-bottom: 50px;
 					}
 				}
 

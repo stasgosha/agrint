@@ -27,11 +27,7 @@
 	.header-row{
 		&.first{
 			padding: 0.8333vw 0;
-			background: $gray;
-
-			.header-inner{
-				justify-content: flex-end;
-			}
+			background: #646464;
 		}
 
 		&.second{
@@ -112,11 +108,6 @@
 }
 
 .top-nav{
-	display: grid;
-	grid-template-columns: 1fr min-content;
-	grid-gap: 1.5625vw;
-	align-items: center;
-
 	> ul{
 		font-size: 1.2500vw;
 		line-height: 1.33;
@@ -127,6 +118,24 @@
 			&:after{
 				content: '|';
 				color: $primary;
+			}
+
+			&:last-child{
+				&:after{
+					display: none;
+				}
+
+				html[dir="ltr"] &{
+					> a{
+						padding-right: 0;
+					}
+				}
+
+				html[dir="rtl"] &{
+					> a{
+						padding-left: 0;
+					}
+				}
 			}
 
 			> a{
@@ -193,7 +202,7 @@
 			height: 0;
 			border-style: solid;
 			border-width: 0.4167vw 0.4167vw 0 0.4167vw;
-			border-color: $primary transparent transparent transparent;
+			border-color: currentColor transparent transparent transparent;
 		}
 
 		&:hover,
@@ -216,6 +225,7 @@
 		border-radius: 0.3125vw;
 		box-shadow: 0 0 0.2083vw rgba(#000, .3);
 		text-align: center;
+		color: $text-color;
 
 		&:before{
 			content: '';
@@ -396,5 +406,64 @@
 		opacity: 1;
 		visibility: visible;
 		transform: translateY(0);
+	}
+}
+
+.header{
+	align-items: center;
+
+	.lang-select{
+		display: block !important;
+	}
+
+	@media screen and (min-width: 992px){
+		.menu-main-container{
+			position: static !important;
+			transform: translateX(0) !important;
+
+			.lang-select{
+				display: none !important;
+			}
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		> .lang-select{
+			display: none !important;
+		}
+
+		.menu-main-container{
+			.lang-select{
+				margin-top: 5vw;
+				width: 15vw;
+				height: 7.5vw;
+				float: none;
+
+				.lang-select-wrap{
+					font-size: 3.35vw;
+					border-width: 1px;
+				}
+
+				.current-lang{
+					padding: 1.9vw 3vw;
+
+					&:after{
+						width: 1.56vw;
+						height: 2.49vw;
+						right: 2.49vw;
+						top: 2.67vw;
+
+						html[dir="rtl"] &{
+							right: auto;
+							left: 2.49vw;
+						}
+					}
+				}
+
+				.lang-item{
+					padding: 1.9vw 3vw;
+				}
+			}
+		}
 	}
 }

@@ -38,6 +38,29 @@
 		}
 	}
 
+	.scroll-next{
+		width: 2.9167vw;
+		height: 1.6667vw;
+		display: block;
+		color: $accent;
+		margin-top: 3.1250vw;
+
+		.link-icon{
+			width: 100%;
+			height: 100%;
+			display: block;
+			fill: currentcolor;
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		.scroll-next{
+			width: 32px;
+			height: 28px;
+			margin-top: 24px;
+		}
+	}
+
 	@media screen and (max-width: 767px){
 		min-height: unset;
 		grid-template-columns: 1fr;

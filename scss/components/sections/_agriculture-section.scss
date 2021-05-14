@@ -1,0 +1,122 @@
+.agriculture-section{
+	padding: 2.7083vw 0 1.5625vw;
+	background: #E9F2F0;
+
+	.breadcrumbs{
+		margin-bottom: 2.0833vw;
+		--breadcrumbs-color: #{ $text-color }
+	}
+
+	.section-caption{
+		text-align: center;
+		max-width: 60.9375vw;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 4.6875vw;
+
+		.sc-title{
+			color: $primary;
+			@include h1;
+		}
+
+		.sc-subtitle{
+			text-transform: uppercase;
+			color: $text-color;
+		}
+	}
+
+	.section-grid{
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 0.6250vw;
+	}
+
+	@media screen and (max-width: 991px){
+		.section-caption{
+			margin-bottom: 40px;
+		}
+
+		.breadcrumbs{
+			margin-bottom: 30px;
+		}
+
+		.section-grid{
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 8px;
+		}
+
+		.section-caption{
+			max-width: unset;
+		}
+	}
+
+	@media screen and (max-width: 575px){
+		.section-grid{
+			grid-template-columns: 1fr;
+		}
+	}
+}
+
+.agriculture-card{
+	position: relative;
+
+	.card-image{
+		position: relative;
+		
+		&:before{
+			content: '';
+			display: block;
+			padding-top: 100%;
+		}
+		
+		img{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: block;
+			object-fit: cover;
+			object-position: center center;
+		}
+	}
+
+	.card-hidden-content{
+		padding: 1.6667vw 2.5000vw;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		transition: all $t;
+		opacity: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		color: #fff;
+		background: #4C9F38;
+	}
+
+	.card-caption{
+		@include h3;
+		text-transform: uppercase;
+		margin-bottom: 0.8333vw;
+	}
+
+	&:hover,
+	&:focus{
+		.card-hidden-content{
+			opacity: 1;
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		.card-caption{
+			margin-bottom: 8px;
+		}
+
+		.card-hidden-content{
+			padding: 16px 24px;
+		}
+	}
+}

@@ -29,8 +29,6 @@
 			object-fit: cover;
 			object-position: center center;
 			opacity: .4;
-
-			// TODO: fix opacity
 		}
 	}
 
@@ -41,6 +39,10 @@
 
 	.block-content {
 		padding-top: 5.9896vw;
+
+		@media screen and (min-width: 992px){
+			max-width: 30.7292vw;
+		}
 	}
 
 	.section-caption {
@@ -56,6 +58,16 @@
 
 	.block-text {
 		color: #fff;
+	}
+
+	&.page-404{
+		.section-caption{
+			color: #fff !important;
+
+			.sc-title{
+				color: #fff !important;
+			}
+		}
 	}
 
 	@media screen and (max-width: 991px){

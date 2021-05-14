@@ -71,8 +71,8 @@ document.addEventListener('DOMContentLoaded', function(){
 	}
 
 	let arrowsButtons = {
-		prevArrow: '<button type="button" class="slick-prev" aria-label="Предыдущий"><svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 17"><path d="M10 2L8 0 0 8.2l8 8.2 2-2-6.2-6.2L10 2z"/></svg></button>',
-		nextArrow: '<button type="button" class="slick-next" aria-label="Следующий"><svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 17"><path d="M0 2l2-2 8 8.2-8 8.2-2-2 6.2-6.2L0 2z"/></svg></button>'
+		prevArrow: '<button type="button" class="slick-prev" aria-label="Previous slide"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.78 27.59"><path d="M4.76 13.8L15.2 24.23a1.96 1.96 0 010 2.79 1.99 1.99 0 01-2.8 0L.57 15.2a1.97 1.97 0 01-.05-2.72L12.39.58a1.97 1.97 0 012.8 2.78z"/></svg></button>',
+		nextArrow: '<button type="button" class="slick-next" aria-label="Next slide"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.78 27.59"><path d="M11.02 13.79L.58 3.36a1.96 1.96 0 010-2.79 1.99 1.99 0 012.8 0L15.2 12.4a1.97 1.97 0 01.06 2.72L3.38 27.01a1.97 1.97 0 01-2.8-2.78z"/></svg></button>'
 	}
 
 	// Product page - steps slider
@@ -104,6 +104,89 @@ document.addEventListener('DOMContentLoaded', function(){
 		rtl: isRTL,
 		// fade: true
 	});
+
+	// Tree protection
+	$('.tree-protection-slider').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		arrows: true,
+		...arrowsButtons,
+		dots: false,
+		infinite: true,
+		speed: 600,
+		rtl: isRTL,
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 2
+				}
+			},
+			{
+				breakpoint: 576,
+				settings: {
+					slidesToShow: 1
+				}
+			}
+		]
+	});
+
+	// Authors
+	$('.authors-slider').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		arrows: true,
+		...arrowsButtons,
+		dots: false,
+		infinite: true,
+		speed: 600,
+		rtl: isRTL,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1
+				}
+			}
+		]
+	});
+
+	equalSlideHeight('.authors-slider');
+
+	// Pests
+	$('.pests-slider').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		arrows: true,
+		...arrowsButtons,
+		dots: false,
+		infinite: true,
+		speed: 600,
+		rtl: isRTL,
+		responsive: [
+			{
+				breakpoint: 576,
+				settings: {
+					slidesToShow: 2
+				}
+			}
+		]
+	});
+
+	equalSlideHeight('.pests-slider');
+
+	// Tree protection
+	$('.category-first-screen-slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		dots: true,
+		infinite: true,
+		speed: 600,
+		rtl: isRTL
+	});
+
+	equalSlideHeight('.category-first-screen-slider');
 
 	//block-tab
 	$('.block-tab .title').on('click', function(e){

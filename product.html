@@ -21,31 +21,41 @@
 				<div class="container">
 					<div class="header-inner">
 						<div class="header-block">
+							<ul class="socials-list">
+								<li>
+									<a href="#" target="_blank" rel="noopener nofollow" aria-label="twitter">
+										<svg class="link-icon">
+											<use xlink:href="img/icons-sprite.svg#twitter"></use>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#" target="_blank" rel="noopener nofollow" aria-label="linkedin">
+										<svg class="link-icon">
+											<use xlink:href="img/icons-sprite.svg#linkedin"></use>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#" target="_blank" rel="noopener nofollow" aria-label="facebook">
+										<svg class="link-icon">
+											<use xlink:href="img/icons-sprite.svg#facebook"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="header-block">
 							<div class="socials-component">
 								<p>Contact us |</p>
-								<ul class="socials-list">
-									<li>
-										<a href="#" target="_blank" rel="noopener nofollow" aria-label="twitter">
-											<svg class="link-icon">
-												<use xlink:href="img/icons-sprite.svg#twitter"></use>
-											</svg>
-										</a>
-									</li>
-									<li>
-										<a href="#" target="_blank" rel="noopener nofollow" aria-label="linkedin">
-											<svg class="link-icon">
-												<use xlink:href="img/icons-sprite.svg#linkedin"></use>
-											</svg>
-										</a>
-									</li>
-									<li>
-										<a href="#" target="_blank" rel="noopener nofollow" aria-label="facebook">
-											<svg class="link-icon">
-												<use xlink:href="img/icons-sprite.svg#facebook"></use>
-											</svg>
-										</a>
-									</li>
-								</ul>
+
+								<div class="language-select">
+									<button class="select-opener" aria-label="Select language">EN</button>
+									<ul class="languages-list">
+										<li><a href="/agrint/">EN</a></li>
+										<li><a href="/agrint/ar/">AR</a></li>
+									</ul>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -68,14 +78,6 @@
 									<li><a href="press-room.html">Press room</a></li>
 									<li><a href="support.html">Support</a></li>
 								</ul>
-
-								<div class="language-select">
-									<button class="select-opener" aria-label="Select language">EN</button>
-									<ul class="languages-list">
-										<li><a href="/agrint/">EN</a></li>
-										<li><a href="/agrint/ar/">AR</a></li>
-									</ul>
-								</div>
 							</nav>
 						</div>
 						<div class="header-block mobile-header-right">
@@ -168,7 +170,7 @@
 		<main class="page-content">
 			<section class="product-first-screen-section">
 				<div class="section-bg">
-					<img src="img/content-images/press-room/holder.jpg" alt="">
+					<img src="img/backgrounds/product-first-screen-bg.jpg" alt="">
 				</div>
 
 				<div class="section-top">
@@ -184,9 +186,12 @@
 								<h1 class="sc-title">IoTree<sup>®</sup></h1>
 								<p class="sc-subtitle no-uppercase">Smart Sensing Solutions <br>For Tree Protection </p>
 								<p class="sc-subtitle no-uppercase">Unique Pest sensing Technology That Detect Threats In tree Before They Cause Damage.</p>
-					
-								<!-- TODO: play btn -->
 							</div>
+							<button class="play-btn" aria-label="Play video" data-video-type="youtube" data-video-modal="K5XRprbteF4">
+								<svg class="btn-icon">
+									<use xlink:href="img/icons-sprite.svg#play"></use>
+								</svg>
+							</button>
 						</div>
 					</div>
 				</div>
@@ -194,18 +199,17 @@
 				<div class="section-bottom">
 					<div class="container">
 						<ul class="page-nav">
-							<!-- TODO: add arrows -->
-							<li><a href="#">The challenge & solution</a></li>
-							<li><a href="#">The Market</a></li>
-							<li><a href="#">How does it work</a></li>
-							<li><a href="#">Plantation management</a></li>
-							<li><a href="#">Tree Protection</a></li>
+							<li><a href="#section-1">The challenge & solution</a></li>
+							<li><a href="#section-2">The Market</a></li>
+							<li><a href="#section-3">How does it work</a></li>
+							<li><a href="#section-4">Plantation management</a></li>
+							<li><a href="#section-5">Tree Protection</a></li>
 						</ul>
 					</div>
 				</div>
 			</section>
 
-			<section class="product-info-section">
+			<section class="product-info-section" id="section-1">
 				<div class="container">
 					<div class="section-inner">
 						<div class="section-column">
@@ -217,27 +221,42 @@
 								<p>The red palm weevil presents a great challenge for palm tree protection, since visible signs and symptoms of attack appear only when it is too late to save the tree</p>
 							</div>
 
-							<div class="pests-grid">
-								<a href="#" class="pest-card">
-									<div class="card-image">
-										<img src="img/content-images/press-room/holder.jpg" alt="">
-									</div>
-									<h3 class="card-caption">Pest Name</h3>
-								</a>
+							<div class="pests-slider">
+								<div class="slide">
+									<a href="#" class="pest-card">
+										<div class="card-image">
+											<img src="img/content-images/pest.jpg" alt="">
+										</div>
+										<h3 class="card-caption">Pest Name</h3>
+									</a>
+								</div>
 
-								<a href="#" class="pest-card">
-									<div class="card-image">
-										<img src="img/content-images/press-room/holder.jpg" alt="">
-									</div>
-									<h3 class="card-caption">Pest Name</h3>
-								</a>
+								<div class="slide">
+									<a href="#" class="pest-card">
+										<div class="card-image">
+											<img src="img/content-images/pest.jpg" alt="">
+										</div>
+										<h3 class="card-caption">Pest Name</h3>
+									</a>
+								</div>
 
-								<a href="#" class="pest-card">
-									<div class="card-image">
-										<img src="img/content-images/press-room/holder.jpg" alt="">
-									</div>
-									<h3 class="card-caption">Pest Name</h3>
-								</a>
+								<div class="slide">
+									<a href="#" class="pest-card">
+										<div class="card-image">
+											<img src="img/content-images/pest.jpg" alt="">
+										</div>
+										<h3 class="card-caption">Pest Name</h3>
+									</a>
+								</div>
+
+								<div class="slide">
+									<a href="#" class="pest-card">
+										<div class="card-image">
+											<img src="img/content-images/pest.jpg" alt="">
+										</div>
+										<h3 class="card-caption">Pest Name</h3>
+									</a>
+								</div>
 							</div>
 						</div>
 						<div class="section-column">
@@ -254,67 +273,94 @@
 				</div>
 			</section>
 
-			<section class="crops-section">
+			<section class="crops-section" id="section-2">
 				<div class="container">
-					<div class="section-caption">
-						<h2 class="sc-title">The Market</h2>
+					<div class="section-header">
+						<div class="section-caption">
+							<h2 class="sc-title">The Market</h2>
+						</div>
+
+						<a href="#" class="view-all-link">Choose your tree protection solution</a>
 					</div>
 
-					<div class="cards-list columns-4 sm-columns-2 xs-columns-1">
-						<a href="#" class="crop-card">
-							<div class="card-image">
-								<img src="img/content-images/press-room/holder.jpg" alt="">
-							</div>
-							<div class="card-content">
-								<h3 class="card-caption">Oil Palms</h3>
-							</div>
-						</a>
+					<div class="tree-protection-slider">
+						<div class="slide">
+							<a href="#" class="crop-card">
+								<div class="card-image">
+									<img src="img/content-images/press-room/holder.jpg" alt="">
+								</div>
+								<div class="card-content">
+									<h3 class="card-caption">Oil Palms</h3>
+								</div>
+							</a>
+						</div>
 
-						<a href="#" class="crop-card">
-							<div class="card-image">
-								<img src="img/content-images/press-room/holder.jpg" alt="">
-							</div>
-							<div class="card-content">
-								<h3 class="card-caption">Ornamental Palms</h3>
-							</div>
-						</a>
+						<div class="slide">
+							<a href="#" class="crop-card">
+								<div class="card-image">
+									<img src="img/content-images/press-room/holder.jpg" alt="">
+								</div>
+								<div class="card-content">
+									<h3 class="card-caption">Ornamental Palms</h3>
+								</div>
+							</a>
+						</div>
 
-						<a href="#" class="crop-card">
-							<div class="card-image">
-								<img src="img/content-images/press-room/holder.jpg" alt="">
-							</div>
-							<div class="card-content">
-								<h3 class="card-caption">Coconuts</h3>
-							</div>
-						</a>
+						<div class="slide">
+							<a href="#" class="crop-card">
+								<div class="card-image">
+									<img src="img/content-images/press-room/holder.jpg" alt="">
+								</div>
+								<div class="card-content">
+									<h3 class="card-caption">Ornamental Palms</h3>
+								</div>
+							</a>
+						</div>
 
-						<a href="#" class="crop-card">
-							<div class="card-image">
-								<img src="img/content-images/press-room/holder.jpg" alt="">
-							</div>
-							<div class="card-content">
-								<h3 class="card-caption">Dates</h3>
-							</div>
-						</a>
+						<div class="slide">
+							<a href="#" class="crop-card">
+								<div class="card-image">
+									<img src="img/content-images/press-room/holder.jpg" alt="">
+								</div>
+								<div class="card-content">
+									<h3 class="card-caption">Coconuts</h3>
+								</div>
+							</a>
+						</div>
+
+						<div class="slide">
+							<a href="#" class="crop-card">
+								<div class="card-image">
+									<img src="img/content-images/press-room/holder.jpg" alt="">
+								</div>
+								<div class="card-content">
+									<h3 class="card-caption">Dates</h3>
+								</div>
+							</a>
+						</div>
 					</div>
 				</div>
 			</section>
 
-			<section class="how-it-work-section">
+			<section class="how-it-work-section" id="section-3">
 				<div class="section-content">
 					<div class="section-caption">
 						<h2 class="sc-title">How does it works?</h2>
 						<p class="sc-subtitle"><strong>3-step process</strong> to provide real-time alerts That will help you protect your trees</p>
 					</div>
 
-					<!-- TODO: add arrow -->
+					<a href="#how-it-work-steps" class="scroll-next">
+						<svg class="link-icon">
+							<use xlink:href="img/icons-sprite.svg#arrow-down"></use>
+						</svg>
+					</a>
 				</div>
 				<div class="section-image">
-					<img src="img/content-images/press-room/holder.jpg" alt="">
+					<img src="img/content-images/how-it-work-bg.jpg" alt="">
 				</div>
 			</section>
 
-			<section class="steps-section">
+			<section class="steps-section" id="how-it-work-steps">
 				<div class="steps-slider">
 					<div class="slide">
 						<div class="split-screen-block">
@@ -417,8 +463,7 @@
 				</div>
 			</section>
 
-			<section class="manage-section">
-				<!-- TODO: add bg -->
+			<section class="manage-section" id="section-4">
 				<div class="container">
 					<div class="section-caption">
 						<h2 class="sc-title">Online way to manage your plantation. The sensor that’ll save your trees</h2>
@@ -431,86 +476,105 @@
 					</ul>
 				</div>
 
-				<div class="section-image">
-					<img src="img/content-images/press-room/holder.jpg" alt="">
-				</div>
+				<picture class="section-bg">
+					<img src="img/content-images/manage-bg.jpg" alt="">
+				</picture>
 			</section>
 
-			<section class="product-solutions-section">
-				<div class="product-solutions-slider">
-					<div class="slide">
-						<div class="product-solutions-block">
-							<div class="block-back">
-								<div class="back-image">
-									<img src="img/content-images/press-room/holder.jpg" alt="">
+			<section class="product-solutions-section" id="section-5">
+				<div class="container">
+					<div class="section-top">
+						<h2>Tree protection</h2>
+						<p> Global data analysis, cloud-based servers and Web-based software applications <br>All information found on an easy-to-use application <br>Get your alerts… anytime, anywhere </p>
+					</div>
+
+					<div class="product-solutions-slider">
+						<div class="slide">
+							<div class="product-solutions-block">
+								<div class="block-back">
+									<a href="#" class="crop-card wide">
+										<div class="card-image">
+											<img src="img/content-images/press-room/holder.jpg" alt="">
+										</div>
+										<div class="card-content">
+											<h3 class="card-caption">Palm Tree</h3>
+										</div>
+									</a>
+									<a href="#" class="crop-card">
+										<div class="card-image">
+											<img src="img/content-images/press-room/holder.jpg" alt="">
+										</div>
+										<div class="card-content">
+											<h3 class="card-caption">Stem Borer</h3>
+										</div>
+									</a>
 								</div>
-								<div class="back-image">
-									<img src="img/content-images/press-room/holder.jpg" alt="">
-								</div>
-							</div>
-							<div class="block-front">
-								<h3 class="block-caption">Tree protection</h3>
-								<ul class="block-list">
-									<li>Palm Tree</li>
-									<li>Stem Borer</li>
-								</ul>
 							</div>
 						</div>
-					</div>
-					<div class="slide">
-						<div class="product-solutions-block">
-							<div class="block-back">
-								<div class="back-image">
-									<img src="img/content-images/press-room/holder.jpg" alt="">
+						<div class="slide">
+							<div class="product-solutions-block">
+								<div class="block-back">
+									<a href="#" class="crop-card wide">
+										<div class="card-image">
+											<img src="img/content-images/press-room/holder.jpg" alt="">
+										</div>
+										<div class="card-content">
+											<h3 class="card-caption">Palm Tree</h3>
+										</div>
+									</a>
+									<a href="#" class="crop-card">
+										<div class="card-image">
+											<img src="img/content-images/press-room/holder.jpg" alt="">
+										</div>
+										<div class="card-content">
+											<h3 class="card-caption">Stem Borer</h3>
+										</div>
+									</a>
 								</div>
-								<div class="back-image">
-									<img src="img/content-images/press-room/holder.jpg" alt="">
-								</div>
-							</div>
-							<div class="block-front">
-								<h3 class="block-caption">Tree protection</h3>
-								<ul class="block-list">
-									<li>Palm Tree</li>
-									<li>Stem Borer</li>
-								</ul>
 							</div>
 						</div>
-					</div>
-					<div class="slide">
-						<div class="product-solutions-block">
-							<div class="block-back">
-								<div class="back-image">
-									<img src="img/content-images/press-room/holder.jpg" alt="">
+						<div class="slide">
+							<div class="product-solutions-block">
+								<div class="block-back">
+									<a href="#" class="crop-card wide">
+										<div class="card-image">
+											<img src="img/content-images/press-room/holder.jpg" alt="">
+										</div>
+										<div class="card-content">
+											<h3 class="card-caption">Palm Tree</h3>
+										</div>
+									</a>
+									<a href="#" class="crop-card">
+										<div class="card-image">
+											<img src="img/content-images/press-room/holder.jpg" alt="">
+										</div>
+										<div class="card-content">
+											<h3 class="card-caption">Stem Borer</h3>
+										</div>
+									</a>
 								</div>
-								<div class="back-image">
-									<img src="img/content-images/press-room/holder.jpg" alt="">
-								</div>
-							</div>
-							<div class="block-front">
-								<h3 class="block-caption">Tree protection</h3>
-								<ul class="block-list">
-									<li>Palm Tree</li>
-									<li>Stem Borer</li>
-								</ul>
 							</div>
 						</div>
-					</div>
-					<div class="slide">
-						<div class="product-solutions-block">
-							<div class="block-back">
-								<div class="back-image">
-									<img src="img/content-images/press-room/holder.jpg" alt="">
+						<div class="slide">
+							<div class="product-solutions-block">
+								<div class="block-back">
+									<a href="#" class="crop-card wide">
+										<div class="card-image">
+											<img src="img/content-images/press-room/holder.jpg" alt="">
+										</div>
+										<div class="card-content">
+											<h3 class="card-caption">Palm Tree</h3>
+										</div>
+									</a>
+									<a href="#" class="crop-card">
+										<div class="card-image">
+											<img src="img/content-images/press-room/holder.jpg" alt="">
+										</div>
+										<div class="card-content">
+											<h3 class="card-caption">Stem Borer</h3>
+										</div>
+									</a>
 								</div>
-								<div class="back-image">
-									<img src="img/content-images/press-room/holder.jpg" alt="">
-								</div>
-							</div>
-							<div class="block-front">
-								<h3 class="block-caption">Tree protection</h3>
-								<ul class="block-list">
-									<li>Palm Tree</li>
-									<li>Stem Borer</li>
-								</ul>
 							</div>
 						</div>
 					</div>
@@ -528,33 +592,6 @@
 							<div class="block-text">
 								<p>New developments, new products, launchings and events. <br class="xs-hidden">Sign up for our e-Newsletter</p>
 							</div>
-						</div>
-
-						<div class="socials-component text-color">
-							<p>Follow us:</p>
-							<ul class="socials-list green-icons">
-								<li>
-									<a href="#" target="_blank" rel="noopener nofollow" aria-label="twitter">
-										<svg class="link-icon">
-											<use xlink:href="img/icons-sprite.svg#twitter"></use>
-										</svg>
-									</a>
-								</li>
-								<li>
-									<a href="#" target="_blank" rel="noopener nofollow" aria-label="linkedin">
-										<svg class="link-icon">
-											<use xlink:href="img/icons-sprite.svg#linkedin"></use>
-										</svg>
-									</a>
-								</li>
-								<li>
-									<a href="#" target="_blank" rel="noopener nofollow" aria-label="facebook">
-										<svg class="link-icon">
-											<use xlink:href="img/icons-sprite.svg#facebook"></use>
-										</svg>
-									</a>
-								</li>
-							</ul>
 						</div>
 
 						<div class="newsletter-form form">
@@ -601,6 +638,7 @@
 										<li><a href="#">Pest detection</a></li>
 										<li><a href="#">Fly Trap</a></li>
 										<li><a href="#">Management app</a></li>
+										<li><a href="#">Tree protection</a></li>
 									</ul>
 								</div>
 
@@ -609,8 +647,9 @@
 
 									<ul class="footer-nav">
 										<li><a href="#">Vision</a></li>
-										<li><a href="#">Our Technology</a></li>
 										<li><a href="#">Sustainable</a></li>
+										<li><a href="#">Contact us</a></li>
+										<li><a href="#">Support</a></li>
 									</ul>
 								</div>
 
@@ -620,8 +659,33 @@
 									<ul class="footer-nav">
 										<li><a href="#">Press</a></li>
 										<li><a href="#">Blog</a></li>
-										<li><a href="#">Case studies</a></li>
 									</ul>
+
+									<div class="socials-component">
+										<ul class="socials-list">
+											<li>
+												<a href="#" target="_blank" rel="noopener nofollow" aria-label="twitter">
+													<svg class="link-icon">
+														<use xlink:href="img/icons-sprite.svg#twitter"></use>
+													</svg>
+												</a>
+											</li>
+											<li>
+												<a href="#" target="_blank" rel="noopener nofollow" aria-label="linkedin">
+													<svg class="link-icon">
+														<use xlink:href="img/icons-sprite.svg#linkedin"></use>
+													</svg>
+												</a>
+											</li>
+											<li>
+												<a href="#" target="_blank" rel="noopener nofollow" aria-label="facebook">
+													<svg class="link-icon">
+														<use xlink:href="img/icons-sprite.svg#facebook"></use>
+													</svg>
+												</a>
+											</li>
+										</ul>
+									</div>
 								</div>
 							</nav>
 						</div>
@@ -644,7 +708,23 @@
 		</footer>
 	</div>
 
+	<div class="modal video-modal" id="video-modal" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<button class="modal-close" aria-label="Закрыть попап">
+					<svg class="btn-icon">
+						<use xlink:href="img/icons-sprite.svg#modal-close"></use>
+					</svg>
+				</button>
+				<div class="modal-video">
+					<div id="modal-video-iframe"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="//www.youtube.com/iframe_api"></script>
 	<script src="js/slick.min.js"></script>
 	<script src="js/scripts.js"></script>
 </body>

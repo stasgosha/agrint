@@ -1,6 +1,20 @@
 .product-solutions-section{
 	padding-bottom: 5.2083vw;
 
+	.section-top{
+		padding: 2.6042vw 0;
+		text-align: center;
+
+		h2{
+			font-size: 1.4583vw;
+			line-height: 1.3;
+			font-weight: bold;
+			text-transform: uppercase;
+			color: $primary;
+			margin-bottom: 2.0833vw;
+		}
+	}
+
 	@media screen and (max-width: 991px){
 		padding-bottom: 60px;
 	}
@@ -31,9 +45,8 @@
 
 	.block-back{
 		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-gap: 1.0417vw;
-		pointer-events: none;
+		grid-template-columns: 1fr 27.9167vw;
+		grid-gap: 0.8333vw;
 
 		.back-image{
 			position: relative;
@@ -54,6 +67,19 @@
 				object-fit: cover;
 				object-position: center center;
 			}
+		}
+
+		@media screen and (min-width: 768px){
+			.crop-card{
+				.card-image:before{
+					height: 43.0208vw;
+					padding-top: 0;
+				}
+			}
+		}
+
+		@media screen and (max-width: 767px){
+			grid-template-columns: 1fr 1fr;
 		}
 	}
 

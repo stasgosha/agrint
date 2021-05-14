@@ -1,5 +1,5 @@
 .contact-us-section { 
-	padding: 5.9896vw 0 0;
+	padding: 5.9896vw 0;
 
 	.section-caption {
 		margin-bottom: 2.0833vw;
@@ -12,13 +12,31 @@
 
 	.block-wrrap{
 		display: grid; 
-		grid-template-columns: 30.7292vw 38.0729vw;
+		grid-template-columns: 38.0208vw 1fr;
 		justify-content: space-between;
-		grid-gap: 0 16.7188vw;
+		grid-gap: 0 7.2917vw;
+	}
+
+	.block-text{
+		width: 30.7292vw;
+	}
+
+	.block-map{
+		margin-top: 3.1250vw;
+
+		img{
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
 	}
 
 	@media screen and (max-width: 991px){
 		padding: 50px 0;
+
+		.block-text{
+			width: 100%;
+		}
 
 		.block-wrrap{
 			grid-gap: 40px;

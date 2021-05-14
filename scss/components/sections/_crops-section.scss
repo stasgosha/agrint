@@ -10,6 +10,52 @@
 			grid-gap: 32px 8px;
 		}
 	}
+
+	.section-header{
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+		margin-bottom: 2.0833vw;
+
+		.section-caption{
+			margin-bottom: 0;
+		}
+	}
+
+	.view-all-link{
+		font-size: 0.9375vw;
+		line-height: 1.2;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: $text-color;
+
+		&:after{
+			content: ' >';
+			color: $accent;
+		}
+
+		&:hover,
+		&:focus{
+			color: $accent;
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		.section-header{
+			margin-bottom: 24px;
+		}
+
+		.view-all-link{
+			font-size: 14px;
+		}
+	}
+
+	@media screen and (max-width: 575px){
+		.section-header{
+			display: grid;
+			grid-gap: 16px;
+		}
+	}
 }
 
 .crop-card{
@@ -43,9 +89,14 @@
 		transition: all $t;
 		@include h3;
 		text-align: center;
-		text-transform: uppercase;
-		font-weight: bold;
-		color: $primary;
+		text-transform: none;
+		color: $text-color;
+		font-weight: 500;
+
+		&:after{
+			content: ' >';
+			color: $accent;
+		}
 	}
 
 	&:hover,
@@ -65,6 +116,30 @@
 	@media screen and (max-width: 991px){
 		.card-image{
 			margin-bottom: 8px;
+		}
+	}
+}
+
+.tree-protection-slider{
+	width: calc(100% + 0.4167vw * 2);
+	margin-left: -0.4167vw;
+	margin-right: -0.4167vw;
+
+	--arrow-top: 42%;
+	
+	.slide{
+		padding: 0 0.4167vw;
+	}
+
+	@media screen and (max-width: 991px){
+		width: calc(100% + 4px * 2);
+		margin-left: -4px;
+		margin-right: -4px;
+
+		--arrow-top: 50%;
+		
+		.slide{
+			padding: 0 4px;
 		}
 	}
 }

@@ -1,6 +1,8 @@
 .footer{
-	background: #3C3B3B;
+	background: #646464;
 	color: #fff;
+
+	--logo-padding: 2.6042vw;
 
 	.footer-row{
 		&.first{
@@ -25,6 +27,8 @@
 	}
 
 	@media screen and (max-width: 991px){
+		--logo-padding: 28px;
+
 		.footer-row{
 			&.first{
 				padding: 30px 0 20px;
@@ -37,6 +41,8 @@
 	}
 
 	@media screen and (max-width: 767px){
+		--logo-padding: 0;
+
 		.footer-row.first{
 			.footer-inner{
 				flex-direction: column;
@@ -62,11 +68,11 @@
 		line-height: 1.4;
 
 		html[dir="ltr"] &{
-			padding-left: 2.5521vw;
+			padding-left: var(--logo-padding);
 		}
 
 		html[dir="rtl"] &{
-			padding-right: 2.5521vw;
+			padding-right: var(--logo-padding);
 		}
 
 		a{
@@ -85,15 +91,6 @@
 		p{
 			margin-top: 8px;
 			font-size: 12px;
-
-			// TODO: fix paddings
-			html[dir="ltr"] &{
-				padding-left: 20px;
-			}
-
-			html[dir="rtl"] &{
-				padding-right: 20px;
-			}
 		}
 	}
 
@@ -106,10 +103,14 @@
 .footer-nav-block{
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 6.2500vw;
+	grid-gap: 7.5000vw;
+	width: 100%;
+	max-width: 47.7083vw;
 
 	@media screen and (max-width: 991px){
 		grid-gap: 48px;
+		max-width: unset;
+		width: auto;
 	}
 
 	@media screen and (max-width: 575px){
@@ -126,6 +127,21 @@
 
 			&:last-child{
 				min-width: 90px;
+			}
+		}
+	}
+
+	.socials-component{
+		margin-top: 1.8750vw;
+	}
+
+	.socials-list{
+		li{
+			a{
+				&:hover,
+				&:focus{
+					color: $accent;
+				}
 			}
 		}
 	}
@@ -206,5 +222,15 @@
 .creator{
 	@media screen and (max-width: 575px){
 		max-width: 70px;
+	}
+}
+
+.copyright{
+	html[dir="ltr"] &{
+		padding-left: var(--logo-padding);
+	}
+
+	html[dir="rtl"] &{
+		padding-right: var(--logo-padding);
 	}
 }

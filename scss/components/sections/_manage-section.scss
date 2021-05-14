@@ -1,5 +1,10 @@
 .manage-section{
-	padding: 10.4167vw 0 4.6875vw;
+	padding: 10.4167vw 0 0;
+
+	.container{
+		position: relative;
+		z-index: 2;
+	}
 
 	.section-caption{
 		max-width: 45.8333vw;
@@ -17,23 +22,23 @@
 			&:before{
 				content: '';
 				display: inline-block;
-				width: 0.8333vw;
-				height: 0.8333vw;
-				background: $primary;
+				width: 0.7292vw;
+				height: 0.7292vw;
+				transform: translateY(-15%);
 
-				// TODO: change style
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13.34 13.35'%3E%3Cg%3E%3Cpath d='M4.67 4.6l2.2-.02a1.95 1.95 0 011.9 1.9V8.7H6.43a1.91 1.91 0 01-1.76-1.74l.01-2.37z' fill='%23ffb229'/%3E%3Cpath d='M7.18 2.35A3.83 3.83 0 019.81 3.5a3.75 3.75 0 011.18 2.67v4.82h-5.3a3.28 3.28 0 01-2.3-1.2 3.67 3.67 0 01-1.04-2.08l.02-5.34 4.81-.02m0-2.35C4 0 .02.03.02.03L0 7.71c0 2.3 2.5 5.63 5.7 5.63h7.64V6.18A6.32 6.32 0 007.18 0z' fill='%2320a562'/%3E%3C/g%3E%3C/svg%3E");
 
 				html[dir="ltr"] &{
-					margin-right: 0.4167vw;
+					margin-right: 1.5625vw;
 				}
 
 				html[dir="rtl"] &{
-					margin-left: 0.4167vw;
+					margin-left: 1.5625vw;
 				}
 
 				@media screen and (max-width: 991px){
-					width: 6px;
-					height: 6px;
+					width: 12px;
+					height: 12px;
 
 					html[dir="ltr"] &{
 						margin-right: 8px;
@@ -58,8 +63,18 @@
 		}
 	}
 
+	.section-bg{
+		margin-top: -18.0729vw;
+
+		img{
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	}
+
 	@media screen and (max-width: 991px){
-		padding: 50px 0;
+		padding: 50px 0 0;
 
 		.section-caption{
 			max-width: 600px;
@@ -69,6 +84,10 @@
 		.section-features{
 			max-width: 600px;
 			margin-bottom: 50px;
+		}
+
+		.section-bg{
+			margin-top: -50px;
 		}
 	}
 }

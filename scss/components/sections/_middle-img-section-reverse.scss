@@ -1,140 +1,218 @@
 .middle-img-section-reverse {
-    display: grid;
-    // grid-template-columns: 1228 663;
-    // grid-gap: 0 26;
-    grid-template-columns: 34.5313vw 63.9583vw;
-    grid-gap: 0 1.3542vw;
-    // margin-bottom: 5.2083vw;
-    .blocks-img {
-        min-height: 47.5521vw;
-        padding-top: 17.2396vw;
-        position: relative;
-        html[dir="ltr"] & {
-            padding-right: 7.2917vw;
-        }
-        html[dir="rtl"] & {
-            padding-left: 7.2917vw;
-        }
-        .bg-picture {
-            img {
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                left: 0;
-                top: 0;
-                display: block;
-                object-fit: cover;
-                object-position: center center;
-            }
-        } 
-    }
-    .blocks-info {
-        display: flex;
-        flex-direction: column;
-        padding-top: 9.3750vw;
-        html[dir="ltr"] & {
-            padding-left: 7.2917vw;
-        }
-        html[dir="rtl"] & {
-            padding-right: 7.2917vw;
-        }
-    }
-    .section-caption {
-        .sc-title {}
-        .sc-subtitle {
-            margin-top: 0;
-        }
-    }
-    .block-footer {
-        .text {
-            display: block;
-            @include p;
-            margin-top: 1.0417vw;
-            margin-bottom: 2.0833vw;
-            font-weight: 500;
-        }
-    }
-    .form {
-        margin-bottom: 2.6042vw;
-        .form-label {
-            color: $primary;
-            @include h3;
-            text-transform: initial;
-            margin-bottom: 1.0417vw;
-            font-weight: 700;
-        }
-        .select-field {
-            @include p;
-            select {
-                padding-top: 0.5208vw;
-                padding-bottom: 0.5208vw;
-            }
-        }
-    }
-    @media screen and (max-width: 991px) {
-        grid-template-columns: 0.5fr 1fr;
-        grid-gap: 0 20px;
-        .blocks-img {
-            min-height: 400px;
-            padding-top: 75px;
-            html[dir="ltr"] & {
-                padding-right: 7.2917vw;
-            }
-            html[dir="rtl"] & {
-                padding-left: 7.2917vw;
-            } 
-        }
-        .blocks-info {
-            padding-top: 70px;
-            html[dir="ltr"] & {
-                padding-left: 7.2917vw;
-            }
-            html[dir="rtl"] & {
-                padding-right: 7.2917vw;
-            }
-        }
-        .section-caption {
-            .sc-subtitle {
-                margin-top: 0;
-            }
-        }
-        .block-footer {
-            .text {
-                margin-top: 5px;
-                margin-bottom: 10px;
-            }
-        }
-        .form {
-            margin-bottom: 15px;
-            .form-label {
-                margin-bottom: 5px;
-            }
-            .select-field {
-                select {
-                    padding-top: 0.5208vw;
-                    padding-bottom: 0.5208vw;
-                }
-            }
-        }
-    }
-    @media screen and (max-width: 768px) {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    @media screen and (max-width: 567px) {
-        display: flex;
-        flex-direction: column;
-        .blocks-img {
-            min-height: 300px;
-            order: -1;
-        }
-        .blocks-info {
-            padding-top: 50px;
-            padding-bottom: 50px;
-            html[dir="ltr"] &,
-            html[dir="rtl"] & {
-                padding-left: 25px;
-                padding-right: 25px;
-            }
-        }
-    }
+	display: grid;
+	grid-template-columns: 34.5313vw 63.9583vw;
+	grid-gap: 0 1.3542vw;
+
+	.blocks-img {
+		min-height: 47.5521vw;
+		padding-top: 17.2396vw;
+		position: relative;
+
+		html[dir="ltr"] & {
+			padding-right: 7.2917vw;
+		}
+
+		html[dir="rtl"] & {
+			padding-left: 7.2917vw;
+		}
+
+		.bg-picture {
+			img {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				display: block;
+				object-fit: cover;
+				object-position: center center;
+			}
+		} 
+	}
+
+	.blocks-info {
+		display: flex;
+		flex-direction: column;
+		padding-top: 9.3750vw;
+		padding-bottom: 9.3750vw;
+
+		html[dir="ltr"] & {
+			padding-left: 7.2917vw;
+		}
+
+		html[dir="rtl"] & {
+			padding-right: 7.2917vw;
+		}
+	}
+
+	.section-caption {
+		.sc-subtitle {
+			margin-top: 0;
+		}
+	}
+
+	.block-footer {
+		.text {
+			display: block;
+			@include p;
+			margin-top: 1.0417vw;
+			margin-bottom: 2.0833vw;
+			font-weight: 500;
+		}
+	}
+
+	.block-files{
+		display: grid;
+		grid-gap: 1.5625vw;
+
+		a{
+			display: flex;
+			align-items: center;
+			font-size: 1.3542vw;
+			line-height: 1.3;
+			font-weight: 500;
+			color: $text-color;
+
+			.link-icon{
+				&.pdf{
+					width: 1.9792vw;
+					height: 2.3438vw;
+					fill: $primary;
+					display: block;
+					margin: 0 1.6667vw;
+				}
+
+				&.arrow{
+					width: 3.3333vw;
+					height: 1.6667vw;
+					display: block;
+					fill: $accent;
+				}
+			}
+
+			&:hover,
+			&:focus{
+				color: $primary;
+			}
+		}
+
+		@media screen and (max-width: 991px){
+			grid-gap: 16px;
+
+			a{
+				font-size: 18px;
+
+				.link-icon{
+					&.pdf{
+						width: 19px;
+						height: 23px;
+						margin: 0 16px;
+					}
+
+					&.arrow{
+						width: 33px;
+						height: 16px;
+					}
+				}
+			}
+		}
+	}
+
+	.form {
+		margin-bottom: 2.6042vw;
+
+		.form-label {
+			color: $primary;
+			@include h3;
+			text-transform: initial;
+			margin-bottom: 1.0417vw;
+			font-weight: 700;
+		}
+
+		.select-field {
+			@include p;
+
+			select {
+				padding-top: 0.5208vw;
+				padding-bottom: 0.5208vw;
+			}
+		}
+	}
+
+	@media screen and (max-width: 991px) {
+		grid-template-columns: 0.5fr 1fr;
+		grid-gap: 0 20px;
+
+		.blocks-img {
+			min-height: 400px;
+			padding-top: 75px;
+
+			html[dir="ltr"] & {
+				padding-right: 7.2917vw;
+			}
+
+			html[dir="rtl"] & {
+				padding-left: 7.2917vw;
+			}
+		}
+
+		.blocks-info {
+			padding-top: 70px;
+			padding-bottom: 70px;
+
+			html[dir="ltr"] & {
+				padding-left: 7.2917vw;
+			}
+
+			html[dir="rtl"] & {
+				padding-right: 7.2917vw;
+			}
+		}
+
+		.section-caption {
+			.sc-subtitle {
+				margin-top: 0;
+			}
+		}
+
+		.block-footer {
+			.text {
+				margin-top: 5px;
+				margin-bottom: 10px;
+			}
+		}
+
+		.form {
+			margin-bottom: 15px;
+
+			.form-label {
+				margin-bottom: 5px;
+			}
+
+			.select-field {
+				select {
+					padding-top: 0.5208vw;
+					padding-bottom: 0.5208vw;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media screen and (max-width: 567px) {
+		display: flex;
+		flex-direction: column;
+
+		.blocks-img {
+			min-height: 300px;
+			order: -1;
+		}
+
+		.blocks-info {
+			padding: 50px 25px !important;
+		}
+	}
 }

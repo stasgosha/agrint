@@ -20,6 +20,7 @@
 @import "components/common/menu-opener";
 @import "components/common/socials-component";
 @import "components/common/split-screen-block";
+@import "components/common/breadcrumbs";
 // @import "components/common/tabs-nav";
 // @import "components/common/video-block";
 // @import "components/common/panel";
@@ -49,9 +50,7 @@
 @import "components/sections/full-screen-section";
 @import "components/sections/manage-section";
 @import "components/sections/product-solutions-section";
-
-
-
+@import "components/sections/stats-section";
 @import "components/sections/full-width-section";
 @import "components/sections/contact-us-section";
 @import "components/sections/author-section"; 
@@ -64,3 +63,7 @@
 @import "components/sections/app-section";
 @import "components/sections/tabs-section";
 @import "components/sections/accordion";
+@import "components/sections/category-first-section";
+@import "components/sections/category-info-section";
+@import "components/sections/agriculture-section";
+@import "components/sections/single-page-section";

@@ -8,20 +8,22 @@
 
 			html[dir="ltr"] &{
 				left: 50%;
-				transform: translateX(calc(-100% - 1.25vw));
+				transform: translateX(-50%);
+				// transform: translateX(calc(-100% - 1.25vw));
 
-				@media screen and (max-width: 991px){
-					transform: translateX(calc(-100% - 16px));
-				}
+				// @media screen and (max-width: 991px){
+				// 	transform: translateX(calc(-100% - 16px));
+				// }
 			}
 
 			html[dir="rtl"] &{
 				right: 50%;
-				transform: translateX(calc(100% + 1.25vw));
+				transform: translateX(50%);
+				// transform: translateX(calc(100% + 1.25vw));
 
-				@media screen and (max-width: 991px){
-					transform: translateX(calc(100% + 16px));
-				}
+				// @media screen and (max-width: 991px){
+				// 	transform: translateX(calc(100% + 16px));
+				// }
 			}
 		}
 

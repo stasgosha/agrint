@@ -12,7 +12,6 @@
 		top: 0;
 		pointer-events: none;
 		background: #000;
-		// TODO: remove bg
 
 		img{
 			width: 100%;
@@ -22,8 +21,7 @@
 			top: 0;
 			object-fit: cover;
 			object-position: center center;
-			opacity: .6;
-			// TODO: remove opacity
+			// opacity: .6;
 		}
 	}
 
@@ -78,12 +76,81 @@
 
 			a{
 				color: inherit;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+				&:after{
+					content: '';
+					display: block;
+					width: 1.4063vw;
+					height: 0.8333vw;
+					background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26.34 15.06'%3E%3Cpath data-name='Icon ionic-ios-arrow-down' d='M13.17 10.52L23.13.55a1.87 1.87 0 012.66 0 1.9 1.9 0 010 2.67L14.5 14.52a1.88 1.88 0 01-2.6.05L.55 3.23A1.88 1.88 0 013.2.56z' fill='%233c3b3b'/%3E%3C/svg%3E") no-repeat center center / contain;
+					margin-top: 0.7813vw;
+					transition: all $t;
+				}
 
 				&:hover,
 				&:focus{
 					color: $primary;
+
+					&:after{
+						transform: translateY(50%);
+					}
 				}
 			}
+		}
+	}
+
+	.play-btn{
+		position: absolute;
+		z-index: 3;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 4.2188vw;
+		height: 4.2188vw;
+		border-radius: 50%;
+		display: block;
+
+		&:after{
+			content: '';
+			display: block;
+			width: 200%;
+			height: 200%;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		.btn-icon{
+			width: 100%;
+			height: 100%;
+			fill: #fff;
+			transition: all $t;
+			display: block;
+		}
+
+		&:hover,
+		&:focus{
+			outline: none;
+
+			.btn-icon{
+				fill: $primary;
+			}
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		.play-btn{
+			position: relative;
+			left: 0;
+			top: 0;
+			transform: none;
+			width: 40px;
+			height: 40px;
+			margin-top: 20px;
 		}
 	}
 
@@ -129,37 +196,5 @@
 		.section-bottom{
 			display: none;
 		}
-	}
-}
-
-.breadcrumbs{
-	display: flex;
-	font-size: 1.0417vw;
-	color: #fff;
-	font-weight: 400;
-
-	li{
-		&:after{
-			content: ' > ';
-		}
-
-		&:last-child{
-			&:after{
-				display: none;
-			}
-		}
-
-		a{
-			color: inherit;
-
-			&:hover,
-			&:focus{
-				color: $accent;
-			}
-		}
-	}
-
-	@media screen and (max-width: 991px){
-		font-size: 12px;
 	}
 }

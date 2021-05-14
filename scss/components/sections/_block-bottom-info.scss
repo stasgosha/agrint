@@ -9,9 +9,9 @@
 	margin-top: auto;
 
 	.block-container{
-		max-width: 67.7083vw;
+		max-width: 85.4167vw;
 		margin: 0 auto;
-		padding: 0.8333vw 0 2.0833vw;
+		padding: 3.8542vw 0;
 	}
 
 	.icons-wrrap {
@@ -19,20 +19,20 @@
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		grid-gap: 0 1.4583vw;
-		max-width: 57.2917vw;
-		margin: 0 auto;
-		margin-bottom: 1.8229vw;
 	}
 
 	.icons-item {
 		font-weight: 500;
 		text-transform: capitalize;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 
 		img{
-			width: 2.3438vw;
-			height: 2.3438vw;
+			width: 4.0104vw;
+			height: 4.0104vw;
 			display: block;
-			margin-bottom: 0.2604vw;
+			margin-bottom: 1.4583vw;
 			object-fit: contain;
 			object-position: center center;
 		}
