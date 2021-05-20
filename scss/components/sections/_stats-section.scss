@@ -18,8 +18,23 @@
 	}
 
 	@media screen and (max-width: 575px){
+		padding: 0;
+
 		.stats-grid{
 			grid-template-columns: 1fr;
+			grid-gap: 0;
+		}
+
+		.container{
+			padding: 0;
+		}
+
+		.stat-card{
+			padding: 36px;
+
+			&:nth-child(odd){
+				background: #fff;
+			}
 		}
 	}
 }
@@ -62,5 +77,9 @@
 
 	@media screen and (max-width: 575px){
 		text-align: center;
+
+		.card-value{
+			font-size: 36px;
+		}
 	}
 }

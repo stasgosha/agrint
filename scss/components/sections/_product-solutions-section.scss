@@ -17,6 +17,14 @@
 
 	@media screen and (max-width: 991px){
 		padding-bottom: 60px;
+
+		.section-top{
+			padding: 16px 0;
+
+			h2{
+				@include h3;
+			}
+		}
 	}
 }
 

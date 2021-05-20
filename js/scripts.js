@@ -124,9 +124,7 @@ document.addEventListener('DOMContentLoaded', function(){
 			},
 			{
 				breakpoint: 576,
-				settings: {
-					slidesToShow: 1
-				}
+				settings: "unslick"
 			}
 		]
 	});
@@ -168,6 +166,12 @@ document.addEventListener('DOMContentLoaded', function(){
 				breakpoint: 576,
 				settings: {
 					slidesToShow: 2
+				}
+			},
+			{
+				breakpoint: 420,
+				settings: {
+					slidesToShow: 1
 				}
 			}
 		]

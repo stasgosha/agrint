@@ -28,6 +28,10 @@
 
 	@media screen and (max-width: 991px){
 		padding-top: 50px;
+
+		.section-text{
+			margin-bottom: 20px;
+		}
 	}
 
 	@media screen and (max-width: 767px){
@@ -67,6 +71,10 @@
 		.slide{
 			padding: 0 4px;
 		}
+	}
+
+	@media screen and (max-width: 419px){
+		--arrow-top: 47%;
 	}
 }
 

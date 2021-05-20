@@ -84,10 +84,23 @@
 		.section-features{
 			max-width: 600px;
 			margin-bottom: 50px;
+
+			li{
+				margin-bottom: 1em;
+
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
 		}
 
 		.section-bg{
 			margin-top: -50px;
+
+			img{
+				width: 115%;
+				margin-left: -15%;
+			}
 		}
 	}
 }

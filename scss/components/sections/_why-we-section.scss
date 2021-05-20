@@ -44,6 +44,7 @@
 
 	@media screen and (max-width: 575px){
 		grid-template-columns: 1fr;
+		grid-gap: 16px;
 	}
 }
 
@@ -83,11 +84,11 @@
 	}
 
 	@media screen and (max-width: 575px){
-		align-items: center;
-		text-align: center;
+		// align-items: center;
+		// text-align: center;
 
-		p{
-			max-width: 280px;
-		}
+		// p{
+		// 	max-width: 280px;
+		// }
 	}
 }

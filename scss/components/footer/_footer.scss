@@ -57,6 +57,13 @@
 			}
 		}
 	}
+
+	@media screen and (max-width: 991px){
+		.socials-component,
+		.creator{
+			display: none;
+		}
+	}
 }
 
 .footer-logo{

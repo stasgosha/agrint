@@ -142,4 +142,28 @@
 			padding: 0 4px;
 		}
 	}
+
+	@media screen and (max-width: 575px){
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 16px;
+
+		.slide{
+			padding: 0;
+		}
+
+		.crop-card{
+			.card-image{
+				&:before{
+					padding-top: 90%;
+				}
+			}
+
+			.card-caption{
+				text-align: left;
+				font-size: 15px;
+				font-weight: 400;
+			}
+		}
+	}
 }
