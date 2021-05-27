@@ -1,26 +1,3 @@
-// TODO: ↓↓↓ remove this script ↓↓↓
-// Current menu item highlithing
-$(function () {
-	var location = window.location.href;
-	var cur_url = location.split('/').pop();
-
-	$('.top-nav li, .mobile-top-nav li, .footer-nav li').each(function () {
-		var link = $(this).find('a').attr('href');
-
-		// console.log(link);
-
-		if (cur_url == '') {
-			cur_url = 'index.html';
-		}
-
-		if (cur_url == link)
-		{
-			$(this).addClass('current-menu-item');
-			$(this).parents('li').addClass('current-menu-parent');
-		}
-	});
-});
-
 document.addEventListener('DOMContentLoaded', function(){
 
 	const isRTL = $('html').attr('dir') == 'rtl';
@@ -60,6 +37,42 @@ document.addEventListener('DOMContentLoaded', function(){
 		}
 	});
 
+	// 
+	if ($(window).width() >= 1024) {
+		$('.block-bottom-info .icons-item').hover(function(){
+			$(this).find('.item-text').stop().slideDown(300);
+		},function(){
+			$(this).find('.item-text').stop().slideUp(300);
+		});
+	}
+
+	// Wow
+	new WOW().init();
+
+	$('.wow-random-delay').each(function(i, el){
+		$(el).attr('data-wow-delay', '0.'+(Math.floor(Math.random() * 4 + 2))+'s');
+	});
+
+	// Odometer
+	window.odometerOptions = {
+		auto: false,
+		selector: '.odometer',
+		format: '( ddd).dd',
+		duration: 1500,
+		theme: 'minimal',
+		animation: 'count'
+	};
+
+	$(window).scroll(function(){
+		var elem = $('.odometer');
+
+		elem.each(function(){
+			if ($(document).scrollTop() >= $(this).offset().top - $(window).height() * 0.9) {
+				$(this).html($(this).data('val'));
+			}
+		});
+	});
+
 	// Sliders
 	function equalSlideHeight(slider){
 		$(slider).on('setPosition', function () {
@@ -74,6 +87,37 @@ document.addEventListener('DOMContentLoaded', function(){
 		prevArrow: '<button type="button" class="slick-prev" aria-label="Previous slide"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.78 27.59"><path d="M4.76 13.8L15.2 24.23a1.96 1.96 0 010 2.79 1.99 1.99 0 01-2.8 0L.57 15.2a1.97 1.97 0 01-.05-2.72L12.39.58a1.97 1.97 0 012.8 2.78z"/></svg></button>',
 		nextArrow: '<button type="button" class="slick-next" aria-label="Next slide"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.78 27.59"><path d="M11.02 13.79L.58 3.36a1.96 1.96 0 010-2.79 1.99 1.99 0 012.8 0L15.2 12.4a1.97 1.97 0 01.06 2.72L3.38 27.01a1.97 1.97 0 01-2.8-2.78z"/></svg></button>'
 	}
+
+	// view-all-link
+	$('.view-all-link').click(function(e){
+		e.preventDefault();
+
+		let target = $( 'li'+$(this).data('target') );
+
+		target.addClass('active');
+
+		target.on('mouseleave', function(){
+			target.removeClass('active');
+		})
+
+		$(window).scroll(function(){
+			target.removeClass('active');
+		});
+	});
+
+	// First screen slider
+	$('.first-screen-slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		dots: true,
+		infinite: true,
+		speed: 800,
+		autoplay: true,
+		autoplaySpeed: 5000,
+		rtl: isRTL,
+		fade: true
+	});
 
 	// Product page - steps slider
 	$('.steps-slider').slick({
@@ -248,10 +292,10 @@ document.addEventListener('DOMContentLoaded', function(){
 			return false;
 		}
 
-		let offset = 72;
+		let offset = $(window).width() * 0.055473;
 
 		if ($(window).width() < 992) {
-			offset = 56;
+			offset = 68;
 		}
 
 		$('html, body').animate({
@@ -358,6 +402,23 @@ document.addEventListener('DOMContentLoaded', function(){
     	hideModal('.modal');
 
     	showModal( "#video-modal" );
+    });
+
+    $('[data-video-bg]').click(function(e){
+    	e.preventDefault();
+    	e.stopPropagation();
+
+    	let videoId = $(this).data('video-bg');
+    	let videoType = $(this).data('video-type');
+
+    	if (videoType == 'youtube') {
+    		$(this).closest('section').find('.block-video-container').removeClass('vimeo youtube').addClass('youtube').append('<div class="video-iframe" id="'+videoId+'"></div>');
+    		$(this).closest('.big-video-block').addClass('playing');
+    		createVideo(videoId, videoId);
+    	} else if(videoType == 'vimeo'){
+    		$(this).closest('section').find('.block-video-container').removeClass('vimeo youtube').addClass('vimeo').html('<iframe class="video-iframe" allow="autoplay" src="https://player.vimeo.com/video/'+videoId+'?playsinline=1&autoplay=1&transparent=1&app_id=122963">');
+    		$(this).closest('.big-video-block').addClass('playing');
+    	}
     });
 
     var player;

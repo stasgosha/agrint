@@ -61,8 +61,16 @@
 		line-height: 1.28;
 	}
 
+	.read-more-link{
+		margin-top: 1.5625vw;
+	}
+
 	@media screen and (max-width: 991px){
 		padding: 16px 0;
+
+		.read-more-link{
+			margin-top: 16px;
+		}
 	}
 }
 

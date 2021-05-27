@@ -1,4 +1,11 @@
-.btn{
+.cli-plugin-button{
+	display: inline-flex !important;
+	border: 0 !important;
+	font-weight: 500 !important;
+}
+
+.btn,
+.cli-plugin-button{
 	text-align: center;
 	padding: 0.6944vw 1.6667vw;
 	min-height: 3.4375vw;

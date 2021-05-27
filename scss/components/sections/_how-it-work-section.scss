@@ -33,7 +33,7 @@
 			left: 0;
 			top: 0;
 			display: block;
-			object-fit: cover; // TODO: change to contain
+			object-fit: contain;
 			object-position: center center;
 		}
 	}

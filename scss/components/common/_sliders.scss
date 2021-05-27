@@ -89,6 +89,8 @@
 	display: flex !important;
 	justify-content: center;
 	align-items: center;
+
+	--dot-color: #{ $primary };
 	
 	li{
 		margin: 0 3px;
@@ -101,12 +103,12 @@
 		button{
 			width: 8px;
 			height: 8px;
-			background: $primary;
+			background: var(--dot-color);
 			padding: 0;
 			opacity: 1;
 			transition: all $t;
 			border-radius: 50%;
-			border: 2px solid $primary;
+			border: 2px solid var(--dot-color);
 
 			&:before{
 				display: none;

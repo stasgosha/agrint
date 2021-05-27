@@ -9,7 +9,7 @@
 
 	.solutions-list{
 		margin-top: 2.0833vw;
-		max-width: 14.0625vw;
+		// max-width: 14.0625vw;
 		display: grid;
 		grid-gap: 1.0417vw;
 	}
@@ -24,6 +24,15 @@
 
 		p{
 			margin-bottom: 1.0417vw;
+
+			a{
+				color: inherit;
+
+				&:hover,
+				&:focus{
+					color: $accent;
+				}
+			}
 		}
 	}
 

@@ -94,7 +94,12 @@ picture, iframe, figure{
 	}
 }
 
-.container{
+:root{
+	--container-width: 100%;
+}
+
+.container,
+.cli-bar-container{
 	width: 100%;
 	padding: 0 15px;
 	margin: 0 auto;
@@ -112,8 +117,10 @@ picture, iframe, figure{
 	}
 
 	@media screen and (min-width: 992px){
+		--container-width: 85.4167vw;
+
 		padding: 0;
-		max-width: 85.4167vw;
+		max-width: var(--container-width);
 	}
 }
 

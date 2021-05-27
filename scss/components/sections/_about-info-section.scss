@@ -129,9 +129,21 @@
 			}
 			.block-image, .block-content{
 				width: 100%;
+				padding-left: 25px !important;
+				padding-right: 25px !important;
 			}
 			.block-image{
 				height: 400px; 
+			}
+		}
+	}
+
+	@media screen and (max-width: 374px){
+		.big-screen-block{
+			.block-content,
+			.block-image{
+				padding-left: 15px !important;
+				padding-right: 15px !important;
 			}
 		}
 	}

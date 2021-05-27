@@ -47,6 +47,15 @@
 		margin-bottom: 0.7813vw;
 	}
 
+	small{
+		margin-left: -0.65em;
+		font-size: 0.6em;
+
+		&:empty{
+			display: none;
+		}
+	}
+
 	p{
 		font-size: 1.6667vw;
 		line-height: 1.25;
