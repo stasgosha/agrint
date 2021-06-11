@@ -120,17 +120,25 @@ document.addEventListener('DOMContentLoaded', function(){
 	});
 
 	// Product page - steps slider
-	$('.steps-slider').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: false,
-		dots: true,
-		infinite: true,
-		speed: 800,
-		autoplay: true,
-		autoplaySpeed: 5000,
-		rtl: isRTL,
-		fade: true
+	$('.steps-slider').each(function(i, slider){
+		$(slider).slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			dots: true,
+			infinite: true,
+			speed: 800,
+			autoplay: true,
+			autoplaySpeed: 5000,
+			rtl: isRTL,
+			fade: true
+		});
+
+		$(slider).find('.js-next-slide').click(function(e){
+			e.preventDefault();
+
+			$(slider).slick('slickNext');
+		});
 	});
 
 	equalSlideHeight('.steps-slider');
