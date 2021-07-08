@@ -16,6 +16,14 @@
                 display: block;
                 margin: 0;
                 position: relative;
+                &.slick-current {
+                    .tab-btn{ 
+                        color: $primary;
+                        &:after {
+                            border-color: $accent;
+                        }
+                    }
+                }
                 a,
                 .tab-btn {
                     // display: block;
@@ -26,7 +34,7 @@
                     margin-bottom: 2.6042vw;
                     padding-top: 1.0417vw;
                     padding-bottom: 1.0417vw;
-                    font-weight: 700;
+                    font-weight: 500;
                     position: relative;
                     color: $gray;
                     text-transform: initial;
@@ -106,8 +114,9 @@
                     .tab-btn{
                         flex-wrap: wrap;
                         margin-bottom: 10px;
-                        padding-top: 10px;
-                        padding-bottom: 10px;
+                        // padding-top: 10px;
+                        // padding-bottom: 10px;
+                        padding: 10px 30px;
                         strong{ 
                             display: block;
                             width: 100%;
@@ -119,9 +128,11 @@
                             }
                         }
                         &:after { 
+                            // content: initial;
                             border-width: 0 1px 1px 0; 
                             padding: 4px;
                             position: relative;
+                            display: none !important;
                             html[dir="ltr"] & { 
                                 right: 10px; 
                             }
@@ -139,8 +150,16 @@
             display: block;
         }
         .tabs-wrapper{ 
+            .tabs-nav-wrapper{
+                width: 100%;
+                // overflow-x: auto;
+                margin-bottom: 20px;
+            }
             ul.tabs-nav{ 
-                margin-bottom: 40px;
+                // display: grid; 
+                // grid-template-columns: repeat(3, 60.1739vw);
+                // grid-gap: 30px;
+                // width: 513px;
                 li{
                     .tab-btn{ 
                         strong{  

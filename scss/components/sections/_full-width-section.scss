@@ -28,7 +28,7 @@
 			display: block;
 			object-fit: cover;
 			object-position: center center;
-			opacity: .4;
+			// opacity: .4;
 		}
 	}
 
@@ -41,22 +41,28 @@
 		padding-top: 5.9896vw;
 
 		@media screen and (min-width: 992px){
-			max-width: 30.7292vw;
+			max-width: 41.7292vw;
 		}
 	}
 
 	.section-caption {
+		.sc-title{
+			@include h1;
+		}
 		@media screen and (min-width: 992px){
 			margin-bottom: 2.0833vw;
 		}
 
 		.sc-subtitle {
+			@include h3;
 			text-transform: none;
 			margin-top: 0;
 		}
 	}
 
 	.block-text {
+		@include h3;
+		text-transform: none;
 		color: #fff;
 	}
 

@@ -1,3 +1,14 @@
+.page-template-about{
+	.about-first-screen-section{
+		.section-caption{
+			max-width: 41.6667vw;
+			.sc-title{
+				font-size: 3.3333vw;
+				text-transform: initial;
+			}
+		}
+	}
+}
 .about-info-section{ 
 	.big-screen-block{ 
 		background-color: #E9F2F0;  
@@ -16,6 +27,9 @@
 			// padding: 7.2917vw;
 			padding: 2.3438vw;//45px
 			padding: 50px 0;
+			.section-caption .sc-title{
+				line-height: 1.2;
+			}
 		}
 
 		.block-image{
@@ -43,7 +57,7 @@
 						width: 0.4167vw;
 						height: 0.4167vw;
 						background: $gray;
-						top: 0.2604vw; 
+						top: 0.6771vw; 
 						border-radius: 50%;
 					}
 					html[dir="ltr"] &{

@@ -15,7 +15,7 @@
 		img{
 			display: block;
 			max-width: 100%;
-			height: auto;
+			height: 31.2500vw; 
 			transition: all $t;
 			object-fit: cover;
 			object-position: center center;
@@ -34,12 +34,11 @@
 
 	.card-caption{
 		@include h3;
+		text-transform: none;
 		color: $primary;
-		text-transform: uppercase;
 		transition: all $t;
 
-		strong{
-			text-transform: none;
+		strong{ 
 			display: block;
 			@include h2;
 		}
@@ -64,6 +63,9 @@
 
 		.card-image{
 			margin-bottom: 20px;
+			img{
+				height: 69.0104vw;
+			}
 		}
 
 		.card-content{

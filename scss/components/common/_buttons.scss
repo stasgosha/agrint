@@ -8,7 +8,7 @@
 .cli-plugin-button{
 	text-align: center;
 	padding: 0.6944vw 1.6667vw;
-	min-height: 3.4375vw;
+    min-height: 5.4375vw;
 	border-radius: 0;
 	font-size: 1.6667vw;
 	font-weight: 500;
@@ -93,7 +93,7 @@
 	}
 
 	&.w-btn{
-		max-width: 15.1042vw;
+		max-width: 17.1042vw;
 		width: 100%;
 		@media screen and (max-width: 991px){ 
 			max-width: 280px;
@@ -133,7 +133,7 @@
 	}
 
 	@media screen and (max-width: 991px){
-		min-height: 40px;
+		min-height: 60px;
 		font-size: 16px;
 		padding: 5px 15px;
 	}

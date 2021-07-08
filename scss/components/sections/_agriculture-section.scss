@@ -4,7 +4,7 @@
 
 	.breadcrumbs{
 		margin-bottom: 2.0833vw;
-		--breadcrumbs-color: #{ $text-color }
+		--breadcrumbs-color: #{ $text-color };
 	}
 
 	.section-caption{
@@ -20,7 +20,7 @@
 		}
 
 		.sc-subtitle{
-			text-transform: uppercase;
+			// text-transform: uppercase;
 			color: $text-color;
 		}
 	}
@@ -99,7 +99,7 @@
 
 	.card-caption{
 		@include h3;
-		text-transform: uppercase;
+		// text-transform: uppercase;
 		margin-bottom: 0.8333vw;
 	}
 
@@ -110,6 +110,31 @@
 		}
 	}
 
+	@media screen and (min-width: 576px){ 
+		&.with-content{
+			.card-image, .card-hidden-content{
+				transition: transform 2s cubic-bezier(.2, .85, .4, 1.275);
+			}
+			.card-image{
+				transform: rotateY(0);
+			}
+			.card-hidden-content{
+				transform: rotateY(-180deg);
+			}
+			&:hover,
+			&:focus{ 
+				.card-image{
+					transform: rotateY(-180deg);
+				}
+				.card-hidden-content{
+					transform: rotateY(0);
+				}
+			}
+	
+		}
+	}
+
+
 	@media screen and (max-width: 991px){
 		.card-caption{
 			margin-bottom: 8px;
@@ -118,5 +143,36 @@
 		.card-hidden-content{
 			padding: 16px 24px;
 		}
+	}
+
+	@media screen and (max-width: 575px){
+		display: none;
+		&.with-content {
+			display: block;
+		}   
+		.card-image{
+			&:before{
+				padding-top: 68%; 
+			} 
+		} 
+		.card-hidden-content{ 
+			position: relative;
+			background: transparent !important;
+			height: auto;
+			padding-left: 0;
+			padding-right: 0;
+			color: $text-color;
+			opacity: 1;  
+			.card-caption{
+				color: $primary;
+			}
+			p{
+				br{
+					display: contents;
+				}
+			}
+			
+		}  
+			
 	}
 }

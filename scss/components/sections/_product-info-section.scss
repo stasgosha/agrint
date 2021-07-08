@@ -62,6 +62,18 @@
 	.slide{
 		padding: 0 0.4167vw;
 	}
+	.slick-arrow{
+		transform: translate(0,-200%);
+		@media screen and (max-width: 991px){ 
+			transform: translate(0,-150%); 
+		}
+		@media screen and (max-width: 767px){ 
+			transform: translate(0,-70%);  
+		}
+		@media screen and (max-width: 419px){  
+			transform: translate(0,-100%); 
+		}
+	}
 
 	@media screen and (max-width: 991px){
 		width: calc(100% + 4px * 2);
@@ -72,9 +84,9 @@
 			padding: 0 4px;
 		}
 	}
-
+	
 	@media screen and (max-width: 419px){
-		--arrow-top: 47%;
+		--arrow-top: 47%; 
 	}
 }
 
@@ -109,13 +121,17 @@
 		text-align: center;
 		margin-top: 1.3021vw;
 		@include h4;
+		font-size: 1.15vw;
 		transition: all $t;
+		@media screen and (max-width: 991px){
+			@include h4; 
+		}
 	}
 
 	&:hover,
 	&:focus{
 		.card-image{
-			img{
+			img{ 
 				transform: scale(1.05);
 				opacity: .8;
 			}

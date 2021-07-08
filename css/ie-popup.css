@@ -1,0 +1,60 @@
+.lock-screen {
+    width: 100%;
+    height: 100%;
+    background: #eee;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 5000;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    display: none;
+    font-size: 25px;
+    color: #20a562;
+    letter-spacing: 2px;
+}
+.lock-screen .block-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    max-width: 450px;
+}
+.lock-screen .block-content .logo {
+    margin-bottom: 30px;
+}
+.lock-screen .block-content .logo img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.lock-screen .block-content h1 {
+    font-size: 36px;
+    line-height: 44px;
+    color: #397d2d;
+}
+.lock-screen .block-content .supported {
+    margin-top: 30px;
+    width: 400px;
+}
+.lock-screen .block-content .supported img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.lock-screen.visible {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}

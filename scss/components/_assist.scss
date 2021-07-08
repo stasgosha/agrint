@@ -177,7 +177,11 @@ a[href^="tel"]{
 		font-size: 1.6667vw;
 		line-height: 1.2;
 		color: $primary;
-		font-weight: bold;
+		font-weight: 500;
+
+		html[dir="rtl"] &{
+			text-align: right;
+		}
 	}
 
 }
@@ -205,6 +209,15 @@ html body{
 
 .cli-style-v2 .cli-bar-message{
 	@include p;
+	font-size: 1.0417vw;
+	font-weight: 300;
+	@media screen and (max-width: 991px){
+		font-size: 20px;
+	}
+	
+	@media (min-width: 985px){
+		width: 80% !important; 
+	}
 }
 
 .cli-style-v2 .cli-bar-btn_container .cli-plugin-button{

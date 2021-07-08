@@ -25,8 +25,8 @@
 	.view-all-link{
 		font-size: 0.9375vw;
 		line-height: 1.2;
-		font-weight: bold;
-		text-transform: uppercase;
+		font-weight: 500;
+		// text-transform: uppercase;
 		color: $text-color;
 
 		&:after{
@@ -87,18 +87,35 @@
 
 	.card-caption{
 		transition: all $t;
-		@include h3;
+		@include p;
+		font-size: 1.15vw;
 		text-align: center;
 		text-transform: none;
 		color: $text-color;
 		font-weight: 500;
 
+
 		&:after{
 			content: ' >';
 			color: $accent;
+
+			.single-landing &{
+				display: none !important;
+			}
 		}
 	}
 
+
+	@media screen and (max-width: 991px){
+		.card-caption{
+			@include p; 
+		}
+		.card-image{
+			margin-bottom: 8px;
+		}
+	}
+}
+a.crop-card{  
 	&:hover,
 	&:focus{
 		.card-image{
@@ -112,13 +129,7 @@
 			color: $accent;
 		}
 	}
-
-	@media screen and (max-width: 991px){
-		.card-image{
-			margin-bottom: 8px;
-		}
-	}
-}
+}  
 
 .tree-protection-slider{
 	width: calc(100% + 0.4167vw * 2);

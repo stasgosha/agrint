@@ -5,7 +5,7 @@
 	// bottom: 0;
 	// z-index: 3;
 	text-align: center;
-	background-color: rgba(#fff, 0.8);
+	background-color: rgba(#fff, 0.7);
 	margin-top: auto;
 
 	.block-container{
@@ -34,6 +34,7 @@
 		font-size: 1.3542vw;
 		line-height: 1.2;
 		font-weight: 500;
+		transition: all, $t;
 	}
 
 	.icons-item {
@@ -57,13 +58,14 @@
 			margin-top: 1em;
 			text-align: center;
 			display: none;
-			font-size: 1.1458vw;
+			font-size: 1.3542vw;
 			line-height: 1.25;
-			font-weight: 300;
+			font-weight: 400;
 			color: #3C3B3B;
 
 			p{
 				color: inherit;
+				transition: all, $t;
 			}
 		}
 
@@ -73,6 +75,12 @@
 				img{
 					width: 2.2917vw;
 					height: 2.2917vw;
+				}
+				.item-caption{
+					font-size: 1.1458vw;
+				}
+				.item-text p{
+					font-size: 1.1458vw;
 				}
 			}
 		}

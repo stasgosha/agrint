@@ -2,13 +2,16 @@
 	display: flex;
 	// height: calc(100vh - 5.4734vw);
 	min-height: 49.4792vw;
-
+	.section-caption .sc-subtitle{
+		margin-top: 0;
+		text-transform: initial; 
+	}
 	.block-content{
 		width: 50%;
 		flex: none;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		// justify-content: center;
 		padding: 7.2917vw;
 	}
 
@@ -98,6 +101,9 @@
 				content: '';
 				display: block;
 				padding-top: 62.222%;
+			}
+			img{ 
+				object-position: center top;
 			}
 		}
 

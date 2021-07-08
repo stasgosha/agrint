@@ -55,13 +55,13 @@
 
 	.card-content{
 		padding-top: 1.0417vw;
-		font-weight: 300;
+		font-weight: 400;
 	}
 
 	.card-caption{
 		@include p;
 		color: $text-dark;
-		font-weight: bold;
+		font-weight: 500;
 	}
 
 	.card-icon{

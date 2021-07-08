@@ -76,13 +76,16 @@
 
 		.blocks-info {
 			flex: auto;
-			padding: 1.0417vw 2.3438vw 2.1875vw;
-
+			padding: 1.0417vw 2.3438vw 2.1875vw; 
 			.block-caption{
 				@include h3;
 				font-weight: 500;
 				margin-bottom: 1.0417vw;
 				text-transform: none;
+				@media screen and (max-width: 992px){
+					font-size: 16px; 
+					margin-bottom: 2.9417vw;
+				}
 			}
 
 			p{
@@ -91,7 +94,7 @@
 				@media screen and (min-width: 992px){
 					font-size: 1.2500vw;
 				}
-			}
+			} 
 		}
 	}
 

@@ -10,7 +10,7 @@
 body{
 	font-family: $main-font;
 	color: $text-color;
-	font-weight: 300;
+	font-weight: 400;
 
 	html[dir="rtl"] &{
 		font-family: $rtl-font;
@@ -40,7 +40,7 @@ body{
 @mixin h3{
 	font-size: 1.4583vw; // 28px
 	line-height: 1.428;
-	text-transform: uppercase;
+	// text-transform: uppercase;
 
 	@media screen and (max-width: 991px){
 		font-size: 18px;
@@ -49,14 +49,42 @@ body{
 
 @mixin h4{
 	@include p;
-	font-weight: bold;
+	font-weight: 500;
 
 	@media screen and (max-width: 991px){
 		font-size: 18px;
 	}
 }
 
-.tpg{
+.tpg{ 
+	h1{
+		@include h1;
+		margin-bottom: 1em;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	h2{
+		@include h2;
+		margin-bottom: 1em;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	h3{
+		@include h3;
+		margin-bottom: 1em;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	h4{
+		@include h4;
+		margin-bottom: 1em;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	} 
 	p{
 		margin-bottom: 1.308em;
 		@include p;
@@ -74,14 +102,16 @@ body{
 		}
 
 		li{
-			&:before{
-				content: '';
-				display: inline-block;
-				width: 0.5556vw;
-				height: 0.5556vw;
-				background: $primary;
-				border-radius: 50%;
-				margin-right: 0.3472vw;
+			display: flex;
+			align-items: center;
+			&:before{ 
+				content: "●";
+				display: inline-flex;
+				align-items: center; 
+				@include p; 
+				color: $primary;
+				margin-right: 0.3472vw;  
+				margin-top: -3px;
 			}
 		}
 	}
@@ -103,7 +133,7 @@ body{
 		}
 
 		&.uppercase{
-			text-transform: uppercase;
+			// text-transform: uppercase;
 		}
 	}
 
@@ -111,7 +141,7 @@ body{
 		margin-top: 1.2500vw;
 		@include h3;
 		color: $primary;
-		font-weight: bold;
+		font-weight: 500;
 
 		&.text-color{
 			color: $text-color;
@@ -161,7 +191,13 @@ body{
 
 	@media screen and (min-width: 992px){
 		.link-text{
-			opacity: 0;
+			opacity: 0;  
+			html[dir="ltr"] &{
+				padding-right: 1.7813vw;
+			}
+			html[dir="rtl"] &{
+				padding-left: 1.7813vw;
+			} 
 		}
 
 		.link-icon{
@@ -180,21 +216,23 @@ body{
 		}
 
 		&:hover,
-		&:focus{
+		&:focus{ 
 			.link-text{
 				opacity: 1;
 			}
 
 			.link-icon{
 				html[dir="ltr"] &{
-					left: calc(100% + 0.7813vw);
+					// left: calc(100% + 0.7813vw); 
+					left: calc(100% + -0.8187vw);
 				}
 
 				html[dir="rtl"] &{
-					right: calc(100% + 0.7813vw);
+					// right: calc(100% + 0.7813vw);
+					right: calc(100% + -0.8187vw);
 				}
 			}
-		}
+		} 
 	}
 
 	@media screen and (max-width: 991px){
@@ -240,3 +278,17 @@ body{
         } 
 	}
 }
+.hover-zoom-img{ 
+	overflow: hidden;
+	img{
+		transition: all, $t;
+	}
+	&:hover,
+	&:focus{ 
+		img{
+			transform: scale(1.05);
+			opacity: .8;
+		}  
+	}
+}
+ 

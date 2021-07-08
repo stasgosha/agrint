@@ -19,7 +19,12 @@
 		bottom: 2vw !important;
 	}
 }
-
+.home{
+	.big-video-block{
+		max-height: 41.6667vw;
+		min-height: auto;
+	}
+}
 .big-video-block{
 	height: calc(100vh - 5.4734vw);
 	min-height: 500px;
@@ -65,6 +70,8 @@
 		.page-caption,
 		.section-text{
 			color: #fff;
+			line-height: 1;
+			margin-bottom: 0.2em;
 			max-width: 26.0417vw;
 			position: relative;
 			z-index: 3;

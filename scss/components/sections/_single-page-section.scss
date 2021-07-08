@@ -14,6 +14,7 @@
 
 		.sc-title{
 			@include h1;
+			position: relative;
 		}
 
 		.sc-subtitle{
@@ -38,8 +39,14 @@
 
 		img{
 			display: block;
+			max-height: 41.6667vw;
 			max-width: 100%;
 			height: auto;
+			width: 100%;
+
+			@media screen and (max-width: 1023px){
+				max-height: 600px;  
+			}
 		}
 	}
 
@@ -73,7 +80,7 @@
 
 		.media-caption{
 			@include h3;
-			text-transform: uppercase;
+			// text-transform: uppercase;
 			position: absolute;
 			left: 0;
 			bottom: calc(100% + 1.5625vw);

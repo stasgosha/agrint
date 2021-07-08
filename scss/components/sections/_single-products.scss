@@ -1,0 +1,45 @@
+.single-products{
+    .product-first-screen-section{
+        .section-caption{
+            .sc-title{
+                @include h1;   
+            }
+            .sc-subtitle{ 
+                @include h1; 
+                line-height: 1;
+                text-transform: initial;
+                max-width: 36.8125vw;
+                margin-bottom: 0.228em;
+                margin-top: 0;
+                + .sc-subtitle{
+                    @include h3;
+                    max-width: 29.8125vw;
+                } 
+            }
+        }
+    }
+    @media screen and (max-width: 991px) {
+        .product-first-screen-section{
+            .section-caption{ 
+                .sc-subtitle{  
+                    max-width: 51.8125vw; 
+                    + .sc-subtitle{ 
+                        max-width: 51.8125vw;
+                    } 
+                }
+            }
+        }   
+    }
+    @media screen and (max-width: 768px) {
+        .product-first-screen-section{
+            .section-caption{ 
+                .sc-subtitle{  
+                    max-width: 100%; 
+                    + .sc-subtitle{ 
+                        max-width: 100%;
+                    } 
+                }
+            }
+        } 
+    }
+}
