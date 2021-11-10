@@ -4,7 +4,9 @@
 
     .section-image{
         position: absolute;
-        left: -8%;
+        // left: -8%;
+        left: 50%;
+        transform: translateX(-50%);
         top: -2%;
         width: 115%;
         pointer-events: none;
@@ -31,7 +33,7 @@
     .app-blocks {
         &:nth-child(2){
             .app-caption{
-                padding-left: 2.1vw;
+                // padding-left: 2.1vw;
             }
         }
     }

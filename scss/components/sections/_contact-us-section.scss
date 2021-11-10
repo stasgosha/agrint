@@ -50,3 +50,37 @@
 		}
 	}
 }
+
+html[dir="rtl"] .intl-tel-input.allow-dropdown .selected-flag, .intl-tel-input.separate-dial-code .selected-flag{
+	padding: 0 6px 0 20px;
+}
+
+html[dir="rtl"] .intl-tel-input.allow-dropdown .flag-container, .intl-tel-input.separate-dial-code .flag-container{
+	right: 0;
+	left: auto;
+}
+html[dir="rtl"] .intl-tel-input .country-list{
+	right: 0;
+	left: auto;
+	direction: ltr;
+	width: 23vw;
+	@media screen and (max-width: 992px){
+		width: 25vw;
+	}
+	@media screen and (max-width: 768px){
+		width: 28vw;
+	}
+	@media screen and (max-width: 575px){
+		width: 92vw;
+	}
+}
+
+html[dir="rtl"] .wpcf7 input[type="tel"]{
+	padding-left: 6px;
+    padding-right: 52px;
+    margin-left: 0;
+}
+html[dir="rtl"] .intl-tel-input .selected-flag .iti-arrow{
+	right: 30px;
+	left: auto;
+}

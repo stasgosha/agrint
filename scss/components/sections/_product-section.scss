@@ -54,7 +54,8 @@
 
 				} 
 				html[dir="rtl"] & {
-					left: 1.5625vw; 
+				    right: 0.925vw;
+				    bottom: 1.2625vw;
 				}
 				@media screen and (max-width: 991px) {
 					bottom: 15px;
@@ -63,7 +64,10 @@
 	
 					} 
 					html[dir="rtl"] & {
-						left: 15px; 
+						right: 2vw;
+						bottom: 3.5625vw;
+					    transform: scale(0.9);
+					    left: 0;
 					}
 				}
 			}

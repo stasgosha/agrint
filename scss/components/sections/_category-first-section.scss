@@ -30,8 +30,14 @@
 	}
 	.breadcrumbs-img{
 		top: 2.3438vw;
-		left: 1vw;
 		position: absolute; 
+		html[dir="rtl"] &{
+			right: 1vw;
+			direction: rtl;
+		}
+		html[dir="ltr"] &{
+			left: 1vw;
+		}
 	}
 	.category-pest-card{
 		display: flex;

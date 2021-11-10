@@ -183,3 +183,7 @@ picture, iframe, figure{
 	clip: rect(0 0 0 0);
 	overflow: hidden;
 }
+
+html[dir="rtl"] .cli-style-v2 .cli-bar-message{
+	text-align: right;
+}

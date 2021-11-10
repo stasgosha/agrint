@@ -143,6 +143,9 @@
 				align-items: start;
 				grid-gap: 10px;
 				text-align: left;
+				html[dir="rtl"] &{
+					text-align: right;
+				}
 
 				img{
 					margin-bottom: 0;
@@ -151,6 +154,9 @@
 				.item-text{
 					text-align: left;
 					margin-top: 0;
+					html[dir="rtl"] &{
+						text-align: right;
+					}
 				}
 			}
 		}

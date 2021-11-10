@@ -31,6 +31,19 @@
 			bottom: 16px !important;
 		}
 	}
+	.slick-slider{
+		.slick-track{
+			html[dir="rtl"] &{
+				direction: rtl;
+				.block-footer{
+					direction: ltr;
+					.block-previews{
+						justify-content: end;
+					}
+				}
+			}
+		}
+	}
 
 	.section-caption{
 		.sc-title{

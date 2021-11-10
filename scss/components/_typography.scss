@@ -112,6 +112,12 @@ body{
 				color: $primary;
 				margin-right: 0.3472vw;  
 				margin-top: -3px;
+				html[dir="rtl"] &{
+					margin-top: 2px;
+					margin-right: 0;
+					margin-left: 0.3472vw; 
+				}
+
 			}
 		}
 	}

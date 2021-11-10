@@ -1,4 +1,16 @@
 .authors-section { 
+	.section-caption{
+		.sc-title{
+			@media screen and (max-width: 575px){
+				html[dir="rtl"] & {
+					font-size: 24px;
+				}
+					
+			}
+		}
+
+	} 
+
 	@media screen and (min-width: 992px){
 		.section-caption{
 			margin-bottom: 5.2083vw;

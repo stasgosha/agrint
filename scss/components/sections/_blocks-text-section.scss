@@ -22,6 +22,9 @@
 		.section-text{
 			text-align: left;
 			max-width: unset;
+			html[dir="rtl"] &{
+				text-align: right;
+			}
 		}
 
 		.section-inner {

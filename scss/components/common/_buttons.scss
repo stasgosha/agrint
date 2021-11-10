@@ -4,11 +4,15 @@
 	font-weight: 500 !important;
 }
 
+html[dir="rtl"] .cli-switch .cli-slider:after{
+	right: auto;
+	left: 10px;
+}
 .btn,
 .cli-plugin-button{
 	text-align: center;
 	padding: 0.6944vw 1.6667vw;
-    min-height: 5.4375vw;
+    min-height: 3.4375vw;
 	border-radius: 0;
 	font-size: 1.6667vw;
 	font-weight: 500;
@@ -23,6 +27,9 @@
 	color: $text-color;
 	border: 2px solid $text-color;
 	background: transparent;
+	html [dir="rtl"] &{
+		padding: 0.4944vw 1.6667vw;
+	}
 
 	&:hover,
 	&:focus{

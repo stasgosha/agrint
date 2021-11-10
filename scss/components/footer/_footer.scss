@@ -79,7 +79,7 @@
 		}
 
 		html[dir="rtl"] &{
-			padding-right: var(--logo-padding);
+			// padding-right: var(--logo-padding);
 		}
 
 		a{
@@ -247,7 +247,7 @@
 		padding-left: var(--logo-padding);
 	}
 
-	html[dir="rtl"] &{
-		padding-right: var(--logo-padding);
-	}
+	// html[dir="rtl"] &{
+	// 	padding-right: var(--logo-padding);
+	// }
 }

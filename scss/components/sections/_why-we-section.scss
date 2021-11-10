@@ -3,6 +3,9 @@
 	background-repeat: no-repeat;
 	background-position: left bottom;
 	background-size: auto 35.7813vw;
+	html[dir="rtl"] &{
+		background-position: right bottom;
+	}
 
 	.section-caption{
 		max-width: 63.5417vw;

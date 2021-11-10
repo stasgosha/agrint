@@ -48,6 +48,10 @@
 	.section-caption {
 		.sc-title{
 			@include h1;
+
+			@media screen and (max-width: 992px){
+				font-size: 30px;
+			}
 		}
 		@media screen and (min-width: 992px){
 			margin-bottom: 2.0833vw;
